@@ -21,7 +21,7 @@ namespace WinFormsApp4
         public program_main_form(string employee_n_id)
         {
             InitializeComponent();
-            button1.Hide();
+          
             this.employee_n_id = employee_n_id;
             name_label_text = db.employees
                 .Where((x) => x.employee_n_id == employee_n_id).FirstOrDefault().name;
@@ -35,7 +35,7 @@ namespace WinFormsApp4
 
             if (cur_user_name == "admin")
             {
-                button1.Show();
+                
             }
         }
 
@@ -85,6 +85,11 @@ namespace WinFormsApp4
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("hello");
         }
     }
 }

@@ -2,14 +2,16 @@
 using System.Text.RegularExpressions;
 using WinFormsApp4.data;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Diagnostics.Eventing.Reader;
 
 namespace funcs
 {
     // this is mohamed ramadan elaryb branch dont touch it 
+    
     public static class ValidationMethods
     {
-        
-    
+
+       
         public static List<string> Employee(EmployeeTable emp)
         {
             List<string> empty_ent = new List<string>();
@@ -35,8 +37,8 @@ namespace funcs
         {
             if (emp.password == confirmed_pass)
             {               
-                MessageBox.Show("Done", "Registration complete", MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+                //MessageBox.Show("Done", "Registration complete", MessageBoxButtons.OK,
+                //MessageBoxIcon.Information);
                 return true;
             }
             MessageBox.Show("Regeister not complete, please check that password is the same as comfirmed passwoard"
@@ -61,11 +63,22 @@ namespace funcs
             MessageBox.Show("User Not Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             return false;
         }
-        public static void CopyImage(string source , string usernow)
+        public static bool CopyImage(string source , string usernow , EmployeeTable emp)
         {
-            string dest = "J:\\c#\\WinFormsApp4\\WinFormsApp4\\bin\\Debug\\net6.0-windows\\images" +
-                           $"\\{usernow}.jpg";
-            File.Copy(source, dest); 
+            if (!string.IsNullOrWhiteSpace(source))
+            {
+                  string dest = Environment.CurrentDirectory + "\\images" +
+                               $"\\{usernow}.jpg";
+                File.Copy(source, dest);
+                emp.photo_path = dest;
+       
+                return true;
+               
+            } else { 
+                
+                MessageBox.Show("Select a photo");
+                return false;
+            }
         }
         public static bool Email(string email)
         {
@@ -102,14 +115,17 @@ namespace funcs
     public static class DataBaseMethods
     {
         static AppDbContext db = AppDbContext.Instance;
-        public static void AddEmployee(EmployeeTable emp)
+        public static bool AddEmployee(EmployeeTable emp)
         {
-            {              
+                       
+              
+            if(ValidationMethods.CopyImage(emp.photo_path, emp.user_name,emp))
+            {
                 db.employees.Add(emp);
                 db.SaveChanges();
+               return true;
             }
-            ValidationMethods.CopyImage(emp.photo_path, emp.user_name); 
-          
+            else return false;
         }
         public static bool Is_Employee(string user_name, string password)
         {
