@@ -1,11 +1,15 @@
 ﻿using WinFormsApp4;
+using System.Text.RegularExpressions;
 using WinFormsApp4.data;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 namespace funcs
 {
     // this is mohamed ramadan elaryb branch dont touch it 
     public static class ValidationMethods
     {
-
+        
+    
         public static List<string> Employee(EmployeeTable emp)
         {
             List<string> empty_ent = new List<string>();
@@ -57,13 +61,43 @@ namespace funcs
             MessageBox.Show("User Not Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             return false;
         }
-
         public static void CopyImage(string source , string usernow)
         {
             string dest = "J:\\c#\\WinFormsApp4\\WinFormsApp4\\bin\\Debug\\net6.0-windows\\images" +
                            $"\\{usernow}.jpg";
             File.Copy(source, dest); 
         }
+        public static bool Email(string email)
+        {
+            string expectedEmailFormat = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            return (Regex.IsMatch(email, expectedEmailFormat) == true); 
+        }
+        public static bool UserName(string username)
+        {
+            AppDbContext db = new AppDbContext();
+            var IsUserFound = db.employees.
+                   Where(a => a.user_name == username).FirstOrDefault();            
+                   return (IsUserFound != null ); 
+          
+        }
+        public static bool NationalIdLen(string id)
+        {           
+            return ( (id.Length == 14) ); 
+        }
+        public static bool NationalId(string id)
+        {
+            AppDbContext db = new AppDbContext();
+            var IsUserFound = db.employees.
+                Where(a => a.employee_n_id == id).FirstOrDefault();
+         
+            return ((IsUserFound != null)); 
+        }
+        public static bool PhoneNumber(string Number)
+        {
+            return (Number.Length == 11);
+        }
+
+
     }
     public static class DataBaseMethods
     {

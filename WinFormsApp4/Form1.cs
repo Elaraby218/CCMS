@@ -7,11 +7,8 @@ namespace WinFormsApp4
     public partial class Login_Page : Form
     {
         public Login_Page()
-
-        {
-            // button2.Hide();
+        {     
             InitializeComponent();
-            //emp_name.Text = db.employees.Where((x) => x.employee_n_id == employee_n_id) .FirstOrDefault() .name; 
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
