@@ -16,17 +16,27 @@ namespace WinFormsApp4
     public partial class program_main_form : Form
     {
         string txt = "null";
+        string cur_user_name;
+
         public program_main_form(string employee_n_id)
         {
             InitializeComponent();
+            button1.Hide();
             this.employee_n_id = employee_n_id;
             name_label_text = db.employees
                 .Where((x) => x.employee_n_id == employee_n_id).FirstOrDefault().name;
+            cur_user_name = name_label_text = db.employees
+                .Where((x) => x.employee_n_id == employee_n_id).FirstOrDefault().user_name;
             txt = name_label_text;
             textBox1.Text = txt;
             string photo_path_to_show = db.employees
                 .Where((x) => x.employee_n_id == employee_n_id).FirstOrDefault().photo_path;
             pictureBox1.ImageLocation = photo_path_to_show;
+
+            if (cur_user_name == "admin")
+            {
+                button1.Show();
+            }
         }
 
         private void Log_out_btn_Click(object sender, EventArgs e)
@@ -35,6 +45,7 @@ namespace WinFormsApp4
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             Application.OpenForms[0].Show();
             this.Close();
+
         }
 
         private void program_main_form_Load(object sender, EventArgs e)
@@ -63,9 +74,15 @@ namespace WinFormsApp4
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

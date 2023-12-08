@@ -17,7 +17,7 @@ namespace WinFormsApp4.data
                 return _instance;
             }
         }
-        private AppDbContext(){}
+        public AppDbContext(){}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -42,8 +42,47 @@ namespace WinFormsApp4
             }
             else
             {
+                bool Validate = true; 
+
+                if(ValidationMethods.NationalId(National_id_txtbox.Text))
+                {
+                    MessageBox.Show("Wrong National ID", "Error"
+                        , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Validate = false;
+                }
+
+                if (!ValidationMethods.NationalIdLen(National_id_txtbox.Text))
+                {
+                    MessageBox.Show("National Id must be 14 Digits", "Error"
+                        , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Validate = false;
+                }
+
+                if (!ValidationMethods.PhoneNumber(phone_num_txtbox.Text))
+                {
+                    MessageBox.Show("Phone number must be 11 digits ", "Error"
+                        , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Validate = false;
+                }
+
+                if (!ValidationMethods.Email(email_txtbox.Text))
+                {
+                    MessageBox.Show("The Email must be in form \"example@example.com\" " , "Error" 
+                        , MessageBoxButtons.OK , MessageBoxIcon.Error);
+                    Validate = false; 
+                }
+
+                if (ValidationMethods.UserName(user_txtbox.Text))
+                {
+                    MessageBox.Show("User name in use, please select another user name", "Error"
+                        , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Validate = false;
+                }
+
+
+
                 string confirmed_pass = this.cpass_txtbox.Text;
-                if (ValidationMethods.password(emp, confirmed_pass))
+                if (Validate && ValidationMethods.password(emp, confirmed_pass) )
                 {
                     DataBaseMethods.AddEmployee(emp);
                     Application.OpenForms[0].Show();

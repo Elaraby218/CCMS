@@ -38,6 +38,7 @@ namespace WinFormsApp4
             emp_name = new Label();
             pictureBox1 = new PictureBox();
             textBox1 = new TextBox();
+            button1 = new Button();
             FindSTU_btn = new Button();
             StudentOut = new Button();
             History = new Button();
@@ -50,7 +51,7 @@ namespace WinFormsApp4
             FindSTU_btn.FlatStyle = FlatStyle.Popup;
             FindSTU_btn.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
             FindSTU_btn.ForeColor = SystemColors.ButtonHighlight;
-            FindSTU_btn.Location = new Point(12, 24);
+            FindSTU_btn.Location = new Point(12, 109);
             FindSTU_btn.Name = "FindSTU_btn";
             FindSTU_btn.Size = new Size(166, 46);
             FindSTU_btn.TabIndex = 1;
@@ -64,7 +65,7 @@ namespace WinFormsApp4
             StudentOut.FlatStyle = FlatStyle.Popup;
             StudentOut.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
             StudentOut.ForeColor = SystemColors.ButtonHighlight;
-            StudentOut.Location = new Point(184, 24);
+            StudentOut.Location = new Point(12, 188);
             StudentOut.Name = "StudentOut";
             StudentOut.Size = new Size(166, 46);
             StudentOut.TabIndex = 2;
@@ -79,7 +80,7 @@ namespace WinFormsApp4
             History.FlatStyle = FlatStyle.Popup;
             History.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
             History.ForeColor = SystemColors.ButtonHighlight;
-            History.Location = new Point(356, 24);
+            History.Location = new Point(12, 32);
             History.Name = "History";
             History.Size = new Size(166, 46);
             History.TabIndex = 3;
@@ -93,7 +94,7 @@ namespace WinFormsApp4
             Log_out_btn.FlatStyle = FlatStyle.Popup;
             Log_out_btn.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
             Log_out_btn.ForeColor = SystemColors.ButtonHighlight;
-            Log_out_btn.Location = new Point(649, 242);
+            Log_out_btn.Location = new Point(402, 267);
             Log_out_btn.Name = "Log_out_btn";
             Log_out_btn.Size = new Size(110, 47);
             Log_out_btn.TabIndex = 0;
@@ -114,7 +115,7 @@ namespace WinFormsApp4
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(622, 47);
+            pictureBox1.Location = new Point(364, 57);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(166, 189);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -126,7 +127,7 @@ namespace WinFormsApp4
             // 
             textBox1.BackColor = SystemColors.InactiveBorder;
             textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(622, 12);
+            textBox1.Location = new Point(364, 12);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
             textBox1.Size = new Size(166, 29);
@@ -134,11 +135,25 @@ namespace WinFormsApp4
             textBox1.TextAlign = HorizontalAlignment.Center;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.ControlDarkDark;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(12, 268);
+            button1.Name = "button1";
+            button1.Size = new Size(166, 46);
+            button1.TabIndex = 8;
+            button1.Text = "Employees Data";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // program_main_form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 448);
+            ClientSize = new Size(560, 325);
+            Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(pictureBox1);
             Controls.Add(emp_name);
@@ -164,6 +179,7 @@ namespace WinFormsApp4
         private string name_label_text;
         private PictureBox pictureBox1;
         private TextBox textBox1;
+        private Button button1;
     }
 
 }
