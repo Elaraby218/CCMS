@@ -133,6 +133,7 @@ namespace WinFormsApp4
             email_txtbox.Size = new Size(251, 48);
             email_txtbox.TabIndex = 9;
             email_txtbox.TextAlign = HorizontalAlignment.Center;
+            email_txtbox.TextChanged += email_txtbox_TextChanged;
             // 
             // label5
             // 
@@ -241,7 +242,7 @@ namespace WinFormsApp4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1018, 486);
+            ClientSize = new Size(822, 504);
             Controls.Add(button2);
             Controls.Add(pictureBox1);
             Controls.Add(label7);
@@ -259,6 +260,7 @@ namespace WinFormsApp4
             Controls.Add(label1);
             Controls.Add(name_txtbox);
             Controls.Add(button1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Sign_up_form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sign up ";

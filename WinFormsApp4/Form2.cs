@@ -11,13 +11,13 @@ namespace WinFormsApp4
     {
 
 
-        string source = "J:\\c#\\WinFormsApp4\\WinFormsApp4\\bin\\Debug\\net6.0-windows\\images\\userDEF.png";
+        string source = "";
         public Sign_up_form()
         {
             InitializeComponent();
             //  MessageBox.Show(Environment.CurrentDirectory);
             // default photo on pt3
-            pictureBox1.ImageLocation = source; 
+            pictureBox1.ImageLocation = source;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,37 +42,37 @@ namespace WinFormsApp4
             }
             else
             {
-                bool Validate = true; 
+                bool Validate = true;
 
-                if(ValidationMethods.NationalId(National_id_txtbox.Text))
+                if (ValidationMethods.NationalId(National_id_txtbox.Text))
                 {
                     MessageBox.Show("Wrong National ID", "Error"
                         , MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Validate = false;
                 }
 
-                if (!ValidationMethods.NationalIdLen(National_id_txtbox.Text))
+               else if (!ValidationMethods.NationalIdLen(National_id_txtbox.Text))
                 {
                     MessageBox.Show("National Id must be 14 Digits", "Error"
                         , MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Validate = false;
                 }
 
-                if (!ValidationMethods.PhoneNumber(phone_num_txtbox.Text))
+                else if(!ValidationMethods.PhoneNumber(phone_num_txtbox.Text))
                 {
                     MessageBox.Show("Phone number must be 11 digits ", "Error"
                         , MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Validate = false;
                 }
 
-                if (!ValidationMethods.Email(email_txtbox.Text))
+                else if(!ValidationMethods.Email(email_txtbox.Text))
                 {
-                    MessageBox.Show("The Email must be in form \"example@example.com\" " , "Error" 
-                        , MessageBoxButtons.OK , MessageBoxIcon.Error);
-                    Validate = false; 
+                    MessageBox.Show("The Email must be in form \"example@example.com\" ", "Error"
+                        , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Validate = false;
                 }
 
-                if (ValidationMethods.UserName(user_txtbox.Text))
+                else if(ValidationMethods.UserName(user_txtbox.Text))
                 {
                     MessageBox.Show("User name in use, please select another user name", "Error"
                         , MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -82,11 +82,16 @@ namespace WinFormsApp4
 
 
                 string confirmed_pass = this.cpass_txtbox.Text;
-                if (Validate && ValidationMethods.password(emp, confirmed_pass) )
+                if (Validate && ValidationMethods.password(emp, confirmed_pass))
                 {
-                    DataBaseMethods.AddEmployee(emp);
-                    Application.OpenForms[0].Show();
-                    this.Close();
+                    if(DataBaseMethods.AddEmployee(emp))
+                    {
+                        MessageBox.Show("Your Account Created successfully");
+                        Application.OpenForms[0].Show();
+                        this.Close();
+                    };
+
+
                 }
             }
 
@@ -110,7 +115,7 @@ namespace WinFormsApp4
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-           
+
             try
             {
                 openFileDialog1.Title = "Select your personal photo";
@@ -122,7 +127,7 @@ namespace WinFormsApp4
             {
                 MessageBox.Show("An error occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           // MessageBox.Show(imagelocation);
+            // MessageBox.Show(imagelocation);
 
         }
 
@@ -137,6 +142,11 @@ namespace WinFormsApp4
         }
 
         private void password_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void email_txtbox_TextChanged(object sender, EventArgs e)
         {
 
         }
