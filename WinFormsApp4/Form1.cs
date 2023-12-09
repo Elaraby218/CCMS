@@ -62,7 +62,7 @@ namespace WinFormsApp4
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-
+            
             if (db.Database.EnsureCreated())
             {
                 MessageBox.Show("connection doen");
@@ -101,6 +101,17 @@ namespace WinFormsApp4
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            forget_pas forget = new forget_pas();
+            forget.ShowDialog();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

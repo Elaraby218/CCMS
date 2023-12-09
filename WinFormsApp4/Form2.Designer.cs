@@ -57,6 +57,7 @@ namespace WinFormsApp4
             button4 = new Button();
             button3 = new Button();
             button5 = new Button();
+            checkBox1 = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -77,12 +78,12 @@ namespace WinFormsApp4
             // 
             // name_txtbox
             // 
-            name_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            name_txtbox.ForeColor = Color.SeaGreen;
+            name_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            name_txtbox.ForeColor = SystemColors.ActiveCaptionText;
             name_txtbox.Location = new Point(293, 147);
             name_txtbox.Multiline = true;
             name_txtbox.Name = "name_txtbox";
-            name_txtbox.Size = new Size(205, 30);
+            name_txtbox.Size = new Size(189, 30);
             name_txtbox.TabIndex = 3;
             name_txtbox.TextAlign = HorizontalAlignment.Center;
             name_txtbox.TextChanged += textBox1_TextChanged;
@@ -100,12 +101,12 @@ namespace WinFormsApp4
             // 
             // phone_num_txtbox
             // 
-            phone_num_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            phone_num_txtbox.ForeColor = Color.SeaGreen;
+            phone_num_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            phone_num_txtbox.ForeColor = SystemColors.ActiveCaptionText;
             phone_num_txtbox.Location = new Point(293, 293);
             phone_num_txtbox.Multiline = true;
             phone_num_txtbox.Name = "phone_num_txtbox";
-            phone_num_txtbox.Size = new Size(205, 30);
+            phone_num_txtbox.Size = new Size(189, 30);
             phone_num_txtbox.TabIndex = 5;
             phone_num_txtbox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -122,13 +123,13 @@ namespace WinFormsApp4
             // 
             // password_txtbox
             // 
-            password_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            password_txtbox.ForeColor = Color.SeaGreen;
+            password_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            password_txtbox.ForeColor = SystemColors.ActiveCaptionText;
             password_txtbox.Location = new Point(540, 217);
             password_txtbox.Multiline = true;
             password_txtbox.Name = "password_txtbox";
             password_txtbox.PasswordChar = '*';
-            password_txtbox.Size = new Size(169, 30);
+            password_txtbox.Size = new Size(182, 30);
             password_txtbox.TabIndex = 7;
             password_txtbox.TextAlign = HorizontalAlignment.Center;
             password_txtbox.TextChanged += password_txtbox_TextChanged;
@@ -147,11 +148,11 @@ namespace WinFormsApp4
             // email_txtbox
             // 
             email_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            email_txtbox.ForeColor = Color.SeaGreen;
+            email_txtbox.ForeColor = SystemColors.ActiveCaptionText;
             email_txtbox.Location = new Point(293, 362);
             email_txtbox.Multiline = true;
             email_txtbox.Name = "email_txtbox";
-            email_txtbox.Size = new Size(416, 30);
+            email_txtbox.Size = new Size(429, 30);
             email_txtbox.TabIndex = 9;
             email_txtbox.TextAlign = HorizontalAlignment.Center;
             email_txtbox.TextChanged += email_txtbox_TextChanged;
@@ -169,13 +170,13 @@ namespace WinFormsApp4
             // 
             // cpass_txtbox
             // 
-            cpass_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            cpass_txtbox.ForeColor = Color.SeaGreen;
+            cpass_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            cpass_txtbox.ForeColor = SystemColors.ActiveCaptionText;
             cpass_txtbox.Location = new Point(540, 293);
             cpass_txtbox.Multiline = true;
             cpass_txtbox.Name = "cpass_txtbox";
             cpass_txtbox.PasswordChar = '*';
-            cpass_txtbox.Size = new Size(169, 30);
+            cpass_txtbox.Size = new Size(182, 30);
             cpass_txtbox.TabIndex = 11;
             cpass_txtbox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -192,12 +193,12 @@ namespace WinFormsApp4
             // 
             // National_id_txtbox
             // 
-            National_id_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            National_id_txtbox.ForeColor = Color.SeaGreen;
+            National_id_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            National_id_txtbox.ForeColor = SystemColors.ActiveCaptionText;
             National_id_txtbox.Location = new Point(293, 217);
             National_id_txtbox.Multiline = true;
             National_id_txtbox.Name = "National_id_txtbox";
-            National_id_txtbox.Size = new Size(205, 30);
+            National_id_txtbox.Size = new Size(189, 30);
             National_id_txtbox.TabIndex = 13;
             National_id_txtbox.TextAlign = HorizontalAlignment.Center;
             National_id_txtbox.TextChanged += National_id_txtbox_TextChanged;
@@ -215,12 +216,12 @@ namespace WinFormsApp4
             // 
             // user_txtbox
             // 
-            user_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            user_txtbox.ForeColor = Color.SeaGreen;
+            user_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            user_txtbox.ForeColor = SystemColors.ActiveCaptionText;
             user_txtbox.Location = new Point(540, 147);
             user_txtbox.Multiline = true;
             user_txtbox.Name = "user_txtbox";
-            user_txtbox.Size = new Size(169, 30);
+            user_txtbox.Size = new Size(182, 30);
             user_txtbox.TabIndex = 15;
             user_txtbox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -260,7 +261,7 @@ namespace WinFormsApp4
             // 
             button1.BackColor = Color.SeaGreen;
             button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ButtonHighlight;
             button1.Location = new Point(413, 424);
             button1.Name = "button1";
@@ -364,11 +365,23 @@ namespace WinFormsApp4
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.ForeColor = Color.SeaGreen;
+            checkBox1.Location = new Point(293, 399);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(181, 19);
+            checkBox1.TabIndex = 25;
+            checkBox1.Text = "I Agree Terms and Conditions";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Sign_up_form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(816, 493);
+            Controls.Add(checkBox1);
             Controls.Add(label8);
             Controls.Add(panel1);
             Controls.Add(label7);
@@ -428,5 +441,6 @@ namespace WinFormsApp4
         private Button button5;
         private Button button3;
         private Button button4;
+        private CheckBox checkBox1;
     }
 }

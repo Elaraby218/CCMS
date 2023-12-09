@@ -16,7 +16,7 @@ namespace WinFormsApp4.data
     public string name { get; set; }
     [Column(TypeName = "char(11)")]
     public string phone_number { get; set; }
-    [Column(TypeName = "varchar(20)")]
+    [Column(TypeName = "varchar(30)")]
     public string email { get; set; }
     [Column(TypeName = "varchar(10)")]
     public string user_name { get; set; }

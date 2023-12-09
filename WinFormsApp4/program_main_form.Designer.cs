@@ -38,19 +38,31 @@ namespace WinFormsApp4
             pictureBox1 = new PictureBox();
             textBox1 = new TextBox();
             panel1 = new Panel();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
             panel2 = new Panel();
-            panel3 = new Panel();
-            label1 = new Label();
-            dataGridView1 = new DataGridView();
+            panel6 = new Panel();
             button4 = new Button();
             button5 = new Button();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            label1 = new Label();
+            panel3 = new Panel();
+            panel5 = new Panel();
+            panel4 = new Panel();
+            button6 = new Button();
+            button7 = new Button();
+            button8 = new Button();
+            button9 = new Button();
+            pictureBox2 = new PictureBox();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            panel6.SuspendLayout();
             panel3.SuspendLayout();
+            panel5.SuspendLayout();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -135,90 +147,21 @@ namespace WinFormsApp4
             panel1.Size = new Size(218, 553);
             panel1.TabIndex = 9;
             // 
-            // panel2
+            // button3
             // 
-            panel2.BackColor = Color.SeaGreen;
-            panel2.Controls.Add(pictureBox1);
-            panel2.Controls.Add(textBox1);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(218, 69);
-            panel2.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            panel3.Controls.Add(button5);
-            panel3.Controls.Add(button4);
-            panel3.Controls.Add(dataGridView1);
-            panel3.Cursor = Cursors.Cross;
-            panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(218, 0);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(608, 553);
-            panel3.TabIndex = 10;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(457, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(186, 45);
-            label1.TabIndex = 11;
-            label1.Text = "DashBoard";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(6, 67);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(599, 359);
-            dataGridView1.TabIndex = 0;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.SeaGreen;
-            button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = SystemColors.ButtonHighlight;
-            button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(97, 444);
-            button4.Name = "button4";
-            button4.Size = new Size(155, 61);
-            button4.TabIndex = 19;
-            button4.Text = "Add Student";
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.SeaGreen;
-            button5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = SystemColors.ButtonHighlight;
-            button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(347, 444);
-            button5.Name = "button5";
-            button5.Size = new Size(155, 61);
-            button5.TabIndex = 20;
-            button5.Text = "Remove Student";
-            button5.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.SeaGreen;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(22, 292);
-            button1.Name = "button1";
-            button1.Padding = new Padding(15, 0, 15, 0);
-            button1.Size = new Size(147, 48);
-            button1.TabIndex = 4;
-            button1.Text = "Setting";
-            button1.TextAlign = ContentAlignment.MiddleRight;
-            button1.UseVisualStyleBackColor = false;
+            button3.BackColor = Color.SeaGreen;
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = SystemColors.ButtonHighlight;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.ImageAlign = ContentAlignment.MiddleLeft;
+            button3.Location = new Point(22, 161);
+            button3.Name = "button3";
+            button3.Padding = new Padding(15, 0, 15, 0);
+            button3.Size = new Size(147, 48);
+            button3.TabIndex = 6;
+            button3.Text = "Account";
+            button3.TextAlign = ContentAlignment.MiddleRight;
+            button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -236,28 +179,195 @@ namespace WinFormsApp4
             button2.TextAlign = ContentAlignment.MiddleRight;
             button2.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // button1
             // 
-            button3.BackColor = Color.SeaGreen;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(22, 161);
-            button3.Name = "button3";
-            button3.Padding = new Padding(15, 0, 15, 0);
-            button3.Size = new Size(147, 48);
-            button3.TabIndex = 6;
-            button3.Text = "Account";
-            button3.TextAlign = ContentAlignment.MiddleRight;
-            button3.UseVisualStyleBackColor = false;
+            button1.BackColor = Color.SeaGreen;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(22, 292);
+            button1.Name = "button1";
+            button1.Padding = new Padding(15, 0, 15, 0);
+            button1.Size = new Size(147, 48);
+            button1.TabIndex = 4;
+            button1.Text = "Setting";
+            button1.TextAlign = ContentAlignment.MiddleRight;
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.SeaGreen;
+            panel2.Controls.Add(pictureBox1);
+            panel2.Controls.Add(textBox1);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(218, 69);
+            panel2.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(button4);
+            panel6.Controls.Add(button5);
+            panel6.Dock = DockStyle.Bottom;
+            panel6.Location = new Point(0, 448);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(608, 105);
+            panel6.TabIndex = 21;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.SeaGreen;
+            button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = SystemColors.ButtonHighlight;
+            button4.ImageAlign = ContentAlignment.MiddleLeft;
+            button4.Location = new Point(79, 30);
+            button4.Name = "button4";
+            button4.Size = new Size(155, 49);
+            button4.TabIndex = 19;
+            button4.Text = "Add Student";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.SeaGreen;
+            button5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.ForeColor = SystemColors.ButtonHighlight;
+            button5.ImageAlign = ContentAlignment.MiddleLeft;
+            button5.Location = new Point(329, 30);
+            button5.Name = "button5";
+            button5.Size = new Size(155, 49);
+            button5.TabIndex = 20;
+            button5.Text = "Remove Student";
+            button5.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.FlatStyle = FlatStyle.Flat;
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label1.Location = new Point(3, 4);
+            label1.Name = "label1";
+            label1.Size = new Size(186, 45);
+            label1.TabIndex = 11;
+            label1.Text = "DashBoard";
+            label1.Click += label1_Click;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(panel6);
+            panel3.Controls.Add(panel5);
+            panel3.Controls.Add(dataGridView1);
+            panel3.Cursor = Cursors.Cross;
+            panel3.Dock = DockStyle.Fill;
+            panel3.Location = new Point(218, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(608, 553);
+            panel3.TabIndex = 10;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(panel4);
+            panel5.Controls.Add(label1);
+            panel5.Controls.Add(pictureBox2);
+            panel5.Cursor = Cursors.Arrow;
+            panel5.Dock = DockStyle.Top;
+            panel5.Location = new Point(0, 0);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(608, 69);
+            panel5.TabIndex = 28;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(button6);
+            panel4.Controls.Add(button7);
+            panel4.Controls.Add(button8);
+            panel4.Controls.Add(button9);
+            panel4.Dock = DockStyle.Right;
+            panel4.Location = new Point(428, 0);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(180, 69);
+            panel4.TabIndex = 27;
+            panel4.Paint += panel4_Paint;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.SeaGreen;
+            button6.FlatStyle = FlatStyle.Popup;
+            button6.ForeColor = SystemColors.ControlDarkDark;
+            button6.Image = (Image)resources.GetObject("button6.Image");
+            button6.Location = new Point(137, 3);
+            button6.Name = "button6";
+            button6.Size = new Size(34, 30);
+            button6.TabIndex = 32;
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
+            // button7
+            // 
+            button7.BackColor = Color.SeaGreen;
+            button7.FlatStyle = FlatStyle.Popup;
+            button7.ForeColor = SystemColors.ButtonHighlight;
+            button7.Image = Properties.Resources.icons8_minus_24;
+            button7.Location = new Point(36, 3);
+            button7.Name = "button7";
+            button7.Size = new Size(34, 30);
+            button7.TabIndex = 31;
+            button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
+            // 
+            // button8
+            // 
+            button8.BackColor = Color.SeaGreen;
+            button8.FlatStyle = FlatStyle.Popup;
+            button8.ForeColor = SystemColors.ControlDarkDark;
+            button8.Image = (Image)resources.GetObject("button8.Image");
+            button8.Location = new Point(87, 3);
+            button8.Name = "button8";
+            button8.Size = new Size(34, 30);
+            button8.TabIndex = 30;
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
+            // 
+            // button9
+            // 
+            button9.BackColor = SystemColors.ControlDarkDark;
+            button9.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            button9.ForeColor = SystemColors.ButtonHighlight;
+            button9.Location = new Point(0, 381);
+            button9.Name = "button9";
+            button9.Size = new Size(221, 37);
+            button9.TabIndex = 6;
+            button9.Text = "Check Connection";
+            button9.UseVisualStyleBackColor = false;
+            button9.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.Design_a_modern_and_sleek_logo_for_a_Computer_Center_Management;
+            pictureBox2.Location = new Point(195, 0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(126, 69);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 34;
+            pictureBox2.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(608, 553);
+            dataGridView1.TabIndex = 0;
             // 
             // program_main_form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(826, 553);
-            Controls.Add(label1);
             Controls.Add(panel3);
             Controls.Add(panel1);
             Controls.Add(emp_name);
@@ -270,7 +380,12 @@ namespace WinFormsApp4
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel6.ResumeLayout(false);
             panel3.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -295,6 +410,14 @@ namespace WinFormsApp4
         private Button button3;
         private Button button2;
         private Button button1;
+        private Panel panel4;
+        private Button button6;
+        private Button button7;
+        private Button button8;
+        private Panel panel5;
+        private Button button9;
+        private Panel panel6;
+        private PictureBox pictureBox2;
     }
 
 }
