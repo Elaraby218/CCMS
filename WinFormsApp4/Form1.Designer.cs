@@ -35,7 +35,6 @@ namespace WinFormsApp4
             textBox2 = new TextBox();
             button1 = new Button();
             linkLabel1 = new LinkLabel();
-            button2 = new Button();
             label8 = new Label();
             label6 = new Label();
             label1 = new Label();
@@ -45,6 +44,7 @@ namespace WinFormsApp4
             button4 = new Button();
             button3 = new Button();
             button5 = new Button();
+            button2 = new Button();
             pictureBox2 = new PictureBox();
             panel2 = new Panel();
             panel3 = new Panel();
@@ -57,8 +57,8 @@ namespace WinFormsApp4
             // 
             // textBox1
             // 
-            textBox1.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.ForeColor = SystemColors.ActiveBorder;
+            textBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.ForeColor = SystemColors.ActiveCaptionText;
             textBox1.Location = new Point(291, 208);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
@@ -104,20 +104,6 @@ namespace WinFormsApp4
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Create Account?";
             linkLabel1.LinkClicked += linkLabel1_LinkClicked;
-            // 
-            // button2
-            // 
-            button2.BackColor = SystemColors.ControlDarkDark;
-            button2.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(0, 381);
-            button2.Name = "button2";
-            button2.Size = new Size(221, 37);
-            button2.TabIndex = 6;
-            button2.Text = "Check Connection";
-            button2.UseVisualStyleBackColor = false;
-            button2.Visible = false;
-            button2.Click += button2_Click_1;
             // 
             // label8
             // 
@@ -187,6 +173,7 @@ namespace WinFormsApp4
             panel1.Name = "panel1";
             panel1.Size = new Size(183, 501);
             panel1.TabIndex = 26;
+            panel1.Paint += panel1_Paint;
             // 
             // button4
             // 
@@ -226,6 +213,20 @@ namespace WinFormsApp4
             button5.TabIndex = 30;
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.ControlDarkDark;
+            button2.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.ButtonHighlight;
+            button2.Location = new Point(0, 381);
+            button2.Name = "button2";
+            button2.Size = new Size(221, 37);
+            button2.TabIndex = 6;
+            button2.Text = "Check Connection";
+            button2.UseVisualStyleBackColor = false;
+            button2.Visible = false;
+            button2.Click += button2_Click_1;
             // 
             // pictureBox2
             // 
@@ -292,7 +293,6 @@ namespace WinFormsApp4
         private TextBox textBox2;
         private Button button1;
         private LinkLabel linkLabel1;
-        private Button button2;
         private Label label8;
         private Label label6;
         private Label label1;
@@ -305,5 +305,6 @@ namespace WinFormsApp4
         private PictureBox pictureBox2;
         private Panel panel2;
         private Panel panel3;
+        private Button button2;
     }
 }

@@ -21,7 +21,7 @@ namespace WinFormsApp4
         public program_main_form(string employee_n_id)
         {
             InitializeComponent();
-          
+
             this.employee_n_id = employee_n_id;
             name_label_text = db.employees
                 .Where((x) => x.employee_n_id == employee_n_id).FirstOrDefault().name;
@@ -35,7 +35,7 @@ namespace WinFormsApp4
 
             if (cur_user_name == "admin")
             {
-                
+
             }
         }
 
@@ -90,6 +90,34 @@ namespace WinFormsApp4
         private void label2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("hello");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+                this.WindowState = FormWindowState.Normal;
+            else
+                this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

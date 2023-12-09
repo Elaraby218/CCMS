@@ -69,13 +69,31 @@ namespace WinFormsApp4
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if(textBox1.Text ==code)
+            if (textBox1.Text == code)
             {
                 MessageBox.Show("Enter the new Password");
             }
             else
                 MessageBox.Show("Not correct code");
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+                this.WindowState = FormWindowState.Normal;
+            else
+                this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
