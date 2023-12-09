@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WinFormsApp4.data;
 
@@ -10,9 +11,10 @@ using WinFormsApp4.data;
 namespace WinFormsApp4.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231209040416_emplyee")]
+    partial class emplyee
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,7 +29,7 @@ namespace WinFormsApp4.Migrations
                         .HasColumnType("varchar(15)");
 
                     b.Property<string>("email")
-                        .HasColumnType("varchar(30)");
+                        .HasColumnType("varchar(20)");
 
                     b.Property<string>("name")
                         .HasColumnType("varchar(20)");

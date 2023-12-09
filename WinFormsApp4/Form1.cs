@@ -102,5 +102,11 @@ namespace WinFormsApp4
         {
             this.Close();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            forget_pas forget=new forget_pas();
+            forget.Show();
+        }
     }
 }
