@@ -30,22 +30,33 @@ namespace WinFormsApp4
         AppDbContext db = AppDbContext.Instance;
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Page));
             textBox1 = new TextBox();
             textBox2 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
             button1 = new Button();
             linkLabel1 = new LinkLabel();
             button2 = new Button();
+            label8 = new Label();
+            label6 = new Label();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            linkLabel2 = new LinkLabel();
+            panel1 = new Panel();
+            button4 = new Button();
+            button3 = new Button();
+            button5 = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(270, 108);
+            textBox1.ForeColor = SystemColors.ActiveBorder;
+            textBox1.Location = new Point(270, 209);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(251, 48);
+            textBox1.Size = new Size(242, 30);
             textBox1.TabIndex = 0;
             textBox1.TextAlign = HorizontalAlignment.Center;
             textBox1.TextChanged += textBox1_TextChanged;
@@ -53,56 +64,39 @@ namespace WinFormsApp4
             // textBox2
             // 
             textBox2.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(270, 217);
+            textBox2.Location = new Point(270, 273);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(251, 48);
+            textBox2.Size = new Size(242, 30);
             textBox2.TabIndex = 1;
             textBox2.TextAlign = HorizontalAlignment.Center;
             textBox2.TextChanged += textBox2_TextChanged;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(318, 68);
-            label1.Name = "label1";
-            label1.Size = new Size(158, 37);
-            label1.TabIndex = 2;
-            label1.Text = "User Name";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(318, 177);
-            label2.Name = "label2";
-            label2.Size = new Size(139, 37);
-            label2.TabIndex = 3;
-            label2.Text = "Password";
-            // 
             // button1
             // 
-            button1.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(338, 311);
+            button1.BackColor = Color.SeaGreen;
+            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(270, 354);
             button1.Name = "button1";
-            button1.Size = new Size(119, 37);
+            button1.Size = new Size(242, 37);
             button1.TabIndex = 4;
             button1.Text = "Login";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            linkLabel1.Location = new Point(307, 379);
+            linkLabel1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            linkLabel1.LinkColor = Color.SeaGreen;
+            linkLabel1.Location = new Point(270, 394);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(179, 21);
+            linkLabel1.Size = new Size(102, 17);
             linkLabel1.TabIndex = 5;
             linkLabel1.TabStop = true;
-            linkLabel1.Text = "Do not have account ?";
+            linkLabel1.Text = "Create Account?";
             linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // button2
@@ -110,7 +104,7 @@ namespace WinFormsApp4
             button2.BackColor = SystemColors.ControlDarkDark;
             button2.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(567, 401);
+            button2.Location = new Point(0, 381);
             button2.Name = "button2";
             button2.Size = new Size(221, 37);
             button2.TabIndex = 6;
@@ -119,23 +113,136 @@ namespace WinFormsApp4
             button2.Visible = false;
             button2.Click += button2_Click_1;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.ForeColor = Color.FromArgb(64, 64, 64);
+            label8.Location = new Point(293, 145);
+            label8.Name = "label8";
+            label8.Size = new Size(219, 30);
+            label8.TabIndex = 21;
+            label8.Text = "Login to Your Account";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.SeaGreen;
+            label6.Location = new Point(270, 190);
+            label6.Name = "label6";
+            label6.Size = new Size(75, 16);
+            label6.TabIndex = 23;
+            label6.Text = "User Name";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.SeaGreen;
+            label1.Location = new Point(270, 254);
+            label1.Name = "label1";
+            label1.Size = new Size(70, 16);
+            label1.TabIndex = 22;
+            label1.Text = "Password";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.SeaGreen;
+            pictureBox1.Image = Properties.Resources.icons8_person_642;
+            pictureBox1.Location = new Point(338, 23);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(132, 119);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 24;
+            pictureBox1.TabStop = false;
+            // 
+            // linkLabel2
+            // 
+            linkLabel2.AutoSize = true;
+            linkLabel2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            linkLabel2.LinkColor = Color.SeaGreen;
+            linkLabel2.Location = new Point(400, 394);
+            linkLabel2.Name = "linkLabel2";
+            linkLabel2.Size = new Size(112, 17);
+            linkLabel2.TabIndex = 25;
+            linkLabel2.TabStop = true;
+            linkLabel2.Text = "Forget Password?";
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(button4);
+            panel1.Controls.Add(button3);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(button5);
+            panel1.Dock = DockStyle.Right;
+            panel1.Location = new Point(646, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(183, 501);
+            panel1.TabIndex = 26;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.SeaGreen;
+            button4.FlatStyle = FlatStyle.Popup;
+            button4.ForeColor = SystemColors.ControlDarkDark;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.Location = new Point(137, 3);
+            button4.Name = "button4";
+            button4.Size = new Size(34, 30);
+            button4.TabIndex = 32;
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.SeaGreen;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.ForeColor = SystemColors.ButtonHighlight;
+            button3.Image = Properties.Resources.icons8_minus_24;
+            button3.Location = new Point(36, 3);
+            button3.Name = "button3";
+            button3.Size = new Size(34, 30);
+            button3.TabIndex = 31;
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.SeaGreen;
+            button5.FlatStyle = FlatStyle.Popup;
+            button5.ForeColor = SystemColors.ControlDarkDark;
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.Location = new Point(87, 3);
+            button5.Name = "button5";
+            button5.Size = new Size(34, 30);
+            button5.TabIndex = 30;
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
+            // 
             // Login_Page
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button2);
+            ClientSize = new Size(829, 501);
+            Controls.Add(panel1);
+            Controls.Add(linkLabel2);
+            Controls.Add(pictureBox1);
+            Controls.Add(label6);
+            Controls.Add(label1);
+            Controls.Add(label8);
             Controls.Add(linkLabel1);
             Controls.Add(button1);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Login_Page";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Log in";
             Load += Login_Page_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -144,10 +251,17 @@ namespace WinFormsApp4
 
         private TextBox textBox1;
         private TextBox textBox2;
-        private Label label1;
-        private Label label2;
         private Button button1;
         private LinkLabel linkLabel1;
         private Button button2;
+        private Label label8;
+        private Label label6;
+        private Label label1;
+        private PictureBox pictureBox1;
+        private LinkLabel linkLabel2;
+        private Panel panel1;
+        private Button button4;
+        private Button button3;
+        private Button button5;
     }
 }
