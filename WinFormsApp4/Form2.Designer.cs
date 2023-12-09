@@ -368,8 +368,7 @@ namespace WinFormsApp4
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.ForeColor = Color.SeaGreen;
-            checkBox1.Location = new Point(293, 399);
+            checkBox1.Location = new Point(304, 402);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(181, 19);
             checkBox1.TabIndex = 25;
