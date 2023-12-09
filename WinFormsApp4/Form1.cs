@@ -7,7 +7,7 @@ namespace WinFormsApp4
     public partial class Login_Page : Form
     {
         public Login_Page()
-        {     
+        {
             InitializeComponent();
         }
 
@@ -81,6 +81,26 @@ namespace WinFormsApp4
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            if (this.WindowState == FormWindowState.Maximized)
+                this.WindowState = FormWindowState.Normal;
+            else
+                this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
