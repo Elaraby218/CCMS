@@ -57,6 +57,7 @@
             email_txtbox.Size = new Size(190, 30);
             email_txtbox.TabIndex = 11;
             email_txtbox.TextAlign = HorizontalAlignment.Center;
+            email_txtbox.TextChanged += email_txtbox_TextChanged;
             // 
             // label3
             // 

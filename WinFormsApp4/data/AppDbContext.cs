@@ -9,11 +9,12 @@ namespace WinFormsApp4.data
         {
             get
             {
+                
                 if (_instance == null)
                 {
                     _instance = new AppDbContext();
+                    _instance.Database.EnsureCreated();
                 }
-               // Console.WriteLine("AppDbContext.Instance");
                 return _instance;
             }
         }
@@ -21,9 +22,8 @@ namespace WinFormsApp4.data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-114872S;Initial Catalog=SSMS;Integrated Security=True;Connect Timeout=30;Encry" +
-                "" +
-                "pt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-1ULGF16\\SQLEXPRESS;Initial Catalog=SSMS;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+            // optionsBuilder.("Data Source=mydatabase.db");
         }
     }
 }

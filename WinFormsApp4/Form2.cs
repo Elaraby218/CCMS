@@ -44,7 +44,7 @@ namespace WinFormsApp4
             {
                 bool Validate = true;
 
-                if (ValidationMethods.NationalId(National_id_txtbox.Text))
+                if (ValidationMethods.EmpNationalId(National_id_txtbox.Text))
                 {
                     MessageBox.Show("Wrong National ID", "Error"
                         , MessageBoxButtons.OK, MessageBoxIcon.Error);

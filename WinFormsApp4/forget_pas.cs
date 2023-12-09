@@ -95,5 +95,10 @@ namespace WinFormsApp4
         {
             this.Close();
         }
+
+        private void email_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

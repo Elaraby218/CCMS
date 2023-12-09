@@ -7,11 +7,14 @@ using System.Diagnostics.Eventing.Reader;
 namespace funcs
 {
     // this is mohamed ramadan elaryb branch dont touch it 
-    
+
     public static class ValidationMethods
     {
-
-       
+        public static bool AddStudent(StudentsTable student)
+        {
+            DataBaseMethods.AddStudent(student);
+            return true;
+        }
         public static List<string> Employee(EmployeeTable emp)
         {
             List<string> empty_ent = new List<string>();
@@ -36,7 +39,7 @@ namespace funcs
         public static bool password(EmployeeTable emp, string confirmed_pass)
         {
             if (emp.password == confirmed_pass)
-            {               
+            {
                 //MessageBox.Show("Done", "Registration complete", MessageBoxButtons.OK,
                 //MessageBoxIcon.Information);
                 return true;
@@ -63,19 +66,21 @@ namespace funcs
             MessageBox.Show("User Not Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             return false;
         }
-        public static bool CopyImage(string source , string usernow , EmployeeTable emp)
+        public static bool CopyImage(string source, string usernow, EmployeeTable emp)
         {
             if (!string.IsNullOrWhiteSpace(source))
             {
-                  string dest = Environment.CurrentDirectory + "\\images" +
-                               $"\\{usernow}.jpg";
+                string dest = Environment.CurrentDirectory + "\\images" +
+                             $"\\{usernow}.jpg";
                 File.Copy(source, dest);
                 emp.photo_path = dest;
-       
+
                 return true;
-               
-            } else { 
-                
+
+            }
+            else
+            {
+
                 MessageBox.Show("Select a photo");
                 return false;
             }
@@ -83,32 +88,35 @@ namespace funcs
         public static bool Email(string email)
         {
             string expectedEmailFormat = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
-            return (Regex.IsMatch(email, expectedEmailFormat) == true); 
+            return (Regex.IsMatch(email, expectedEmailFormat) == true);
         }
         public static bool UserName(string username)
         {
             AppDbContext db = new AppDbContext();
             var IsUserFound = db.employees.
-                   Where(a => a.user_name == username).FirstOrDefault();            
-                   return (IsUserFound != null ); 
-          
+                   Where(a => a.user_name == username).FirstOrDefault();
+            return (IsUserFound != null);
+
         }
         public static bool NationalIdLen(string id)
-        {           
-            return ( (id.Length == 14) ); 
-        }
-        public static bool NationalId(string id)
         {
-            AppDbContext db = new AppDbContext();
-            var IsUserFound = db.employees.
-                Where(a => a.employee_n_id == id).FirstOrDefault();
-         
-            return ((IsUserFound != null)); 
+            return ((id.Length == 14));
+        }
+        public static bool EmpNationalId(string id)
+        {
+            EmployeeTable IsUserFound = DataBaseMethods.getEmployee(id);
+            return ((IsUserFound != null));
+        }
+        public static bool StudentNationalId(string id)
+        {
+            StudentsTable IsUserFound = DataBaseMethods.getStudent(id);
+            return ((IsUserFound != null));
         }
         public static bool PhoneNumber(string Number)
         {
             return (Number.Length == 11);
         }
+
 
 
     }
@@ -117,29 +125,77 @@ namespace funcs
         static AppDbContext db = AppDbContext.Instance;
         public static bool AddEmployee(EmployeeTable emp)
         {
-                       
-              
-            if(ValidationMethods.CopyImage(emp.photo_path, emp.user_name,emp))
+
+
+            if (ValidationMethods.CopyImage(emp.photo_path, emp.user_name, emp))
             {
                 db.employees.Add(emp);
                 db.SaveChanges();
-               return true;
+                return true;
             }
             else return false;
         }
-        public static bool Is_Employee(string user_name, string password)
+        public static StudentsTable getStudent(string id)
         {
-            var emp = db.employees.
-               Where(a => a.user_name == user_name && a.password == password).FirstOrDefault();
-            return (emp != null);
+            return db.students.Where((x) => x.student_n_id == id).FirstOrDefault();
+        }
+        public static EmployeeTable getEmployee(string id)
+        {
+            return db.employees.Where((x) => x.employee_n_id == id).FirstOrDefault();
         }
         public static string getEmpName(string User_name)
         {
             return (string)db.employees.Where((x) => x.user_name == User_name).Select((x) => x.name).FirstOrDefault();
         }
-
+        public static bool Is_Employee(string user_name, string password)
+        {
+            return db.employees.Any((x) => x.user_name == user_name && x.password == password);
+        }
+        public static void AddToInStudent(string id)
+        {
+            db.in_students.Add(new InStudentsTable { student_n_id = id, in_time = DateTime.Now.ToString("hh:mm"), });
+            db.SaveChanges();
+            MessageBox.Show("Successfully added", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        public static List<List<string>> getInView()
+        {
+            return db.students
+            .Join(db.in_students, (x) => x.student_n_id, (y) => y.student_n_id, (x, y) => new
+            List<string>(){
+                x.student_n_id,
+                x.name,
+                x.faculty,
+                x.level.ToString(),
+                y.in_time,
+            }).ToList();
+        }
+        public static void AddStudent(StudentsTable student)
+        {
+            db.students.Add(student);
+            db.SaveChanges();
+            MessageBox.Show("Successfully added", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        public static void StudentOut(string id, string employee_id)
+        {
+            var student = db.in_students.Where((x) => x.student_n_id == id).FirstOrDefault();
+            db.in_students.Remove(student);
+            db.history.Add(new HistoryTable
+            {
+                student_n_id = id,
+                time_in = student.in_time,
+                time_out = DateTime.Now.ToString("hh:mm"),
+                date = DateTime.Now.ToString("dd/MM/yyyy"),
+                employee_n_id = employee_id,
+                paper_count = student.paper_printed,
+                cost = student.paper_printed * 0.5
+            });
+            db.SaveChanges();
+            MessageBox.Show("Successfully added", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
     }
 
-    
+
 }
+
+
