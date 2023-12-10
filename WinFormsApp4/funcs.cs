@@ -72,7 +72,11 @@ namespace funcs
             {
                 string dest = Environment.CurrentDirectory + "\\images" +
                              $"\\{usernow}.jpg";
-                File.Copy(source, dest);
+                try
+                {
+                    File.Copy(source, dest);
+                }
+                catch { }
                 emp.photo_path = dest;
 
                 return true;
