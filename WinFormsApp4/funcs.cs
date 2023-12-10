@@ -66,6 +66,9 @@ namespace funcs
             MessageBox.Show("User Not Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             return false;
         }
+
+
+
         public static bool CopyImage(string source, string usernow, EmployeeTable emp)
         {
             if (!string.IsNullOrWhiteSpace(source))
@@ -74,6 +77,10 @@ namespace funcs
                              $"\\{usernow}.jpg";
                 try
                 {
+
+                    if (File.Exists(dest)) // To Avoid errors
+                        File.Delete(dest);
+
                     File.Copy(source, dest);
                 }
                 catch { }
@@ -121,46 +128,69 @@ namespace funcs
             return (Number.Length == 11);
         }
 
+        public static bool IsRightPass(EmployeeTable emp, string password)
+        {
+            return (emp.password == password);
+        }
 
+        public static bool IsImageFile(string filePath)
+        {
+            string extension = Path.GetExtension(filePath)?.ToLowerInvariant();
+            if (extension != null)
+            {
+                string[] allowedExtensions = { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+                return allowedExtensions.Contains(extension);
+            }
+            return false;
+        }
 
     }
+
+
     public static class DataBaseMethods
     {
         static AppDbContext db = AppDbContext.Instance;
         public static bool AddEmployee(EmployeeTable emp)
         {
-
-
-            if (ValidationMethods.CopyImage(emp.photo_path, emp.user_name, emp))
-            {
-                db.employees.Add(emp);
-                db.SaveChanges();
-                return true;
-            }
-            else return false;
+            //if (ValidationMethods.CopyImage(emp.photo_path, emp.user_name, emp)) // Edited by Abbas & Araby, Cuz image copy should be indpendent
+            //{
+            db.employees.Add(emp);
+            db.SaveChanges();
+            return true;
+            //}
+            //else return false;
         }
+
+
         public static StudentsTable getStudent(string id)
         {
             return db.students.Where((x) => x.student_n_id == id).FirstOrDefault();
         }
+
+
         public static EmployeeTable getEmployee(string id)
         {
             return db.employees.Where((x) => x.employee_n_id == id).FirstOrDefault();
         }
+
+
         public static string getEmpName(string User_name)
         {
             return (string)db.employees.Where((x) => x.user_name == User_name).Select((x) => x.name).FirstOrDefault();
         }
+
         public static bool Is_Employee(string user_name, string password)
         {
             return db.employees.Any((x) => x.user_name == user_name && x.password == password);
         }
+
         public static void AddToInStudent(string id)
         {
             db.in_students.Add(new InStudentsTable { student_n_id = id, in_time = DateTime.Now.ToString("hh:mm"), });
             db.SaveChanges();
             MessageBox.Show("Successfully added", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
         public static List<List<string>> getInView()
         {
             return db.students
@@ -173,16 +203,17 @@ namespace funcs
                 y.in_time,
             }).ToList();
         }
+
         public static void AddStudent(StudentsTable student)
         {
             db.students.Add(student);
             db.SaveChanges();
             MessageBox.Show("Successfully added", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
         public static void StudentOut(string id, string employee_id)
         {
             var student = db.in_students.Where((x) => x.student_n_id == id).FirstOrDefault();
-            db.in_students.Remove(student);
             db.history.Add(new HistoryTable
             {
                 student_n_id = id,
@@ -196,6 +227,42 @@ namespace funcs
             db.SaveChanges();
             MessageBox.Show("Successfully added", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        public static EmployeeTable GetEmlpyeeByID(string id)
+        {
+            var emp = db.employees
+                .Where((x) => x.employee_n_id == id)
+                .Select((x) => x)
+                .FirstOrDefault();
+            return emp;
+        } // Repeated 
+
+        public static void DeleteEmployeeById(string id) // Delete
+        {
+            var emp = db.employees
+                .Where((x) => x.employee_n_id == id)
+                .Select((x) => x)
+                .FirstOrDefault();
+            db.employees.Remove(emp);
+            db.SaveChanges();
+        }
+
+        public static void UpdateEmployeeById(string id, EmployeeTable tempEmp) // Update
+        {
+            var emp = db.employees.FirstOrDefault(x => x.employee_n_id == id);
+            if (emp != null)
+            {
+                emp.name = tempEmp.name;
+                emp.phone_number = tempEmp.phone_number;
+                emp.email = tempEmp.email;
+                emp.user_name = tempEmp.user_name;
+                emp.photo_path = tempEmp.photo_path;
+                emp.password = tempEmp.password;
+
+                db.SaveChanges();
+            }
+        }
+
 
     }
 

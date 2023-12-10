@@ -148,6 +148,7 @@ namespace WinFormsApp4
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 24;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // linkLabel2
             // 
@@ -173,7 +174,7 @@ namespace WinFormsApp4
             panel1.Name = "panel1";
             panel1.Size = new Size(183, 501);
             panel1.TabIndex = 26;
-            panel1.Paint += panel1_Paint;
+            //panel1.Paint += panel1_Paint;
             // 
             // button4
             // 
