@@ -64,6 +64,8 @@ namespace WinFormsApp4
 
             // Call the UpdateEmployeeById function
             DataBaseMethods.UpdateEmployeeById(updatedEmployee.employee_n_id, updatedEmployee);
+            Application.OpenForms[1].Show();
+            this.Hide();
 
         }
 

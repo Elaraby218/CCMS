@@ -12,6 +12,7 @@ namespace WinFormsApp4
             writer.Flush();
         }
 
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
