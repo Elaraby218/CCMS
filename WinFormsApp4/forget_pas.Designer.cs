@@ -43,6 +43,8 @@
             button6 = new Button();
             button7 = new Button();
             button8 = new Button();
+            button2 = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel4.SuspendLayout();
             SuspendLayout();
@@ -97,7 +99,7 @@
             // 
             textBox2.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.ForeColor = Color.SeaGreen;
-            textBox2.Location = new Point(39, 254);
+            textBox2.Location = new Point(48, 307);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(190, 30);
@@ -108,7 +110,7 @@
             // 
             textBox3.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox3.ForeColor = Color.SeaGreen;
-            textBox3.Location = new Point(39, 310);
+            textBox3.Location = new Point(48, 363);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(190, 30);
@@ -120,7 +122,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.SeaGreen;
-            label5.Location = new Point(39, 235);
+            label5.Location = new Point(48, 288);
             label5.Name = "label5";
             label5.Size = new Size(70, 16);
             label5.TabIndex = 18;
@@ -131,7 +133,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.SeaGreen;
-            label2.Location = new Point(39, 291);
+            label2.Location = new Point(48, 344);
             label2.Name = "label2";
             label2.Size = new Size(132, 16);
             label2.TabIndex = 19;
@@ -210,11 +212,39 @@
             button8.UseVisualStyleBackColor = false;
             button8.Click += button8_Click;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.SeaGreen;
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.ForeColor = SystemColors.ButtonHighlight;
+            button2.Location = new Point(93, 399);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 36;
+            button2.Text = "Change";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.SeaGreen;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.ForeColor = SystemColors.ButtonHighlight;
+            button3.Location = new Point(84, 223);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 23);
+            button3.TabIndex = 37;
+            button3.Text = "Submit";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
             // forget_pas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(719, 477);
+            Controls.Add(button3);
+            Controls.Add(button2);
             Controls.Add(pictureBox2);
             Controls.Add(panel4);
             Controls.Add(button1);
@@ -252,5 +282,7 @@
         private Button button6;
         private Button button7;
         private Button button8;
+        private Button button2;
+        private Button button3;
     }
 }
