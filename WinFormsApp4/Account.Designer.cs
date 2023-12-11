@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Account));
             button2 = new Button();
             openFileDialog1 = new OpenFileDialog();
-            checkBox1 = new CheckBox();
             button4 = new Button();
             button3 = new Button();
             label8 = new Label();
@@ -58,6 +57,8 @@
             name_txtbox = new TextBox();
             button7 = new Button();
             panel2 = new Panel();
+            button1 = new Button();
+            button8 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel1.SuspendLayout();
@@ -67,28 +68,14 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.LightGreen;
-            button2.Location = new Point(552, 448);
+            button2.Location = new Point(0, 0);
             button2.Name = "button2";
-            button2.Size = new Size(184, 40);
-            button2.TabIndex = 7;
-            button2.Text = "Delete Account";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 47;
             // 
             // openFileDialog1
             // 
             openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(304, 398);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(181, 19);
-            checkBox1.TabIndex = 44;
-            checkBox1.Text = "I Agree Terms and Conditions";
-            checkBox1.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -101,6 +88,7 @@
             button4.Size = new Size(34, 30);
             button4.TabIndex = 29;
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -113,6 +101,7 @@
             button3.Size = new Size(34, 30);
             button3.TabIndex = 28;
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // label8
             // 
@@ -154,7 +143,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(266, 545);
+            panel1.Size = new Size(266, 526);
             panel1.TabIndex = 41;
             // 
             // button5
@@ -198,6 +187,7 @@
             button6.Size = new Size(34, 30);
             button6.TabIndex = 27;
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // label7
             // 
@@ -257,6 +247,7 @@
             // 
             // cpass_txtbox
             // 
+            cpass_txtbox.AllowDrop = true;
             cpass_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             cpass_txtbox.ForeColor = SystemColors.ActiveCaptionText;
             cpass_txtbox.Location = new Point(540, 289);
@@ -289,6 +280,7 @@
             email_txtbox.Size = new Size(429, 30);
             email_txtbox.TabIndex = 33;
             email_txtbox.TextAlign = HorizontalAlignment.Center;
+            email_txtbox.TextChanged += email_txtbox_TextChanged;
             // 
             // label3
             // 
@@ -361,11 +353,11 @@
             // 
             button7.BackColor = Color.SeaGreen;
             button7.FlatStyle = FlatStyle.Popup;
-            button7.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button7.Font = new Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             button7.ForeColor = SystemColors.Control;
-            button7.Location = new Point(304, 448);
+            button7.Location = new Point(272, 463);
             button7.Name = "button7";
-            button7.Size = new Size(208, 35);
+            button7.Size = new Size(144, 35);
             button7.TabIndex = 26;
             button7.Text = "Save Changes";
             button7.UseVisualStyleBackColor = false;
@@ -378,17 +370,46 @@
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(button6);
             panel2.Dock = DockStyle.Right;
-            panel2.Location = new Point(783, 0);
+            panel2.Location = new Point(680, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(156, 545);
+            panel2.Size = new Size(156, 526);
             panel2.TabIndex = 43;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(192, 0, 0);
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.Control;
+            button1.Location = new Point(440, 463);
+            button1.Name = "button1";
+            button1.Size = new Size(144, 35);
+            button1.TabIndex = 45;
+            button1.Text = "Delete Acount";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // button8
+            // 
+            button8.BackColor = Color.FromArgb(255, 128, 0);
+            button8.FlatStyle = FlatStyle.Popup;
+            button8.Font = new Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button8.ForeColor = SystemColors.Control;
+            button8.Location = new Point(605, 463);
+            button8.Name = "button8";
+            button8.Size = new Size(144, 35);
+            button8.TabIndex = 46;
+            button8.Text = "Discard changes";
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // Account
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(939, 545);
-            Controls.Add(checkBox1);
+            ClientSize = new Size(836, 526);
+            Controls.Add(button8);
+            Controls.Add(button1);
             Controls.Add(label8);
             Controls.Add(panel1);
             Controls.Add(label7);
@@ -408,6 +429,7 @@
             Controls.Add(button7);
             Controls.Add(panel2);
             Controls.Add(button2);
+            FormBorderStyle = FormBorderStyle.None;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Account";
@@ -424,7 +446,6 @@
         #endregion
         private Button button2;
         private OpenFileDialog openFileDialog1;
-        private CheckBox checkBox1;
         private Button button4;
         private Button button3;
         private Label label8;
@@ -452,5 +473,7 @@
         private TextBox phone_num_txtbox;
         private TextBox name_txtbox;
         private TextBox user_txtbox;
+        private Button button1;
+        private Button button8;
     }
 }

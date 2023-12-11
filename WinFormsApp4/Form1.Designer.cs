@@ -64,7 +64,6 @@ namespace WinFormsApp4
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(242, 30);
             textBox1.TabIndex = 0;
-            textBox1.TextAlign = HorizontalAlignment.Center;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
@@ -76,7 +75,6 @@ namespace WinFormsApp4
             textBox2.PasswordChar = '*';
             textBox2.Size = new Size(242, 30);
             textBox2.TabIndex = 1;
-            textBox2.TextAlign = HorizontalAlignment.Center;
             textBox2.TextChanged += textBox2_TextChanged;
             // 
             // button1
@@ -174,7 +172,6 @@ namespace WinFormsApp4
             panel1.Name = "panel1";
             panel1.Size = new Size(183, 501);
             panel1.TabIndex = 26;
-            //panel1.Paint += panel1_Paint;
             // 
             // button4
             // 

@@ -75,15 +75,13 @@ namespace funcs
             {
                 string dest = Environment.CurrentDirectory + "\\images" +
                              $"\\{usernow}.jpg";
+
                 try
                 {
-
-                    if (File.Exists(dest)) // To Avoid errors
-                        File.Delete(dest);
-
                     File.Copy(source, dest);
                 }
                 catch { }
+            
                 emp.photo_path = dest;
 
                 return true;

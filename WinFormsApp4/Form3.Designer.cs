@@ -28,20 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(New_stu_reg));
             name_txtbox = new TextBox();
             Faculty_txtbox = new TextBox();
             N_id_txtbox = new TextBox();
             Level_txtbox = new TextBox();
             name_lbl = new Label();
-            Level_lbl = new Label();
-            N_id_lbl = new Label();
-            Faculty_lbl = new Label();
-            add_new_stu_reg_btn = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            Reg_newstudbtn = new Button();
+            pictureBox2 = new PictureBox();
+            panel1 = new Panel();
+            button4 = new Button();
+            button3 = new Button();
+            button5 = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // name_txtbox
             // 
-            name_txtbox.Location = new Point(153, 95);
+            name_txtbox.Location = new Point(70, 41);
             name_txtbox.Multiline = true;
             name_txtbox.Name = "name_txtbox";
             name_txtbox.Size = new Size(235, 42);
@@ -50,7 +58,7 @@
             // 
             // Faculty_txtbox
             // 
-            Faculty_txtbox.Location = new Point(519, 95);
+            Faculty_txtbox.Location = new Point(70, 209);
             Faculty_txtbox.Multiline = true;
             Faculty_txtbox.Name = "Faculty_txtbox";
             Faculty_txtbox.Size = new Size(235, 42);
@@ -59,7 +67,7 @@
             // 
             // N_id_txtbox
             // 
-            N_id_txtbox.Location = new Point(153, 200);
+            N_id_txtbox.Location = new Point(70, 120);
             N_id_txtbox.Multiline = true;
             N_id_txtbox.Name = "N_id_txtbox";
             N_id_txtbox.Size = new Size(235, 42);
@@ -68,7 +76,7 @@
             // 
             // Level_txtbox
             // 
-            Level_txtbox.Location = new Point(519, 200);
+            Level_txtbox.Location = new Point(70, 288);
             Level_txtbox.Multiline = true;
             Level_txtbox.Name = "Level_txtbox";
             Level_txtbox.Size = new Size(235, 42);
@@ -78,65 +86,146 @@
             // name_lbl
             // 
             name_lbl.AutoSize = true;
-            name_lbl.Location = new Point(94, 111);
+            name_lbl.BackColor = Color.Transparent;
+            name_lbl.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            name_lbl.ForeColor = Color.SeaGreen;
+            name_lbl.Location = new Point(70, 22);
             name_lbl.Name = "name_lbl";
-            name_lbl.Size = new Size(38, 15);
+            name_lbl.Size = new Size(51, 20);
             name_lbl.TabIndex = 4;
-            name_lbl.Text = "label1";
+            name_lbl.Text = "Name";
             // 
-            // Level_lbl
+            // label1
             // 
-            Level_lbl.AutoSize = true;
-            Level_lbl.Location = new Point(466, 217);
-            Level_lbl.Name = "Level_lbl";
-            Level_lbl.Size = new Size(38, 15);
-            Level_lbl.TabIndex = 5;
-            Level_lbl.Text = "label2";
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.SeaGreen;
+            label1.Location = new Point(70, 186);
+            label1.Name = "label1";
+            label1.Size = new Size(59, 20);
+            label1.TabIndex = 9;
+            label1.Text = "Faculty";
             // 
-            // N_id_lbl
+            // label2
             // 
-            N_id_lbl.AutoSize = true;
-            N_id_lbl.Location = new Point(94, 217);
-            N_id_lbl.Name = "N_id_lbl";
-            N_id_lbl.Size = new Size(38, 15);
-            N_id_lbl.TabIndex = 6;
-            N_id_lbl.Text = "label3";
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.SeaGreen;
+            label2.Location = new Point(70, 103);
+            label2.Name = "label2";
+            label2.Size = new Size(25, 20);
+            label2.TabIndex = 10;
+            label2.Text = "ID";
             // 
-            // Faculty_lbl
+            // label3
             // 
-            Faculty_lbl.AutoSize = true;
-            Faculty_lbl.Location = new Point(466, 111);
-            Faculty_lbl.Name = "Faculty_lbl";
-            Faculty_lbl.Size = new Size(38, 15);
-            Faculty_lbl.TabIndex = 7;
-            Faculty_lbl.Text = "label4";
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.SeaGreen;
+            label3.Location = new Point(70, 265);
+            label3.Name = "label3";
+            label3.Size = new Size(45, 20);
+            label3.TabIndex = 11;
+            label3.Text = "Level";
             // 
-            // add_new_stu_reg_btn
+            // Reg_newstudbtn
             // 
-            add_new_stu_reg_btn.Location = new Point(340, 351);
-            add_new_stu_reg_btn.Name = "add_new_stu_reg_btn";
-            add_new_stu_reg_btn.Size = new Size(188, 40);
-            add_new_stu_reg_btn.TabIndex = 8;
-            add_new_stu_reg_btn.Text = "button1";
-            add_new_stu_reg_btn.UseVisualStyleBackColor = true;
-            add_new_stu_reg_btn.Click += add_new_stu_reg_btn_Click;
+            Reg_newstudbtn.BackColor = Color.SeaGreen;
+            Reg_newstudbtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Reg_newstudbtn.ForeColor = SystemColors.ButtonHighlight;
+            Reg_newstudbtn.ImageAlign = ContentAlignment.MiddleLeft;
+            Reg_newstudbtn.Location = new Point(107, 374);
+            Reg_newstudbtn.Name = "Reg_newstudbtn";
+            Reg_newstudbtn.Size = new Size(155, 36);
+            Reg_newstudbtn.TabIndex = 22;
+            Reg_newstudbtn.Text = "New Student";
+            Reg_newstudbtn.UseVisualStyleBackColor = false;
+            Reg_newstudbtn.Click += Reg_newstudbtn_Click;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Dock = DockStyle.Bottom;
+            pictureBox2.Image = Properties.Resources.Design_a_modern_and_sleek_logo_for_a_Computer_Center_Management;
+            pictureBox2.Location = new Point(0, 244);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(181, 196);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 34;
+            pictureBox2.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(button4);
+            panel1.Controls.Add(button3);
+            panel1.Controls.Add(button5);
+            panel1.Controls.Add(pictureBox2);
+            panel1.Dock = DockStyle.Right;
+            panel1.Location = new Point(434, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(181, 440);
+            panel1.TabIndex = 35;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.SeaGreen;
+            button4.FlatStyle = FlatStyle.Popup;
+            button4.ForeColor = SystemColors.ControlDarkDark;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.Location = new Point(137, 3);
+            button4.Name = "button4";
+            button4.Size = new Size(34, 30);
+            button4.TabIndex = 32;
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.SeaGreen;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.ForeColor = SystemColors.ButtonHighlight;
+            button3.Image = Properties.Resources.icons8_minus_24;
+            button3.Location = new Point(36, 3);
+            button3.Name = "button3";
+            button3.Size = new Size(34, 30);
+            button3.TabIndex = 31;
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.SeaGreen;
+            button5.FlatStyle = FlatStyle.Popup;
+            button5.ForeColor = SystemColors.ControlDarkDark;
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.Location = new Point(87, 3);
+            button5.Name = "button5";
+            button5.Size = new Size(34, 30);
+            button5.TabIndex = 30;
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click_1;
             // 
             // New_stu_reg
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(add_new_stu_reg_btn);
-            Controls.Add(Faculty_lbl);
-            Controls.Add(N_id_lbl);
-            Controls.Add(Level_lbl);
+            ClientSize = new Size(615, 440);
+            Controls.Add(Reg_newstudbtn);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(name_lbl);
             Controls.Add(Level_txtbox);
             Controls.Add(N_id_txtbox);
             Controls.Add(Faculty_txtbox);
             Controls.Add(name_txtbox);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "New_stu_reg";
             Text = "reg";
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -148,9 +237,14 @@
         private TextBox N_id_txtbox;
         private TextBox Level_txtbox;
         private Label name_lbl;
-        private Label Level_lbl;
-        private Label N_id_lbl;
-        private Label Faculty_lbl;
-        private Button add_new_stu_reg_btn;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Button Reg_newstudbtn;
+        private PictureBox pictureBox2;
+        private Panel panel1;
+        private Button button4;
+        private Button button3;
+        private Button button5;
     }
 }
