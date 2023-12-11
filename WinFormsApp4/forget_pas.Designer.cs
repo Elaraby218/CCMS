@@ -58,9 +58,8 @@
             email_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             email_txtbox.ForeColor = Color.SeaGreen;
             email_txtbox.Location = new Point(119, 55);
-            email_txtbox.Multiline = true;
             email_txtbox.Name = "email_txtbox";
-            email_txtbox.Size = new Size(221, 30);
+            email_txtbox.Size = new Size(221, 23);
             email_txtbox.TabIndex = 11;
             email_txtbox.TextChanged += email_txtbox_TextChanged;
             // 
@@ -80,9 +79,8 @@
             textBox1.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.ForeColor = Color.SeaGreen;
             textBox1.Location = new Point(119, 187);
-            textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(221, 30);
+            textBox1.Size = new Size(221, 23);
             textBox1.TabIndex = 13;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
@@ -102,9 +100,8 @@
             textBox2.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.ForeColor = Color.SeaGreen;
             textBox2.Location = new Point(119, 307);
-            textBox2.Multiline = true;
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(221, 30);
+            textBox2.Size = new Size(221, 23);
             textBox2.TabIndex = 15;
             // 
             // textBox3
@@ -112,9 +109,8 @@
             textBox3.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox3.ForeColor = Color.SeaGreen;
             textBox3.Location = new Point(119, 363);
-            textBox3.Multiline = true;
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(221, 30);
+            textBox3.Size = new Size(221, 23);
             textBox3.TabIndex = 17;
             // 
             // label5

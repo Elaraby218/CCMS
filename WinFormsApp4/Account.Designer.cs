@@ -59,6 +59,7 @@
             panel2 = new Panel();
             button1 = new Button();
             button8 = new Button();
+            checkBox1 = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel1.SuspendLayout();
@@ -205,9 +206,8 @@
             user_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             user_txtbox.ForeColor = SystemColors.ActiveCaptionText;
             user_txtbox.Location = new Point(540, 143);
-            user_txtbox.Multiline = true;
             user_txtbox.Name = "user_txtbox";
-            user_txtbox.Size = new Size(182, 30);
+            user_txtbox.Size = new Size(182, 23);
             user_txtbox.TabIndex = 39;
             user_txtbox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -228,9 +228,8 @@
             National_id_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             National_id_txtbox.ForeColor = SystemColors.ActiveCaptionText;
             National_id_txtbox.Location = new Point(293, 213);
-            National_id_txtbox.Multiline = true;
             National_id_txtbox.Name = "National_id_txtbox";
-            National_id_txtbox.Size = new Size(189, 30);
+            National_id_txtbox.Size = new Size(189, 23);
             National_id_txtbox.TabIndex = 37;
             National_id_txtbox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -251,10 +250,9 @@
             cpass_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             cpass_txtbox.ForeColor = SystemColors.ActiveCaptionText;
             cpass_txtbox.Location = new Point(540, 289);
-            cpass_txtbox.Multiline = true;
             cpass_txtbox.Name = "cpass_txtbox";
             cpass_txtbox.PasswordChar = '*';
-            cpass_txtbox.Size = new Size(182, 30);
+            cpass_txtbox.Size = new Size(182, 23);
             cpass_txtbox.TabIndex = 35;
             cpass_txtbox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -275,9 +273,8 @@
             email_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             email_txtbox.ForeColor = SystemColors.ActiveCaptionText;
             email_txtbox.Location = new Point(293, 358);
-            email_txtbox.Multiline = true;
             email_txtbox.Name = "email_txtbox";
-            email_txtbox.Size = new Size(429, 30);
+            email_txtbox.Size = new Size(429, 23);
             email_txtbox.TabIndex = 33;
             email_txtbox.TextAlign = HorizontalAlignment.Center;
             email_txtbox.TextChanged += email_txtbox_TextChanged;
@@ -298,10 +295,9 @@
             password_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             password_txtbox.ForeColor = SystemColors.ActiveCaptionText;
             password_txtbox.Location = new Point(540, 213);
-            password_txtbox.Multiline = true;
             password_txtbox.Name = "password_txtbox";
             password_txtbox.PasswordChar = '*';
-            password_txtbox.Size = new Size(182, 30);
+            password_txtbox.Size = new Size(182, 23);
             password_txtbox.TabIndex = 31;
             password_txtbox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -321,9 +317,8 @@
             phone_num_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             phone_num_txtbox.ForeColor = SystemColors.ActiveCaptionText;
             phone_num_txtbox.Location = new Point(293, 289);
-            phone_num_txtbox.Multiline = true;
             phone_num_txtbox.Name = "phone_num_txtbox";
-            phone_num_txtbox.Size = new Size(189, 30);
+            phone_num_txtbox.Size = new Size(189, 23);
             phone_num_txtbox.TabIndex = 29;
             phone_num_txtbox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -343,9 +338,8 @@
             name_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             name_txtbox.ForeColor = SystemColors.ActiveCaptionText;
             name_txtbox.Location = new Point(293, 143);
-            name_txtbox.Multiline = true;
             name_txtbox.Name = "name_txtbox";
-            name_txtbox.Size = new Size(189, 30);
+            name_txtbox.Size = new Size(189, 23);
             name_txtbox.TabIndex = 27;
             name_txtbox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -403,11 +397,24 @@
             button8.UseVisualStyleBackColor = false;
             button8.Click += button8_Click;
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox1.Location = new Point(540, 242);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(107, 17);
+            checkBox1.TabIndex = 48;
+            checkBox1.Text = "Show Password";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
             // Account
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(836, 526);
+            Controls.Add(checkBox1);
             Controls.Add(button8);
             Controls.Add(button1);
             Controls.Add(label8);
@@ -475,5 +482,6 @@
         private TextBox user_txtbox;
         private Button button1;
         private Button button8;
+        private CheckBox checkBox1;
     }
 }

@@ -76,12 +76,13 @@ namespace funcs
                 string dest = Environment.CurrentDirectory + "\\images" +
                              $"\\{usernow}.jpg";
 
-                try
+                if (File.Exists(dest))
                 {
-                    File.Copy(source, dest);
+                    File.Delete(dest);
                 }
-                catch { }
-            
+
+                File.Copy(source, dest);
+          
                 emp.photo_path = dest;
 
                 return true;
@@ -239,7 +240,6 @@ namespace funcs
         {
             var emp = db.employees
                 .Where((x) => x.employee_n_id == id)
-                .Select((x) => x)
                 .FirstOrDefault();
             db.employees.Remove(emp);
             db.SaveChanges();

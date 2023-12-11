@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using WinFormsApp4.data;
 using System.ComponentModel;
 using funcs;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WinFormsApp4
 {
@@ -18,6 +19,8 @@ namespace WinFormsApp4
             //  MessageBox.Show(Environment.CurrentDirectory);
             // default photo on pt3
             pictureBox1.ImageLocation = source;
+            password_txtbox.UseSystemPasswordChar = true;
+            cpass_txtbox.UseSystemPasswordChar = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,8 +46,14 @@ namespace WinFormsApp4
             else
             {
                 bool Validate = true;
+                if (ValidationMethods.UserName(user_txtbox.Text))
+                {
+                    MessageBox.Show("User name in use, please select another user name", "Error"
+                        , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Validate = false;
+                }
 
-                if (ValidationMethods.EmpNationalId(National_id_txtbox.Text))
+                else if (ValidationMethods.EmpNationalId(National_id_txtbox.Text))
                 {
                     MessageBox.Show("Wrong National ID", "Error"
                         , MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -71,29 +80,36 @@ namespace WinFormsApp4
                         , MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Validate = false;
                 }
-
-                else if (ValidationMethods.UserName(user_txtbox.Text))
+                else if (db.employees.Count((x) => x.email == email_txtbox.Text) >= 1)
                 {
-                    MessageBox.Show("User name in use, please select another user name", "Error"
+                    MessageBox.Show("The Email Already Exist Try anthor one \" ", "Error"
                         , MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Validate = false;
                 }
+                else if (!checkBox1.Checked)
+                {
+                    MessageBox.Show("Click on \"Agree Terms and Conditions\"  ", "Error"
+                  , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Validate = false;
+                }
+
+
 
 
 
                 string confirmed_pass = this.cpass_txtbox.Text;
                 if (Validate && ValidationMethods.password(emp, confirmed_pass))
                 {
-                  
-                   
-                        if(ValidationMethods.CopyImage(emp.photo_path, emp.user_name, emp))
-                        {
+
+
+                    if (ValidationMethods.CopyImage(emp.photo_path, emp.user_name, emp))
+                    {
                         DataBaseMethods.AddEmployee(emp);
                         MessageBox.Show("Your Account Created successfully");
                         Application.OpenForms[0].Show();
                         this.Close();
-                            }
-        
+                    }
+
 
 
                 }
@@ -173,7 +189,7 @@ namespace WinFormsApp4
             this.WindowState = FormWindowState.Minimized;
         }
 
-        
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -206,13 +222,29 @@ namespace WinFormsApp4
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
 
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if(!checkBox2.Checked) { password_txtbox.UseSystemPasswordChar = true;
+                cpass_txtbox.UseSystemPasswordChar = true;
+            }
+            else {
+                password_txtbox.UseSystemPasswordChar = false;
+                cpass_txtbox.UseSystemPasswordChar = false;
+            }
         }
     }
 }
