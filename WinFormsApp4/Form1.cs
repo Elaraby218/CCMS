@@ -9,15 +9,16 @@ namespace WinFormsApp4
         public Login_Page()
         {
             InitializeComponent();
+            textBox2.UseSystemPasswordChar = true;
         }
-
+        
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Sign_up_form frm2 = new Sign_up_form();
             frm2.ShowDialog();
             //this.Hide();
         }
-
+        
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -33,13 +34,13 @@ namespace WinFormsApp4
                 !string.IsNullOrWhiteSpace(password_in))
             {
                 var emp = db.employees.
-                   Where(a => a.user_name == user_name_in && a.password == password_in).FirstOrDefault();
+                   Where(a => (a.user_name == user_name_in || a.email == user_name_in) && a.password == password_in).FirstOrDefault();
                 if (emp != null)
                 {
-                    MessageBox.Show("Welcome", emp.name, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Welcome " + emp.name);
                     program_main_form frm = new program_main_form(emp.employee_n_id);
                     frm.ShowDialog();
-                   
+                    this.Close();
                 }
                 else
                 {
@@ -107,12 +108,23 @@ namespace WinFormsApp4
         {
             forget_pas forget = new forget_pas();
             forget.ShowDialog();
+
         }
 
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (checkBox1.Checked)
+            {
+                textBox2.UseSystemPasswordChar = false;
+            }
+            else { textBox2.UseSystemPasswordChar = true; }
         }
     }
 }

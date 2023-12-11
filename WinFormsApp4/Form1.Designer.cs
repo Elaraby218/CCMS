@@ -47,33 +47,33 @@ namespace WinFormsApp4
             button2 = new Button();
             pictureBox2 = new PictureBox();
             panel2 = new Panel();
+            panel4 = new Panel();
+            checkBox1 = new CheckBox();
             panel3 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
+            panel4.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
             // 
             // textBox1
             // 
-            textBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.ForeColor = SystemColors.ActiveCaptionText;
-            textBox1.Location = new Point(291, 208);
-            textBox1.Multiline = true;
+            textBox1.Location = new Point(262, 214);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(242, 30);
+            textBox1.Size = new Size(242, 23);
             textBox1.TabIndex = 0;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
-            textBox2.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(291, 272);
-            textBox2.Multiline = true;
+            textBox2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Location = new Point(262, 278);
             textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(242, 30);
+            textBox2.Size = new Size(242, 23);
             textBox2.TabIndex = 1;
             textBox2.TextChanged += textBox2_TextChanged;
             // 
@@ -82,7 +82,7 @@ namespace WinFormsApp4
             button1.BackColor = Color.SeaGreen;
             button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(291, 353);
+            button1.Location = new Point(262, 359);
             button1.Name = "button1";
             button1.Size = new Size(242, 37);
             button1.TabIndex = 4;
@@ -95,7 +95,7 @@ namespace WinFormsApp4
             linkLabel1.AutoSize = true;
             linkLabel1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             linkLabel1.LinkColor = Color.SeaGreen;
-            linkLabel1.Location = new Point(291, 393);
+            linkLabel1.Location = new Point(262, 399);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(102, 17);
             linkLabel1.TabIndex = 5;
@@ -108,7 +108,7 @@ namespace WinFormsApp4
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label8.ForeColor = Color.FromArgb(64, 64, 64);
-            label8.Location = new Point(304, 144);
+            label8.Location = new Point(275, 150);
             label8.Name = "label8";
             label8.Size = new Size(219, 30);
             label8.TabIndex = 21;
@@ -119,18 +119,18 @@ namespace WinFormsApp4
             label6.AutoSize = true;
             label6.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.SeaGreen;
-            label6.Location = new Point(291, 189);
+            label6.Location = new Point(262, 195);
             label6.Name = "label6";
-            label6.Size = new Size(75, 16);
+            label6.Size = new Size(129, 16);
             label6.TabIndex = 23;
-            label6.Text = "User Name";
+            label6.Text = "User Name or Email";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.SeaGreen;
-            label1.Location = new Point(291, 253);
+            label1.Location = new Point(262, 259);
             label1.Name = "label1";
             label1.Size = new Size(70, 16);
             label1.TabIndex = 22;
@@ -140,7 +140,7 @@ namespace WinFormsApp4
             // 
             pictureBox1.BackColor = Color.SeaGreen;
             pictureBox1.Image = Properties.Resources.icons8_person_642;
-            pictureBox1.Location = new Point(349, 22);
+            pictureBox1.Location = new Point(320, 28);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(132, 119);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -153,7 +153,7 @@ namespace WinFormsApp4
             linkLabel2.AutoSize = true;
             linkLabel2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             linkLabel2.LinkColor = Color.SeaGreen;
-            linkLabel2.Location = new Point(421, 393);
+            linkLabel2.Location = new Point(392, 399);
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new Size(112, 17);
             linkLabel2.TabIndex = 25;
@@ -168,7 +168,7 @@ namespace WinFormsApp4
             panel1.Controls.Add(button5);
             panel1.Controls.Add(button2);
             panel1.Dock = DockStyle.Right;
-            panel1.Location = new Point(646, 0);
+            panel1.Location = new Point(546, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(183, 501);
             panel1.TabIndex = 26;
@@ -217,7 +217,7 @@ namespace WinFormsApp4
             button2.BackColor = SystemColors.ControlDarkDark;
             button2.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(0, 381);
+            button2.Location = new Point(-50, 316);
             button2.Name = "button2";
             button2.Size = new Size(221, 37);
             button2.TabIndex = 6;
@@ -238,20 +238,42 @@ namespace WinFormsApp4
             // 
             // panel2
             // 
-            panel2.Controls.Add(pictureBox1);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(label6);
-            panel2.Controls.Add(linkLabel2);
-            panel2.Controls.Add(linkLabel1);
-            panel2.Controls.Add(textBox1);
-            panel2.Controls.Add(label8);
+            panel2.Controls.Add(panel4);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(646, 501);
+            panel2.Size = new Size(546, 501);
             panel2.TabIndex = 34;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(checkBox1);
+            panel4.Controls.Add(pictureBox1);
+            panel4.Controls.Add(linkLabel1);
+            panel4.Controls.Add(textBox1);
+            panel4.Controls.Add(label1);
+            panel4.Controls.Add(linkLabel2);
+            panel4.Controls.Add(label8);
+            panel4.Controls.Add(button1);
+            panel4.Controls.Add(label6);
+            panel4.Controls.Add(textBox2);
+            panel4.Dock = DockStyle.Fill;
+            panel4.Location = new Point(0, 0);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(546, 501);
+            panel4.TabIndex = 0;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox1.Location = new Point(262, 309);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(107, 17);
+            checkBox1.TabIndex = 26;
+            checkBox1.Text = "Show Password";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // panel3
             // 
@@ -266,7 +288,7 @@ namespace WinFormsApp4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(829, 501);
+            ClientSize = new Size(729, 501);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -280,7 +302,8 @@ namespace WinFormsApp4
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -304,5 +327,7 @@ namespace WinFormsApp4
         private Panel panel2;
         private Panel panel3;
         private Button button2;
+        private CheckBox checkBox1;
+        private Panel panel4;
     }
 }
