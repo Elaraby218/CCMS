@@ -21,6 +21,7 @@ namespace WinFormsApp4
             pictureBox1.ImageLocation = source;
             password_txtbox.UseSystemPasswordChar = true;
             cpass_txtbox.UseSystemPasswordChar = true;
+            //kshciuhces
         }
 
         private void button1_Click(object sender, EventArgs e)
