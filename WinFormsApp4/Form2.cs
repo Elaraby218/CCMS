@@ -84,12 +84,16 @@ namespace WinFormsApp4
                 string confirmed_pass = this.cpass_txtbox.Text;
                 if (Validate && ValidationMethods.password(emp, confirmed_pass))
                 {
-                    if (DataBaseMethods.AddEmployee(emp))
-                    {
+                  
+                   
+                        if(ValidationMethods.CopyImage(emp.photo_path, emp.user_name, emp))
+                        {
+                        DataBaseMethods.AddEmployee(emp);
                         MessageBox.Show("Your Account Created successfully");
                         Application.OpenForms[0].Show();
                         this.Close();
-                    };
+                            }
+        
 
 
                 }
@@ -115,22 +119,61 @@ namespace WinFormsApp4
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-
             try
             {
-                openFileDialog1.Title = "Select your personal photo";
-                openFileDialog1.ShowDialog();
-                source = openFileDialog1.FileName;
-                pictureBox1.ImageLocation = source;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("An error occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            // MessageBox.Show(imagelocation);
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Title = "Select your personal photo";
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+                openFileDialog.FilterIndex = 1;
+                openFileDialog.RestoreDirectory = true;
 
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string selectedFilePath = openFileDialog.FileName;
+
+                    // Perform additional checks if needed before setting the image
+                    if (ValidationMethods.IsImageFile(selectedFilePath))
+                    {
+                        // Load the image to the pictureBox
+                        pictureBox1.ImageLocation = selectedFilePath;
+                        source = selectedFilePath;
+
+                        //Program.Log(selectedFilePath);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please select a valid image file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
+
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+                this.WindowState = FormWindowState.Normal;
+            else
+                this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -170,24 +213,6 @@ namespace WinFormsApp4
         {
 
 
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-                this.WindowState = FormWindowState.Normal;
-            else
-                this.WindowState = FormWindowState.Maximized;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

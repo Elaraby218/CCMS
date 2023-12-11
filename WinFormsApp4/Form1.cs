@@ -38,8 +38,8 @@ namespace WinFormsApp4
                 {
                     MessageBox.Show("Welcome", emp.name, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     program_main_form frm = new program_main_form(emp.employee_n_id);
-                    frm.Show();
-                    this.Hide();
+                    frm.ShowDialog();
+                   
                 }
                 else
                 {
@@ -62,7 +62,7 @@ namespace WinFormsApp4
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            
+
             if (db.Database.EnsureCreated())
             {
                 MessageBox.Show("connection doen");
@@ -109,7 +109,8 @@ namespace WinFormsApp4
             forget.ShowDialog();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

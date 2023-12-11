@@ -45,6 +45,10 @@
             button8 = new Button();
             button2 = new Button();
             button3 = new Button();
+            label4 = new Label();
+            sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            label8 = new Label();
+            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel4.SuspendLayout();
             SuspendLayout();
@@ -53,12 +57,11 @@
             // 
             email_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             email_txtbox.ForeColor = Color.SeaGreen;
-            email_txtbox.Location = new Point(39, 55);
+            email_txtbox.Location = new Point(119, 55);
             email_txtbox.Multiline = true;
             email_txtbox.Name = "email_txtbox";
-            email_txtbox.Size = new Size(190, 30);
+            email_txtbox.Size = new Size(221, 30);
             email_txtbox.TabIndex = 11;
-            email_txtbox.TextAlign = HorizontalAlignment.Center;
             email_txtbox.TextChanged += email_txtbox_TextChanged;
             // 
             // label3
@@ -66,7 +69,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.SeaGreen;
-            label3.Location = new Point(39, 36);
+            label3.Location = new Point(119, 36);
             label3.Name = "label3";
             label3.Size = new Size(98, 16);
             label3.TabIndex = 10;
@@ -76,12 +79,11 @@
             // 
             textBox1.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.ForeColor = Color.SeaGreen;
-            textBox1.Location = new Point(39, 187);
+            textBox1.Location = new Point(119, 187);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(190, 30);
+            textBox1.Size = new Size(221, 30);
             textBox1.TabIndex = 13;
-            textBox1.TextAlign = HorizontalAlignment.Center;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label1
@@ -89,7 +91,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.SeaGreen;
-            label1.Location = new Point(39, 168);
+            label1.Location = new Point(119, 168);
             label1.Name = "label1";
             label1.Size = new Size(221, 16);
             label1.TabIndex = 12;
@@ -99,30 +101,28 @@
             // 
             textBox2.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.ForeColor = Color.SeaGreen;
-            textBox2.Location = new Point(48, 307);
+            textBox2.Location = new Point(119, 307);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(190, 30);
+            textBox2.Size = new Size(221, 30);
             textBox2.TabIndex = 15;
-            textBox2.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox3
             // 
             textBox3.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox3.ForeColor = Color.SeaGreen;
-            textBox3.Location = new Point(48, 363);
+            textBox3.Location = new Point(119, 363);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(190, 30);
+            textBox3.Size = new Size(221, 30);
             textBox3.TabIndex = 17;
-            textBox3.TextAlign = HorizontalAlignment.Center;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.SeaGreen;
-            label5.Location = new Point(48, 288);
+            label5.Location = new Point(119, 288);
             label5.Name = "label5";
             label5.Size = new Size(70, 16);
             label5.TabIndex = 18;
@@ -133,7 +133,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.SeaGreen;
-            label2.Location = new Point(48, 344);
+            label2.Location = new Point(119, 344);
             label2.Name = "label2";
             label2.Size = new Size(132, 16);
             label2.TabIndex = 19;
@@ -144,7 +144,7 @@
             button1.BackColor = Color.SeaGreen;
             button1.FlatStyle = FlatStyle.Popup;
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(84, 91);
+            button1.Location = new Point(119, 91);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 20;
@@ -155,7 +155,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.Design_a_modern_and_sleek_logo_for_a_Computer_Center_Management;
-            pictureBox2.Location = new Point(336, 101);
+            pictureBox2.Location = new Point(395, 109);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(298, 239);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -217,7 +217,7 @@
             button2.BackColor = Color.SeaGreen;
             button2.FlatStyle = FlatStyle.Popup;
             button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(93, 399);
+            button2.Location = new Point(128, 399);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 36;
@@ -230,7 +230,7 @@
             button3.BackColor = Color.SeaGreen;
             button3.FlatStyle = FlatStyle.Popup;
             button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Location = new Point(84, 223);
+            button3.Location = new Point(119, 223);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 37;
@@ -238,11 +238,54 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.SeaGreen;
+            label4.Location = new Point(22, 55);
+            label4.Name = "label4";
+            label4.Size = new Size(57, 21);
+            label4.TabIndex = 38;
+            label4.Text = "Step 1";
+            // 
+            // sqlCommand1
+            // 
+            sqlCommand1.CommandTimeout = 30;
+            sqlCommand1.Connection = null;
+            sqlCommand1.Notification = null;
+            sqlCommand1.Transaction = null;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.SeaGreen;
+            label8.Location = new Point(22, 339);
+            label8.Name = "label8";
+            label8.Size = new Size(57, 21);
+            label8.TabIndex = 41;
+            label8.Text = "Step 3";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = Color.SeaGreen;
+            label9.Location = new Point(22, 187);
+            label9.Name = "label9";
+            label9.Size = new Size(57, 21);
+            label9.TabIndex = 42;
+            label9.Text = "Step 2";
+            // 
             // forget_pas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(719, 477);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(pictureBox2);
@@ -284,5 +327,9 @@
         private Button button8;
         private Button button2;
         private Button button3;
+        private Label label4;
+        private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
+        private Label label8;
+        private Label label9;
     }
 }

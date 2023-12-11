@@ -85,7 +85,6 @@ namespace WinFormsApp4
             name_txtbox.Name = "name_txtbox";
             name_txtbox.Size = new Size(189, 30);
             name_txtbox.TabIndex = 3;
-            name_txtbox.TextAlign = HorizontalAlignment.Center;
             name_txtbox.TextChanged += textBox1_TextChanged;
             // 
             // label2
@@ -108,7 +107,6 @@ namespace WinFormsApp4
             phone_num_txtbox.Name = "phone_num_txtbox";
             phone_num_txtbox.Size = new Size(189, 30);
             phone_num_txtbox.TabIndex = 5;
-            phone_num_txtbox.TextAlign = HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -131,7 +129,6 @@ namespace WinFormsApp4
             password_txtbox.PasswordChar = '*';
             password_txtbox.Size = new Size(182, 30);
             password_txtbox.TabIndex = 7;
-            password_txtbox.TextAlign = HorizontalAlignment.Center;
             password_txtbox.TextChanged += password_txtbox_TextChanged;
             // 
             // label4
@@ -154,7 +151,6 @@ namespace WinFormsApp4
             email_txtbox.Name = "email_txtbox";
             email_txtbox.Size = new Size(429, 30);
             email_txtbox.TabIndex = 9;
-            email_txtbox.TextAlign = HorizontalAlignment.Center;
             email_txtbox.TextChanged += email_txtbox_TextChanged;
             // 
             // label5
@@ -178,7 +174,6 @@ namespace WinFormsApp4
             cpass_txtbox.PasswordChar = '*';
             cpass_txtbox.Size = new Size(182, 30);
             cpass_txtbox.TabIndex = 11;
-            cpass_txtbox.TextAlign = HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -200,7 +195,6 @@ namespace WinFormsApp4
             National_id_txtbox.Name = "National_id_txtbox";
             National_id_txtbox.Size = new Size(189, 30);
             National_id_txtbox.TabIndex = 13;
-            National_id_txtbox.TextAlign = HorizontalAlignment.Center;
             National_id_txtbox.TextChanged += National_id_txtbox_TextChanged;
             // 
             // label7
@@ -223,7 +217,6 @@ namespace WinFormsApp4
             user_txtbox.Name = "user_txtbox";
             user_txtbox.Size = new Size(182, 30);
             user_txtbox.TabIndex = 15;
-            user_txtbox.TextAlign = HorizontalAlignment.Center;
             // 
             // pictureBox1
             // 

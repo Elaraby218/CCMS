@@ -185,6 +185,12 @@ namespace WinFormsApp4
             }
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form ac = new Account(employee_n_id);
+            ac.ShowDialog();
+        }
     }
 }
 
