@@ -84,13 +84,16 @@ namespace WinFormsApp4
                 string confirmed_pass = this.cpass_txtbox.Text;
                 if (Validate && ValidationMethods.password(emp, confirmed_pass))
                 {
-                    if (DataBaseMethods.AddEmployee(emp))
-                    {
-                        ValidationMethods.CopyImage(emp.photo_path, emp.user_name, emp);
+                  
+                   
+                        if(ValidationMethods.CopyImage(emp.photo_path, emp.user_name, emp))
+                        {
+                        DataBaseMethods.AddEmployee(emp);
                         MessageBox.Show("Your Account Created successfully");
                         Application.OpenForms[0].Show();
                         this.Close();
-                    };
+                            }
+        
 
 
                 }
@@ -135,7 +138,7 @@ namespace WinFormsApp4
                         pictureBox1.ImageLocation = selectedFilePath;
                         source = selectedFilePath;
 
-                        Program.Log(selectedFilePath);
+                        //Program.Log(selectedFilePath);
                     }
                     else
                     {

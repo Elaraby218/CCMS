@@ -38,8 +38,8 @@ namespace WinFormsApp4
                 {
                     MessageBox.Show("Welcome", emp.name, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     program_main_form frm = new program_main_form(emp.employee_n_id);
-                    frm.Show();
-                    this.Hide();
+                    frm.ShowDialog();
+                   
                 }
                 else
                 {

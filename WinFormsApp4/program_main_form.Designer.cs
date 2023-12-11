@@ -49,14 +49,15 @@ namespace WinFormsApp4
             button5 = new Button();
             label1 = new Label();
             panel3 = new Panel();
+            panel7 = new Panel();
+            StudNational_txtbox = new TextBox();
+            label2 = new Label();
             dataGridView2 = new DataGridView();
             IdSTU = new DataGridViewTextBoxColumn();
             NameSTU = new DataGridViewTextBoxColumn();
             FacultySTU = new DataGridViewTextBoxColumn();
             LevelSTU = new DataGridViewTextBoxColumn();
             In_timeSTU = new DataGridViewTextBoxColumn();
-            label2 = new Label();
-            StudNational_txtbox = new TextBox();
             panel5 = new Panel();
             panel4 = new Panel();
             button6 = new Button();
@@ -64,18 +65,17 @@ namespace WinFormsApp4
             button8 = new Button();
             button9 = new Button();
             pictureBox2 = new PictureBox();
-            dataGridView1 = new DataGridView();
             contextMenuStrip1 = new ContextMenuStrip(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel6.SuspendLayout();
             panel3.SuspendLayout();
+            panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // History
@@ -123,6 +123,7 @@ namespace WinFormsApp4
             // 
             // pictureBox1
             // 
+            pictureBox1.Image = Properties.Resources.icons8_person_644;
             pictureBox1.Location = new Point(3, 6);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(53, 54);
@@ -136,6 +137,7 @@ namespace WinFormsApp4
             textBox1.BackColor = Color.SeaGreen;
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox1.ForeColor = Color.Transparent;
             textBox1.Location = new Point(65, 20);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
@@ -156,7 +158,7 @@ namespace WinFormsApp4
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(50, 3, 3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(176, 608);
+            panel1.Size = new Size(176, 456);
             panel1.TabIndex = 9;
             // 
             // button3
@@ -225,20 +227,20 @@ namespace WinFormsApp4
             panel6.Controls.Add(button4);
             panel6.Controls.Add(button5);
             panel6.Dock = DockStyle.Bottom;
-            panel6.Location = new Point(0, 550);
+            panel6.Location = new Point(0, 398);
             panel6.Name = "panel6";
-            panel6.Size = new Size(942, 58);
+            panel6.Size = new Size(570, 58);
             panel6.TabIndex = 21;
             // 
             // Reg_newstudbtn
             // 
             Reg_newstudbtn.BackColor = Color.SeaGreen;
-            Reg_newstudbtn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Reg_newstudbtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             Reg_newstudbtn.ForeColor = SystemColors.ButtonHighlight;
             Reg_newstudbtn.ImageAlign = ContentAlignment.MiddleLeft;
-            Reg_newstudbtn.Location = new Point(393, 6);
+            Reg_newstudbtn.Location = new Point(202, 10);
             Reg_newstudbtn.Name = "Reg_newstudbtn";
-            Reg_newstudbtn.Size = new Size(155, 49);
+            Reg_newstudbtn.Size = new Size(155, 36);
             Reg_newstudbtn.TabIndex = 21;
             Reg_newstudbtn.Text = "New Student";
             Reg_newstudbtn.UseVisualStyleBackColor = false;
@@ -246,13 +248,13 @@ namespace WinFormsApp4
             // 
             // button4
             // 
-            button4.BackColor = Color.SeaGreen;
-            button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.BackColor = Color.FromArgb(255, 128, 0);
+            button4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             button4.ForeColor = SystemColors.ButtonHighlight;
             button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(90, 5);
+            button4.Location = new Point(21, 10);
             button4.Name = "button4";
-            button4.Size = new Size(155, 49);
+            button4.Size = new Size(155, 36);
             button4.TabIndex = 19;
             button4.Text = "Add Student";
             button4.UseVisualStyleBackColor = false;
@@ -260,13 +262,13 @@ namespace WinFormsApp4
             // 
             // button5
             // 
-            button5.BackColor = Color.SeaGreen;
-            button5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.BackColor = Color.FromArgb(192, 0, 0);
+            button5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             button5.ForeColor = SystemColors.ButtonHighlight;
             button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(687, 5);
+            button5.Location = new Point(390, 10);
             button5.Name = "button5";
-            button5.Size = new Size(155, 49);
+            button5.Size = new Size(155, 36);
             button5.TabIndex = 20;
             button5.Text = "Remove Student";
             button5.UseVisualStyleBackColor = false;
@@ -286,29 +288,60 @@ namespace WinFormsApp4
             // 
             // panel3
             // 
+            panel3.Controls.Add(panel7);
             panel3.Controls.Add(dataGridView2);
-            panel3.Controls.Add(label2);
-            panel3.Controls.Add(StudNational_txtbox);
             panel3.Controls.Add(panel6);
             panel3.Controls.Add(panel5);
-            panel3.Controls.Add(dataGridView1);
             panel3.Cursor = Cursors.Cross;
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(176, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(942, 608);
+            panel3.Size = new Size(570, 456);
             panel3.TabIndex = 10;
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(StudNational_txtbox);
+            panel7.Controls.Add(label2);
+            panel7.Dock = DockStyle.Bottom;
+            panel7.Location = new Point(0, 357);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(570, 41);
+            panel7.TabIndex = 33;
+            // 
+            // StudNational_txtbox
+            // 
+            StudNational_txtbox.Location = new Point(202, 6);
+            StudNational_txtbox.Multiline = true;
+            StudNational_txtbox.Name = "StudNational_txtbox";
+            StudNational_txtbox.Size = new Size(258, 29);
+            StudNational_txtbox.TabIndex = 29;
+            StudNational_txtbox.TextChanged += StudNational_txtbox_TextChanged;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.SeaGreen;
+            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ButtonHighlight;
+            label2.Location = new Point(6, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(176, 20);
+            label2.TabIndex = 31;
+            label2.Text = "Enter Student National Id";
             // 
             // dataGridView2
             // 
             dataGridView2.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { IdSTU, NameSTU, FacultySTU, LevelSTU, In_timeSTU });
+            dataGridView2.Cursor = Cursors.Arrow;
+            dataGridView2.Dock = DockStyle.Fill;
             dataGridView2.GridColor = SystemColors.ButtonHighlight;
-            dataGridView2.Location = new Point(9, 134);
+            dataGridView2.Location = new Point(0, 66);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(642, 391);
+            dataGridView2.Size = new Size(570, 332);
             dataGridView2.TabIndex = 32;
             // 
             // IdSTU
@@ -341,26 +374,6 @@ namespace WinFormsApp4
             In_timeSTU.Name = "In_timeSTU";
             In_timeSTU.ReadOnly = true;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.SeaGreen;
-            label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(106, 103);
-            label2.Name = "label2";
-            label2.Size = new Size(139, 15);
-            label2.TabIndex = 31;
-            label2.Text = "Enter Student National Id";
-            // 
-            // StudNational_txtbox
-            // 
-            StudNational_txtbox.Location = new Point(264, 88);
-            StudNational_txtbox.Multiline = true;
-            StudNational_txtbox.Name = "StudNational_txtbox";
-            StudNational_txtbox.Size = new Size(258, 40);
-            StudNational_txtbox.TabIndex = 29;
-            StudNational_txtbox.TextChanged += StudNational_txtbox_TextChanged;
-            // 
             // panel5
             // 
             panel5.Controls.Add(panel4);
@@ -369,7 +382,7 @@ namespace WinFormsApp4
             panel5.Dock = DockStyle.Top;
             panel5.Location = new Point(0, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(942, 69);
+            panel5.Size = new Size(570, 66);
             panel5.TabIndex = 28;
             // 
             // panel4
@@ -379,9 +392,9 @@ namespace WinFormsApp4
             panel4.Controls.Add(button8);
             panel4.Controls.Add(button9);
             panel4.Dock = DockStyle.Right;
-            panel4.Location = new Point(762, 0);
+            panel4.Location = new Point(390, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(180, 69);
+            panel4.Size = new Size(180, 66);
             panel4.TabIndex = 27;
             panel4.Paint += panel4_Paint;
             // 
@@ -447,17 +460,6 @@ namespace WinFormsApp4
             pictureBox2.TabIndex = 34;
             pictureBox2.TabStop = false;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(942, 608);
-            dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
             // contextMenuStrip1
             // 
             contextMenuStrip1.Name = "contextMenuStrip1";
@@ -467,7 +469,7 @@ namespace WinFormsApp4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1118, 608);
+            ClientSize = new Size(746, 456);
             Controls.Add(panel3);
             Controls.Add(panel1);
             Controls.Add(emp_name);
@@ -482,13 +484,13 @@ namespace WinFormsApp4
             panel2.PerformLayout();
             panel6.ResumeLayout(false);
             panel3.ResumeLayout(false);
-            panel3.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -508,7 +510,6 @@ namespace WinFormsApp4
         private Label label1;
         private Button button5;
         private Button button4;
-        private DataGridView dataGridView1;
         private Button button3;
         private Button button2;
         private Button button1;
@@ -530,6 +531,7 @@ namespace WinFormsApp4
         private DataGridViewTextBoxColumn FacultySTU;
         private DataGridViewTextBoxColumn LevelSTU;
         private DataGridViewTextBoxColumn In_timeSTU;
+        private Panel panel7;
     }
 
 }

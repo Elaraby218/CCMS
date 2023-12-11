@@ -39,9 +39,10 @@ namespace WinFormsApp4
 
         }
 
-        private void add_new_stu_reg_btn_Click(object sender, EventArgs e)
+        private void Reg_newstudbtn_Click(object sender, EventArgs e)
         {
-            StudentsTable student = new StudentsTable() {
+            StudentsTable student = new StudentsTable()
+            {
                 name = name_txtbox.Text,
                 student_n_id = N_id_txtbox.Text,
                 faculty = Faculty_txtbox.Text,
@@ -49,6 +50,27 @@ namespace WinFormsApp4
             };
             ValidationMethods.AddStudent(student);
             this.Close();
+        }
+
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+                this.WindowState = FormWindowState.Normal;
+            else
+                this.WindowState = FormWindowState.Maximized;
         }
     }
 }
