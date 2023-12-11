@@ -42,10 +42,19 @@ namespace WinFormsApp4
 
         private void Log_out_btn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Are you sure ?", "LOG OUT",
-                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            Application.OpenForms[0].Show();
-            this.Close();
+            DialogResult result = MessageBox.Show("Are you sure?", "LOG OUT",
+                                 MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            // Check if the user clicked OK
+            if (result == DialogResult.OK)
+            {
+                // Show the first form
+                if (Application.OpenForms.Count > 0)
+                    Application.OpenForms[0].Show();
+
+                // Close the current form
+                this.Close();
+            }
         }
 
         private void program_main_form_Load(object sender, EventArgs e)
@@ -72,20 +81,7 @@ namespace WinFormsApp4
               MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void label2_Click(object sender, EventArgs e)
         {

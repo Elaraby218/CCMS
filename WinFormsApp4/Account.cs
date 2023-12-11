@@ -49,73 +49,93 @@ namespace WinFormsApp4
         {
             // Create an instance of EmployeeTable with data from text boxes
 
-            EmployeeTable updateemp = new EmployeeTable
+            DialogResult result = MessageBox.Show("Are you sure To Save Changes?", "Save Changes",
+                                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            // Check if the user clicked OK
+            if (result == DialogResult.OK)
             {
-                employee_n_id = National_id_txtbox.Text,
-                name = name_txtbox.Text,
-                phone_number = phone_num_txtbox.Text,
-                email = email_txtbox.Text,
-                user_name = user_txtbox.Text,
-                photo_path = source,
-                password = password_txtbox.Text
-            };
-            List<string> empty_ent = ValidationMethods.Employee(emp);
 
-            if (empty_ent.Count > 0)
-            {
-                MessageBox.Show($"These Fields can not be empty\n{string.Join("\n", empty_ent)}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                bool Validate = true;
-
-
-                if (!ValidationMethods.NationalIdLen(National_id_txtbox.Text))
+                EmployeeTable updateemp = new EmployeeTable
                 {
-                    MessageBox.Show("National Id must be 14 Digits", "Error"
-                        , MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Validate = false;
+                    employee_n_id = National_id_txtbox.Text,
+                    name = name_txtbox.Text,
+                    phone_number = phone_num_txtbox.Text,
+                    email = email_txtbox.Text,
+                    user_name = user_txtbox.Text,
+                    photo_path = source,
+                    password = password_txtbox.Text
+                };
+                List<string> empty_ent = ValidationMethods.Employee(emp);
+
+                if (empty_ent.Count > 0)
+                {
+                    MessageBox.Show($"These Fields can not be empty\n{string.Join("\n", empty_ent)}", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-                else if (!ValidationMethods.PhoneNumber(phone_num_txtbox.Text))
+                else
                 {
-                    MessageBox.Show("Phone number must be 11 digits ", "Error"
-                        , MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Validate = false;
-                }
-
-                else if (!ValidationMethods.Email(email_txtbox.Text))
-                {
-                    MessageBox.Show("The Email must be in form \"example@example.com\" ", "Error"
-                        , MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Validate = false;
-                }
-
-                else if (ValidationMethods.UserName(user_txtbox.Text))
-                {
-                    MessageBox.Show("User name in use, please select another user name", "Error"
-                        , MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Validate = false;
-                }
+                    bool Validate = true;
+                    AppDbContext db = new AppDbContext();
 
 
-
-                string confirmed_pass = this.cpass_txtbox.Text;
-                if (Validate && ValidationMethods.password(updateemp, confirmed_pass))
-                {
-
-
-                    if (ValidationMethods.CopyImage(emp.photo_path, emp.user_name, emp))
+                    if (db.employees.Count((x) => x.user_name == user_txtbox.Text) > 1)
                     {
-                        DataBaseMethods.UpdateEmployeeById(updateemp.employee_n_id, updateemp);
-                        MessageBox.Show("Your Account Created successfully");
-                        Application.OpenForms[0].Show();
-                        this.Close();
+                        MessageBox.Show("The User Already Exist Try anthor one \" ", "Error"
+                            , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validate = false;
                     }
 
+                    else if (!ValidationMethods.NationalIdLen(National_id_txtbox.Text))
+                    {
+                        MessageBox.Show("National Id must be 14 Digits", "Error"
+                            , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validate = false;
+                    }
+
+                    else if (db.employees.Count((x) => x.employee_n_id == National_id_txtbox.Text) > 1)
+
+                    {
+                        MessageBox.Show("National ID Already Exist Try anthor one", "Error"
+                            , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validate = false;
+                    }
+
+                    else if (!ValidationMethods.PhoneNumber(phone_num_txtbox.Text))
+                    {
+                        MessageBox.Show("Phone number must be 11 digits ", "Error"
+                            , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validate = false;
+                    }
+
+                    else if (!ValidationMethods.Email(email_txtbox.Text))
+                    {
+                        MessageBox.Show("The Email must be in form \"example@example.com\" ", "Error"
+                            , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validate = false;
+                    }
+                    else if (db.employees.Count((x) => x.email == email_txtbox.Text) > 1)
+                    {
+                        MessageBox.Show("The Email Already Exist Try anthor one \" ", "Error"
+                            , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validate = false;
+                    }
+
+                    string confirmed_pass = this.cpass_txtbox.Text;
+                    if (Validate && ValidationMethods.password(updateemp, confirmed_pass))
+                    {
 
 
+                        if (ValidationMethods.CopyImage(updateemp.photo_path, updateemp.user_name, updateemp))
+                        {
+                            DataBaseMethods.UpdateEmployeeById(updateemp.employee_n_id, updateemp);
+                            MessageBox.Show("Your Account Updated successfully");
+                            Application.OpenForms[0].Show();
+                            this.Close();
+                        }
+
+
+                    }
                 }
             }
 
@@ -150,8 +170,7 @@ namespace WinFormsApp4
                         // Load the image to the pictureBox
                         pictureBox1.ImageLocation = selectedFilePath;
                         source = selectedFilePath;
-
-                        // Program.Log(selectedFilePath);
+                        Program.Log(selectedFilePath);
                     }
                     else
                     {
@@ -197,15 +216,40 @@ namespace WinFormsApp4
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DataBaseMethods.DeleteEmployeeById(employee_n_id);
+            DialogResult result = MessageBox.Show("Are You Sure To Delete Your Acount", "Delete Acount",
+                                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            // Check if the user clicked OK
+            if (result == DialogResult.OK)
+            {
+                DataBaseMethods.DeleteEmployeeById(National_id_txtbox.Text);
+                // Show the first form
+                Login_Page login_Page = new Login_Page();
+                login_Page.ShowDialog();
+                this.Close();
+
+
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult result = MessageBox.Show("Are You Sure To Discard Changes", "Discard Changes",
+                                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            // Check if the user clicked OK
+            if (result == DialogResult.OK)
+            {
+                // Show the first form
+                if (Application.OpenForms.Count > 0)
+                    Application.OpenForms[0].Show();
+                // Close the current form
+                this.Close();
+
+
+            }
         }
 
-      
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -225,6 +269,15 @@ namespace WinFormsApp4
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!checkBox1.Checked)
+            {
+                password_txtbox.UseSystemPasswordChar = false;
+            }
+            else { password_txtbox.UseSystemPasswordChar = true ;}
         }
     }
 }
