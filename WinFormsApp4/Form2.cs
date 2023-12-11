@@ -22,7 +22,6 @@ namespace WinFormsApp4
             password_txtbox.UseSystemPasswordChar = true;
             cpass_txtbox.UseSystemPasswordChar = true;
             //kshciuhces
-            //kwhqcuwuhcuw
         }
 
         private void button1_Click(object sender, EventArgs e)
