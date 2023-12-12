@@ -446,7 +446,7 @@ namespace WinFormsApp4
 
         private Button Log_out_btn;
         private Label emp_name;
-        private string employee_n_id;
+        //private string employee_n_id;
         private string name_label_text;
         private PictureBox pictureBox1;
         private TextBox textBox1;

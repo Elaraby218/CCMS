@@ -117,7 +117,7 @@ namespace WinFormsApp4
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ValidationMethods.StudentCheckOut(StudNational_txtbox.Text, this.employee_n_id);
+            ValidationMethods.StudentCheckOut(StudNational_txtbox.Text, this.cur_employee_n_id);
             UpdateGridView();
 
         }
@@ -140,7 +140,7 @@ namespace WinFormsApp4
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form ac = new Account(employee_n_id);
+            Form ac = new Account(cur_employee_n_id);
             ac.ShowDialog();
         }
 

@@ -16,7 +16,7 @@ namespace WinFormsApp4
     {
         string employee_n_id;
         string org_image_path;
-        data.EmployeeTable emp;
+        EmployeeTable emp;
         string imageSource;
         string imageDestinationFolderPath = Environment.CurrentDirectory + "\\images\\";
 
@@ -151,10 +151,9 @@ namespace WinFormsApp4
 
         }
 
-        private void button5_Click(object sender, EventArgs e) // Browse Image
+        
+        private string SelectImageFile()
         {
-
-
             try
             {
                 OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -167,13 +166,10 @@ namespace WinFormsApp4
                 {
                     string selectedFilePath = openFileDialog.FileName;
 
-                    // Perform additional checks if needed before setting the image
+                    // Perform additional checks if needed before returning the path
                     if (ValidationMethods.IsImageFile(selectedFilePath))
                     {
-                        // Load the image to the pictureBox
-                        pictureBox1.ImageLocation = selectedFilePath;
-                        imageSource = selectedFilePath;
-                        Program.Log(selectedFilePath);
+                        return selectedFilePath;
                     }
                     else
                     {
@@ -186,29 +182,19 @@ namespace WinFormsApp4
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            //try
-            //{
-            //    if (File.Exists(org_image_path))
-            //    {
-            //        File.Delete(org_image_path);
-            //    }
-            //}
-            //catch (Exception)
-            //{
+            return null; // Return null if file selection failed or was invalid
+        }
 
-            //}
+        private void button5_Click(object sender, EventArgs e) // Browse Image
+        {
 
-            //try
-            //{
-            //    openFileDialog1.Title = "Select your personal photo";
-            //    openFileDialog1.ShowDialog();
-            //    imageSource = openFileDialog1.FileName;
-            //    pictureBox1.ImageLocation = imageSource;
-            //}
-            //catch (Exception)
-            //{
-            //    MessageBox.Show("An error occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            string selectedFilePath = SelectImageFile(); // This opens the dialog to get the image path
+
+            if (selectedFilePath != null)
+            {
+                pictureBox1.ImageLocation = selectedFilePath;
+                imageSource = selectedFilePath;
+            }
 
         }
 
