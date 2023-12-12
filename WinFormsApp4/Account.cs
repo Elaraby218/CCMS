@@ -17,14 +17,15 @@ namespace WinFormsApp4
         string employee_n_id;
         string org_image_path;
         data.EmployeeTable emp;
-        string source;
+        string imageSource;
+        string imageDestinationFolderPath = Environment.CurrentDirectory + "\\images\\";
 
         public Account(string employee_n_id)
         {
             InitializeComponent();
             emp = DataBaseMethods.GetEmlpyeeByID(employee_n_id);
             LoadEmployeeData(employee_n_id);
-            source = emp.photo_path;
+            imageSource = emp.photo_path;
         }
 
         private void LoadEmployeeData(string employee_n_id) // Show data on the form
@@ -63,7 +64,7 @@ namespace WinFormsApp4
                     phone_number = phone_num_txtbox.Text,
                     email = email_txtbox.Text,
                     user_name = user_txtbox.Text,
-                    photo_path = source,
+                    photo_path = imageSource,
                     password = password_txtbox.Text
                 };
                 List<string> empty_ent = ValidationMethods.Employee(emp);
@@ -126,13 +127,15 @@ namespace WinFormsApp4
                     {
 
 
-                        if (ValidationMethods.CopyImage(updateemp.photo_path, updateemp.user_name, updateemp))
-                        {
+                        string newImagePath = ValidationMethods.CreateEmployeeImageFilePath(imageDestinationFolderPath, emp);
+                        ValidationMethods.CopyImage(imageSource, newImagePath);
+                        //if (ValidationMethods.CopyImage(updateemp.photo_path, updateemp.user_name, updateemp))
+                        //{
                             DataBaseMethods.UpdateEmployeeById(updateemp.employee_n_id, updateemp);
                             MessageBox.Show("Your Account Updated successfully");
                             Application.OpenForms[0].Show();
                             this.Close();
-                        }
+                        //}
 
 
                     }
@@ -169,7 +172,7 @@ namespace WinFormsApp4
                     {
                         // Load the image to the pictureBox
                         pictureBox1.ImageLocation = selectedFilePath;
-                        source = selectedFilePath;
+                        imageSource = selectedFilePath;
                         Program.Log(selectedFilePath);
                     }
                     else

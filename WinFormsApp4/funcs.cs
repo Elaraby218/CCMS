@@ -70,6 +70,32 @@ namespace funcs
 
 
 
+        public static string CreateEmployeeImageFilePath(string imageLocationFolder, EmployeeTable employee)
+        {
+            string newImageName = $"{employee.user_name}_{DateTime.Now.ToString("yyyyMMddHHmmss")}.jpg";
+            string newImagePath = Path.Combine(imageLocationFolder, newImageName);
+            return newImagePath;
+        }
+
+        public static void CopyImage(string imagePath, string newImagePath)
+        {
+            if (!File.Exists(imagePath))
+            {
+                throw new FileNotFoundException($"Image not found: {imagePath}");
+            }
+
+            Directory.CreateDirectory(Path.GetDirectoryName(newImagePath));
+
+            if (File.Exists(newImagePath))
+                File.Delete(newImagePath);
+
+            File.Copy(imagePath, newImagePath);
+        }
+
+
+
+
+        /*  Old Function
         public static bool CopyImage(string source, string usernow, EmployeeTable emp)
         {
             if (!string.IsNullOrWhiteSpace(source))
@@ -96,6 +122,7 @@ namespace funcs
                 return false;
             }
         }
+        */
 
         
         public static bool Email(string email)

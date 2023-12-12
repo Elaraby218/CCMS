@@ -103,13 +103,17 @@ namespace WinFormsApp4
                 if (Validate && ValidationMethods.password(emp, confirmed_pass))
                 {
 
-                    if (ValidationMethods.CopyImage(emp.photo_path, emp.user_name, emp))
-                    {
+                    string newImagePath = ValidationMethods.CreateEmployeeImageFilePath(imageDestinationFolderPath, emp);
+                    ValidationMethods.CopyImage(imageSource, newImagePath);
+
+
+                    //if (ValidationMethods.CopyImage(emp.photo_path, emp.user_name, emp))
+                    //{
                         DataBaseMethods.AddEmployee(emp);
                         MessageBox.Show("Your Account Created successfully");
                         Application.OpenForms[0].Show();
                         this.Close();
-                    }
+                    //}
 
 
 
