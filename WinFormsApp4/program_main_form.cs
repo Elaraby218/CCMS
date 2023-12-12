@@ -56,7 +56,7 @@ namespace WinFormsApp4
             string photo_path_to_show = db.employees
                 .Where((x) => x.employee_n_id == cur_employee_n_id).FirstOrDefault().photo_path;
             pictureBox1.ImageLocation = photo_path_to_show;
-            reload();
+            UpdateGridView();
         }
 
         private void History_Click(object sender, EventArgs e)
@@ -104,7 +104,7 @@ namespace WinFormsApp4
 
             ValidationMethods.StudentCheckIn(StudNational_txtbox.Text);
             Reg_newstudbtn.Show();
-            reload();
+            UpdateGridView();
         }
 
 
@@ -118,10 +118,10 @@ namespace WinFormsApp4
         private void button5_Click(object sender, EventArgs e)
         {
             ValidationMethods.StudentCheckOut(StudNational_txtbox.Text, this.employee_n_id);
-            reload();
+            UpdateGridView();
 
         }
-        private void reload()
+        private void UpdateGridView()
         {
             this.dataGridView2.Rows.Clear();
             // dataGridView2.Rows.CollectionChanged();
