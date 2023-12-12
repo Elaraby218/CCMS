@@ -16,15 +16,16 @@ namespace WinFormsApp4
     {
         string employee_n_id;
         string org_image_path;
-        data.EmployeeTable emp;
-        string source;
+        EmployeeTable emp;
+        string imageSource;
+        string imageDestinationFolderPath = Environment.CurrentDirectory + "\\images\\";
 
         public Account(string employee_n_id)
         {
             InitializeComponent();
             emp = DataBaseMethods.GetEmlpyeeByID(employee_n_id);
             LoadEmployeeData(employee_n_id);
-            source = emp.photo_path;
+            imageSource = emp.photo_path;
         }
 
         private void LoadEmployeeData(string employee_n_id) // Show data on the form
@@ -63,7 +64,7 @@ namespace WinFormsApp4
                     phone_number = phone_num_txtbox.Text,
                     email = email_txtbox.Text,
                     user_name = user_txtbox.Text,
-                    photo_path = source,
+                    photo_path = imageSource,
                     password = password_txtbox.Text
                 };
                 List<string> empty_ent = ValidationMethods.Employee(emp);
@@ -126,13 +127,15 @@ namespace WinFormsApp4
                     {
 
 
-                        if (ValidationMethods.CopyImage(updateemp.photo_path, updateemp.user_name, updateemp))
-                        {
+                        string newImagePath = ValidationMethods.CreateEmployeeImageFilePath(imageDestinationFolderPath, emp);
+                        ValidationMethods.CopyImage(imageSource, newImagePath);
+                        //if (ValidationMethods.CopyImage(updateemp.photo_path, updateemp.user_name, updateemp))
+                        //{
                             DataBaseMethods.UpdateEmployeeById(updateemp.employee_n_id, updateemp);
                             MessageBox.Show("Your Account Updated successfully");
                             Application.OpenForms[0].Show();
                             this.Close();
-                        }
+                        //}
 
 
                     }
@@ -148,10 +151,9 @@ namespace WinFormsApp4
 
         }
 
-        private void button5_Click(object sender, EventArgs e) // Browse Image
+        
+        private string SelectImageFile()
         {
-
-
             try
             {
                 OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -164,13 +166,10 @@ namespace WinFormsApp4
                 {
                     string selectedFilePath = openFileDialog.FileName;
 
-                    // Perform additional checks if needed before setting the image
+                    // Perform additional checks if needed before returning the path
                     if (ValidationMethods.IsImageFile(selectedFilePath))
                     {
-                        // Load the image to the pictureBox
-                        pictureBox1.ImageLocation = selectedFilePath;
-                        source = selectedFilePath;
-                        Program.Log(selectedFilePath);
+                        return selectedFilePath;
                     }
                     else
                     {
@@ -183,29 +182,19 @@ namespace WinFormsApp4
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            //try
-            //{
-            //    if (File.Exists(org_image_path))
-            //    {
-            //        File.Delete(org_image_path);
-            //    }
-            //}
-            //catch (Exception)
-            //{
+            return null; // Return null if file selection failed or was invalid
+        }
 
-            //}
+        private void button5_Click(object sender, EventArgs e) // Browse Image
+        {
 
-            //try
-            //{
-            //    openFileDialog1.Title = "Select your personal photo";
-            //    openFileDialog1.ShowDialog();
-            //    source = openFileDialog1.FileName;
-            //    pictureBox1.ImageLocation = source;
-            //}
-            //catch (Exception)
-            //{
-            //    MessageBox.Show("An error occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            string selectedFilePath = SelectImageFile(); // This opens the dialog to get the image path
+
+            if (selectedFilePath != null)
+            {
+                pictureBox1.ImageLocation = selectedFilePath;
+                imageSource = selectedFilePath;
+            }
 
         }
 
@@ -292,7 +281,7 @@ namespace WinFormsApp4
 //        phone_number = phone_num_txtbox.Text,
 //        email = email_txtbox.Text,
 //        user_name = user_txtbox.Text,
-//        photo_path = source,
+//        photo_path = imageSource,
 //        password = password_txtbox.Text
 //    };
 
@@ -318,8 +307,8 @@ namespace WinFormsApp4
 //    {
 //        openFileDialog1.Title = "Select your personal photo";
 //        openFileDialog1.ShowDialog();
-//        source = openFileDialog1.FileName;
-//        pictureBox1.ImageLocation = source;
+//        imageSource = openFileDialog1.FileName;
+//        pictureBox1.ImageLocation = imageSource;
 //    }
 //    catch (Exception)
 //    {

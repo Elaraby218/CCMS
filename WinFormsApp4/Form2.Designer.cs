@@ -84,7 +84,7 @@ namespace WinFormsApp4
             name_txtbox.Location = new Point(293, 147);
             name_txtbox.Name = "name_txtbox";
             name_txtbox.Size = new Size(189, 22);
-            name_txtbox.TabIndex = 3;
+            name_txtbox.TabIndex = 1;
             name_txtbox.TextChanged += textBox1_TextChanged;
             // 
             // label2
@@ -105,7 +105,7 @@ namespace WinFormsApp4
             phone_num_txtbox.Location = new Point(293, 293);
             phone_num_txtbox.Name = "phone_num_txtbox";
             phone_num_txtbox.Size = new Size(189, 22);
-            phone_num_txtbox.TabIndex = 5;
+            phone_num_txtbox.TabIndex = 3;
             // 
             // label3
             // 
@@ -125,7 +125,7 @@ namespace WinFormsApp4
             password_txtbox.Location = new Point(540, 217);
             password_txtbox.Name = "password_txtbox";
             password_txtbox.Size = new Size(182, 22);
-            password_txtbox.TabIndex = 7;
+            password_txtbox.TabIndex = 6;
             password_txtbox.TextChanged += password_txtbox_TextChanged;
             // 
             // label4
@@ -146,7 +146,7 @@ namespace WinFormsApp4
             email_txtbox.Location = new Point(293, 362);
             email_txtbox.Name = "email_txtbox";
             email_txtbox.Size = new Size(192, 22);
-            email_txtbox.TabIndex = 9;
+            email_txtbox.TabIndex = 4;
             email_txtbox.TextChanged += email_txtbox_TextChanged;
             // 
             // label5
@@ -167,7 +167,7 @@ namespace WinFormsApp4
             cpass_txtbox.Location = new Point(540, 293);
             cpass_txtbox.Name = "cpass_txtbox";
             cpass_txtbox.Size = new Size(182, 22);
-            cpass_txtbox.TabIndex = 11;
+            cpass_txtbox.TabIndex = 7;
             // 
             // label6
             // 
@@ -187,7 +187,7 @@ namespace WinFormsApp4
             National_id_txtbox.Location = new Point(293, 217);
             National_id_txtbox.Name = "National_id_txtbox";
             National_id_txtbox.Size = new Size(189, 22);
-            National_id_txtbox.TabIndex = 13;
+            National_id_txtbox.TabIndex = 2;
             National_id_txtbox.TextChanged += National_id_txtbox_TextChanged;
             // 
             // label7
@@ -208,7 +208,7 @@ namespace WinFormsApp4
             user_txtbox.Location = new Point(540, 147);
             user_txtbox.Name = "user_txtbox";
             user_txtbox.Size = new Size(182, 22);
-            user_txtbox.TabIndex = 15;
+            user_txtbox.TabIndex = 5;
             // 
             // pictureBox1
             // 
@@ -251,7 +251,7 @@ namespace WinFormsApp4
             button1.Location = new Point(413, 424);
             button1.Name = "button1";
             button1.Size = new Size(208, 35);
-            button1.TabIndex = 0;
+            button1.TabIndex = 8;
             button1.Text = "Regisiter";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -403,6 +403,8 @@ namespace WinFormsApp4
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sign up ";
             Load += Sign_up_form_Load;
+            KeyDown += Sign_up_form_KeyDown;
+            KeyPress += Sign_up_form_KeyPress;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

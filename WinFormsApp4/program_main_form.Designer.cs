@@ -120,15 +120,18 @@ namespace WinFormsApp4
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Location = new Point(32, 24);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(100, 50);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(0, 0);
+            textBox1.BackColor = Color.DarkSeaGreen;
+            textBox1.Location = new Point(32, 0);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 1;
@@ -443,7 +446,7 @@ namespace WinFormsApp4
 
         private Button Log_out_btn;
         private Label emp_name;
-        private string employee_n_id;
+        //private string employee_n_id;
         private string name_label_text;
         private PictureBox pictureBox1;
         private TextBox textBox1;
