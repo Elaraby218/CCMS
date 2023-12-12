@@ -103,7 +103,7 @@ namespace funcs
         }
         public static bool UserName(string username)
         {
-            AppDbContext db =  AppDbContext.Instance;
+            AppDbContext db = AppDbContext.Instance;
             var IsUserFound = db.employees.
                    Where(a => a.user_name == username).FirstOrDefault();
             return (IsUserFound != null);
@@ -130,11 +130,11 @@ namespace funcs
             // return true if this student is in
             if (!DataBaseMethods.IsIn(id))
             {
-                MessageBox.Show("The Student is not in" , "Error" , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("The Student is not in", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             DataBaseMethods.StudentCheckOut(id, employee_id);
-            return true ;
+            return true;
         }
         public static bool PhoneNumber(string Number)
         {
@@ -156,24 +156,25 @@ namespace funcs
             }
             return false;
         }
-        public static bool StudentCheckIn(string id){
-            if (!ValidationMethods.NationalIdLen(id)) 
+        public static bool StudentCheckIn(string id)
+        {
+            if (!ValidationMethods.NationalIdLen(id))
             {
                 MessageBox.Show("Invalid National ID", "NOT FOUND", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false ; 
+                return false;
             }
-            if (!ValidationMethods.IsStudent(id)) 
+            if (!ValidationMethods.IsStudent(id))
             {
                 MessageBox.Show("User Not found", "NOT FOUND", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (DataBaseMethods.IsIn(id)) 
+            if (DataBaseMethods.IsIn(id))
             {
                 MessageBox.Show("User Already in", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             DataBaseMethods.AddToInStudent(id);
-                return true;
+            return true;
         }
 
     }
@@ -297,8 +298,9 @@ namespace funcs
                 db.SaveChanges();
             }
         }
-        public static bool IsIn(string id) {
-            return( db.in_students.Where((x) => x.student_n_id == id).FirstOrDefault() != null ); 
+        public static bool IsIn(string id)
+        {
+            return (db.in_students.Where((x) => x.student_n_id == id).FirstOrDefault() != null);
         }
 
 

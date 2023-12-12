@@ -53,7 +53,12 @@ namespace WinFormsApp4
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+            if (ValidationMethods.IsStudent(N_id_txtbox.Text))
+            {
+                MessageBox.Show("Wrong National Id", "Error"
+                   , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (!Regex.IsMatch(Level_txtbox.Text, "^(1|2|3|4|5)$"))
 
             {
