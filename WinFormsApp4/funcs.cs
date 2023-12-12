@@ -227,6 +227,19 @@ namespace funcs
             MessageBox.Show("Successfully removed", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        public static string GetEmployeePassword(string id)
+        {
+            var emp = db.employees
+                .FirstOrDefault(x => x.employee_n_id == id);
+            return emp?.password;
+        }
+
+        public static string GetEmployeePhone(string id)
+        {
+            var emp = db.employees
+                .FirstOrDefault(x => x.employee_n_id == id);
+            return emp?.phone_number;
+        }
         public static EmployeeTable GetEmlpyeeByID(string id)
         {
             var emp = db.employees

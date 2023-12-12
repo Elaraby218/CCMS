@@ -57,10 +57,10 @@
             name_txtbox = new TextBox();
             button7 = new Button();
             panel2 = new Panel();
+            btn_back = new Button();
             button1 = new Button();
             button8 = new Button();
             checkBox1 = new CheckBox();
-            btn_back = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel1.SuspendLayout();
@@ -173,6 +173,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 17;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // openFileDialog2
             // 
@@ -297,10 +298,10 @@
             password_txtbox.ForeColor = SystemColors.ActiveCaptionText;
             password_txtbox.Location = new Point(540, 213);
             password_txtbox.Name = "password_txtbox";
-            password_txtbox.PasswordChar = '*';
             password_txtbox.Size = new Size(182, 23);
             password_txtbox.TabIndex = 31;
             password_txtbox.TextAlign = HorizontalAlignment.Center;
+            password_txtbox.TextChanged += password_txtbox_TextChanged;
             // 
             // label2
             // 
@@ -322,6 +323,7 @@
             phone_num_txtbox.Size = new Size(189, 23);
             phone_num_txtbox.TabIndex = 29;
             phone_num_txtbox.TextAlign = HorizontalAlignment.Center;
+            phone_num_txtbox.TextChanged += phone_num_txtbox_TextChanged;
             // 
             // label1
             // 
@@ -371,6 +373,20 @@
             panel2.Size = new Size(156, 526);
             panel2.TabIndex = 43;
             // 
+            // btn_back
+            // 
+            btn_back.BackColor = Color.DarkSeaGreen;
+            btn_back.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_back.ForeColor = SystemColors.ButtonHighlight;
+            btn_back.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_back.Location = new Point(48, 475);
+            btn_back.Name = "btn_back";
+            btn_back.Size = new Size(96, 39);
+            btn_back.TabIndex = 49;
+            btn_back.Text = "Dashboard";
+            btn_back.UseVisualStyleBackColor = false;
+            btn_back.Click += btn_back_Click;
+            // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(192, 0, 0);
@@ -410,20 +426,6 @@
             checkBox1.Text = "Show Password";
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
-            // 
-            // btn_back
-            // 
-            btn_back.BackColor = Color.DarkSeaGreen;
-            btn_back.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_back.ForeColor = SystemColors.ButtonHighlight;
-            btn_back.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_back.Location = new Point(48, 475);
-            btn_back.Name = "btn_back";
-            btn_back.Size = new Size(96, 39);
-            btn_back.TabIndex = 49;
-            btn_back.Text = "Dashboard";
-            btn_back.UseVisualStyleBackColor = false;
-            btn_back.Click += btn_back_Click;
             // 
             // Account
             // 

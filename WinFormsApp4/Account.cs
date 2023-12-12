@@ -275,9 +275,14 @@ namespace WinFormsApp4
         {
             if (!checkBox1.Checked)
             {
-                password_txtbox.UseSystemPasswordChar = false;
+                password_txtbox.UseSystemPasswordChar = true;
             }
-            else { password_txtbox.UseSystemPasswordChar = true; }
+            else
+            {
+                string employeeId = program_main_form.E_id;
+                password_txtbox.UseSystemPasswordChar = false;
+                password_txtbox.Text = DataBaseMethods.GetEmployeePassword(employeeId);
+            }
         }
 
         private void btn_back_Click(object sender, EventArgs e)
@@ -286,6 +291,24 @@ namespace WinFormsApp4
             program_main_form pp = new program_main_form(employeeID);
             pp.Show();
             this.Close();
+        }
+
+        private void password_txtbox_TextChanged(object sender, EventArgs e)
+        {
+            string employeeId = program_main_form.E_id;
+            password_txtbox.Text = DataBaseMethods.GetEmployeePassword(employeeId);
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phone_num_txtbox_TextChanged(object sender, EventArgs e)
+        {
+            string employeeId = program_main_form.E_id;
+            password_txtbox.Text = DataBaseMethods.GetEmployeePhone(employeeId);
         }
     }
 }
