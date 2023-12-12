@@ -43,10 +43,8 @@ namespace WinFormsApp4
             }
         }
 
-        private void program_main_form_Load(object sender, EventArgs e)
+        private void PreviewImageAndName()
         {
-
-            Reg_newstudbtn.Hide();
             name_label_text = db.employees
                 .Where((x) => x.employee_n_id == cur_employee_n_id).FirstOrDefault().name;
             cur_user_name = name_label_text = db.employees
@@ -56,6 +54,13 @@ namespace WinFormsApp4
             string photo_path_to_show = db.employees
                 .Where((x) => x.employee_n_id == cur_employee_n_id).FirstOrDefault().photo_path;
             pictureBox1.ImageLocation = photo_path_to_show;
+        }
+
+        private void program_main_form_Load(object sender, EventArgs e)
+        {
+
+            Reg_newstudbtn.Hide();
+            PreviewImageAndName();
             UpdateGridView();
         }
 
@@ -142,6 +147,7 @@ namespace WinFormsApp4
         {
             Form ac = new Account(cur_employee_n_id);
             ac.ShowDialog();
+            PreviewImageAndName();
         }
 
         // -------------------- Empty Functions --------------------
