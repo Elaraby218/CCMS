@@ -132,8 +132,7 @@ namespace WinFormsApp4
         {
 
         }
-
-        private void button2_Click_1(object sender, EventArgs e)
+        private string SelectImageFile()
         {
             try
             {
@@ -147,14 +146,10 @@ namespace WinFormsApp4
                 {
                     string selectedFilePath = openFileDialog.FileName;
 
-                    // Perform additional checks if needed before setting the image
+                    // Perform additional checks if needed before returning the path
                     if (ValidationMethods.IsImageFile(selectedFilePath))
                     {
-                        // Load the image to the pictureBox
-                        pictureBox1.ImageLocation = selectedFilePath;
-                        source = selectedFilePath;
-
-                        //Program.Log(selectedFilePath);
+                        return selectedFilePath;
                     }
                     else
                     {
@@ -165,6 +160,22 @@ namespace WinFormsApp4
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return null; // Return null if file selection failed or was invalid
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+            string selectedFilePath = SelectImageFile(); // This opens the dialog to get the image path
+
+            if (selectedFilePath != null)
+            {
+                // Load the image to the pictureBox
+                pictureBox1.ImageLocation = selectedFilePath;
+                source = selectedFilePath;
+                //Program.Log(selectedFilePath);
             }
         }
 
