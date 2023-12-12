@@ -38,6 +38,8 @@ namespace WinFormsApp4
                 phone_number = this.phone_num_txtbox.Text,
                 photo_path = imageSource
             };
+
+
             List<string> empty_ent = ValidationMethods.Employee(emp);
 
             if (empty_ent.Count > 0)
@@ -111,12 +113,12 @@ namespace WinFormsApp4
                     //{
                         DataBaseMethods.AddEmployee(emp);
                         MessageBox.Show("Your Account Created successfully");
-                        Application.OpenForms[0].Show();
-                        this.Close();
                     //}
 
 
 
+                        Application.OpenForms[0].Show();
+                        this.Close();
                 }
             }
 

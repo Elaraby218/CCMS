@@ -74,6 +74,7 @@ namespace funcs
         {
             string newImageName = $"{employee.user_name}_{DateTime.Now.ToString("yyyyMMddHHmmss")}.jpg";
             string newImagePath = Path.Combine(imageLocationFolder, newImageName);
+            employee.photo_path = newImagePath;
             return newImagePath;
         }
 
