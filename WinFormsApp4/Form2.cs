@@ -12,13 +12,13 @@ namespace WinFormsApp4
     {
 
 
-        string source = "";
+        string imageSource = ""; 
         public Sign_up_form()
         {
             InitializeComponent();
             //  MessageBox.Show(Environment.CurrentDirectory);
             // default photo on pt3
-            pictureBox1.ImageLocation = source;
+            pictureBox1.ImageLocation = imageSource;
             password_txtbox.UseSystemPasswordChar = true;
             cpass_txtbox.UseSystemPasswordChar = true;
         }
@@ -34,7 +34,7 @@ namespace WinFormsApp4
                 email = this.email_txtbox.Text,
                 user_name = this.user_txtbox.Text,
                 phone_number = this.phone_num_txtbox.Text,
-                photo_path = source
+                photo_path = imageSource
             };
             List<string> empty_ent = ValidationMethods.Employee(emp);
 
@@ -100,7 +100,6 @@ namespace WinFormsApp4
                 string confirmed_pass = this.cpass_txtbox.Text;
                 if (Validate && ValidationMethods.password(emp, confirmed_pass))
                 {
-
 
                     if (ValidationMethods.CopyImage(emp.photo_path, emp.user_name, emp))
                     {
@@ -174,7 +173,7 @@ namespace WinFormsApp4
             {
                 // Load the image to the pictureBox
                 pictureBox1.ImageLocation = selectedFilePath;
-                source = selectedFilePath;
+                imageSource = selectedFilePath;
                 //Program.Log(selectedFilePath);
             }
         }

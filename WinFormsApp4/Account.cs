@@ -199,8 +199,8 @@ namespace WinFormsApp4
             //{
             //    openFileDialog1.Title = "Select your personal photo";
             //    openFileDialog1.ShowDialog();
-            //    source = openFileDialog1.FileName;
-            //    pictureBox1.ImageLocation = source;
+            //    imageSource = openFileDialog1.FileName;
+            //    pictureBox1.ImageLocation = imageSource;
             //}
             //catch (Exception)
             //{
@@ -292,7 +292,7 @@ namespace WinFormsApp4
 //        phone_number = phone_num_txtbox.Text,
 //        email = email_txtbox.Text,
 //        user_name = user_txtbox.Text,
-//        photo_path = source,
+//        photo_path = imageSource,
 //        password = password_txtbox.Text
 //    };
 
@@ -318,8 +318,8 @@ namespace WinFormsApp4
 //    {
 //        openFileDialog1.Title = "Select your personal photo";
 //        openFileDialog1.ShowDialog();
-//        source = openFileDialog1.FileName;
-//        pictureBox1.ImageLocation = source;
+//        imageSource = openFileDialog1.FileName;
+//        pictureBox1.ImageLocation = imageSource;
 //    }
 //    catch (Exception)
 //    {
