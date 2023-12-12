@@ -24,10 +24,8 @@ namespace WinFormsApp4
             password_txtbox.UseSystemPasswordChar = true;
             cpass_txtbox.UseSystemPasswordChar = true;
         }
-
-        private void button1_Click(object sender, EventArgs e) // Register
+        private void ExecuteRegistration()
         {
-
             EmployeeTable emp = new EmployeeTable
             {
                 name = this.name_txtbox.Text,
@@ -111,18 +109,32 @@ namespace WinFormsApp4
 
                     //if (ValidationMethods.CopyImage(emp.photo_path, emp.user_name, emp))
                     //{
-                        DataBaseMethods.AddEmployee(emp);
-                        MessageBox.Show("Your Account Created successfully");
+                    DataBaseMethods.AddEmployee(emp);
+                    MessageBox.Show("Your Account Created successfully");
                     //}
 
 
 
-                        Application.OpenForms[0].Show();
-                        this.Close();
+                    Application.OpenForms[0].Show();
+                    this.Close();
                 }
             }
 
 
+
+        }
+
+        private void button1_Click(object sender, EventArgs e) // Register
+        {
+            ExecuteRegistration();
+        }
+
+        private void Sign_up_form_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void Sign_up_form_KeyDown(object sender, KeyEventArgs e)
+        {
         }
 
         private string SelectImageFile()
@@ -197,10 +209,13 @@ namespace WinFormsApp4
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            if(!checkBox2.Checked) { password_txtbox.UseSystemPasswordChar = true;
+            if (!checkBox2.Checked)
+            {
+                password_txtbox.UseSystemPasswordChar = true;
                 cpass_txtbox.UseSystemPasswordChar = true;
             }
-            else {
+            else
+            {
                 password_txtbox.UseSystemPasswordChar = false;
                 cpass_txtbox.UseSystemPasswordChar = false;
             }
@@ -208,7 +223,7 @@ namespace WinFormsApp4
 
 
 
-        // Empty Functions
+        // -------------------- Empty Functions --------------------
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -269,5 +284,6 @@ namespace WinFormsApp4
         {
 
         }
+
     }
 }
