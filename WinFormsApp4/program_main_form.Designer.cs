@@ -120,7 +120,7 @@ namespace WinFormsApp4
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Location = new Point(32, 24);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(100, 50);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -130,7 +130,8 @@ namespace WinFormsApp4
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(0, 0);
+            textBox1.BackColor = Color.DarkSeaGreen;
+            textBox1.Location = new Point(32, 0);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 1;
