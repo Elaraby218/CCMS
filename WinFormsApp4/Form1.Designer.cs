@@ -60,6 +60,7 @@ namespace WinFormsApp4
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.None;
             textBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.ForeColor = SystemColors.ActiveCaptionText;
             textBox1.Location = new Point(262, 214);
@@ -70,6 +71,7 @@ namespace WinFormsApp4
             // 
             // textBox2
             // 
+            textBox2.Anchor = AnchorStyles.None;
             textBox2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.Location = new Point(262, 278);
             textBox2.Name = "textBox2";
@@ -79,6 +81,7 @@ namespace WinFormsApp4
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.None;
             button1.BackColor = Color.SeaGreen;
             button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ButtonHighlight;
@@ -92,6 +95,7 @@ namespace WinFormsApp4
             // 
             // linkLabel1
             // 
+            linkLabel1.Anchor = AnchorStyles.None;
             linkLabel1.AutoSize = true;
             linkLabel1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             linkLabel1.LinkColor = Color.SeaGreen;
@@ -105,6 +109,7 @@ namespace WinFormsApp4
             // 
             // label8
             // 
+            label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label8.ForeColor = Color.FromArgb(64, 64, 64);
@@ -116,6 +121,7 @@ namespace WinFormsApp4
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.SeaGreen;
@@ -127,6 +133,7 @@ namespace WinFormsApp4
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.SeaGreen;
@@ -138,6 +145,7 @@ namespace WinFormsApp4
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackColor = Color.SeaGreen;
             pictureBox1.Image = Properties.Resources.icons8_person_642;
             pictureBox1.Location = new Point(320, 28);
@@ -150,6 +158,7 @@ namespace WinFormsApp4
             // 
             // linkLabel2
             // 
+            linkLabel2.Anchor = AnchorStyles.None;
             linkLabel2.AutoSize = true;
             linkLabel2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             linkLabel2.LinkColor = Color.SeaGreen;
@@ -163,11 +172,11 @@ namespace WinFormsApp4
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.None;
             panel1.Controls.Add(button4);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button5);
             panel1.Controls.Add(button2);
-            panel1.Dock = DockStyle.Right;
             panel1.Location = new Point(546, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(183, 501);
@@ -175,19 +184,23 @@ namespace WinFormsApp4
             // 
             // button4
             // 
+            button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button4.AutoSize = true;
             button4.BackColor = Color.SeaGreen;
             button4.FlatStyle = FlatStyle.Popup;
             button4.ForeColor = SystemColors.ControlDarkDark;
             button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(137, 3);
+            button4.Location = new Point(135, 3);
             button4.Name = "button4";
-            button4.Size = new Size(34, 30);
+            button4.Size = new Size(36, 36);
             button4.TabIndex = 32;
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
             // button3
             // 
+            button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button3.AutoSize = true;
             button3.BackColor = Color.SeaGreen;
             button3.FlatStyle = FlatStyle.Popup;
             button3.ForeColor = SystemColors.ButtonHighlight;
@@ -201,6 +214,8 @@ namespace WinFormsApp4
             // 
             // button5
             // 
+            button5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button5.AutoSize = true;
             button5.BackColor = Color.SeaGreen;
             button5.FlatStyle = FlatStyle.Popup;
             button5.ForeColor = SystemColors.ControlDarkDark;
@@ -214,6 +229,7 @@ namespace WinFormsApp4
             // 
             // button2
             // 
+            button2.Anchor = AnchorStyles.None;
             button2.BackColor = SystemColors.ControlDarkDark;
             button2.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonHighlight;
@@ -228,6 +244,7 @@ namespace WinFormsApp4
             // 
             // pictureBox2
             // 
+            pictureBox2.Anchor = AnchorStyles.None;
             pictureBox2.Image = Properties.Resources.Design_a_modern_and_sleek_logo_for_a_Computer_Center_Management;
             pictureBox2.Location = new Point(-33, 119);
             pictureBox2.Name = "pictureBox2";
@@ -238,8 +255,8 @@ namespace WinFormsApp4
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.None;
             panel2.Controls.Add(panel4);
-            panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(546, 501);
@@ -247,6 +264,7 @@ namespace WinFormsApp4
             // 
             // panel4
             // 
+            panel4.Anchor = AnchorStyles.None;
             panel4.Controls.Add(checkBox1);
             panel4.Controls.Add(pictureBox1);
             panel4.Controls.Add(linkLabel1);
@@ -257,7 +275,6 @@ namespace WinFormsApp4
             panel4.Controls.Add(button1);
             panel4.Controls.Add(label6);
             panel4.Controls.Add(textBox2);
-            panel4.Dock = DockStyle.Fill;
             panel4.Location = new Point(0, 0);
             panel4.Name = "panel4";
             panel4.Size = new Size(546, 501);
@@ -265,6 +282,7 @@ namespace WinFormsApp4
             // 
             // checkBox1
             // 
+            checkBox1.Anchor = AnchorStyles.None;
             checkBox1.AutoSize = true;
             checkBox1.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             checkBox1.Location = new Point(262, 309);
@@ -277,8 +295,8 @@ namespace WinFormsApp4
             // 
             // panel3
             // 
+            panel3.Anchor = AnchorStyles.None;
             panel3.Controls.Add(pictureBox2);
-            panel3.Dock = DockStyle.Left;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
             panel3.Size = new Size(221, 501);
@@ -300,6 +318,7 @@ namespace WinFormsApp4
             Load += Login_Page_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel2.ResumeLayout(false);
             panel4.ResumeLayout(false);
