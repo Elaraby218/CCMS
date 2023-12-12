@@ -362,4 +362,5 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 # Mohamed test file
-/WindowsFormApp4/images/
+WindowsFormApp4/images/
+.mydatabase.db
