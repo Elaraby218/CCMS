@@ -103,7 +103,7 @@ namespace funcs
         }
         public static bool UserName(string username)
         {
-            AppDbContext db = new AppDbContext();
+            AppDbContext db =  AppDbContext.Instance;
             var IsUserFound = db.employees.
                    Where(a => a.user_name == username).FirstOrDefault();
             return (IsUserFound != null);
@@ -119,7 +119,7 @@ namespace funcs
             EmployeeTable IsUserFound = DataBaseMethods.getEmployee(id);
             return ((IsUserFound != null));
         }
-        public static bool StudentNationalId(string id)
+        public static bool IsStudent(string id)
         {
             StudentsTable IsUserFound = DataBaseMethods.getStudent(id);
             return ((IsUserFound != null));
@@ -155,6 +155,25 @@ namespace funcs
                 return allowedExtensions.Contains(extension);
             }
             return false;
+        }
+        public static bool StudentCheckIn(string id){
+            if (!ValidationMethods.NationalIdLen(id)) 
+            {
+                MessageBox.Show("Invalid National ID", "NOT FOUND", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false ; 
+            }
+            if (!ValidationMethods.IsStudent(id)) 
+            {
+                MessageBox.Show("User Not found", "NOT FOUND", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (DataBaseMethods.IsIn(id)) 
+            {
+                MessageBox.Show("User Already in", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            DataBaseMethods.AddToInStudent(id);
+                return true;
         }
 
     }
@@ -279,7 +298,7 @@ namespace funcs
             }
         }
         public static bool IsIn(string id) {
-            return( db.in_students.Any((x) => x.student_n_id == id) ); 
+            return( db.in_students.Where((x) => x.student_n_id == id).FirstOrDefault() != null ); 
         }
 
 

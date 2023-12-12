@@ -54,7 +54,7 @@ namespace WinFormsApp4
                 return;
             }
 
-            if (!Regex.IsMatch(Level_txtbox.Text, "^[1 - 5]$"))
+            if (!Regex.IsMatch(Level_txtbox.Text, "^(1|2|3|4|5)$"))
 
             {
                 MessageBox.Show("Invalid Level", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -69,8 +69,12 @@ namespace WinFormsApp4
                 faculty = Faculty_txtbox.Text,
                 level = Convert.ToInt32(Level_txtbox.Text)
             };
-            ValidationMethods.AddStudent(student);
+            DataBaseMethods.AddStudent(student);
+           // MessageBox.Show("Student Added", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
             this.Close();
+
         }
 
 

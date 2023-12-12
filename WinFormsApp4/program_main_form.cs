@@ -124,18 +124,9 @@ namespace WinFormsApp4
 
         private void AddStudBtn(object sender, EventArgs e)
         {
-            if (!ValidationMethods.NationalIdLen(StudNational_txtbox.Text))
-            {
-                MessageBox.Show("Invalid National Id", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (!ValidationMethods.StudentNationalId(StudNational_txtbox.Text))
-            {
-                MessageBox.Show("No such student found, please add new student", "NOT FOUND", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Reg_newstudbtn.Show();
-                return;
-            }
-            DataBaseMethods.AddToInStudent(StudNational_txtbox.Text);
+
+            ValidationMethods.StudentCheckIn(StudNational_txtbox.Text);
+            Reg_newstudbtn.Show();
             reload();
         }
 
