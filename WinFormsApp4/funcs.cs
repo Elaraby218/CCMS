@@ -96,6 +96,8 @@ namespace funcs
                 return false;
             }
         }
+
+        
         public static bool Email(string email)
         {
             string expectedEmailFormat = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";

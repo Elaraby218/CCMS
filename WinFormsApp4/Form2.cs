@@ -12,7 +12,9 @@ namespace WinFormsApp4
     {
 
 
-        string imageSource = ""; 
+        string imageSource = "";
+        string imageDestinationFolderPath = Environment.CurrentDirectory + "\\images\\";
+
         public Sign_up_form()
         {
             InitializeComponent();
@@ -23,7 +25,7 @@ namespace WinFormsApp4
             cpass_txtbox.UseSystemPasswordChar = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // Register
         {
 
             EmployeeTable emp = new EmployeeTable
@@ -117,20 +119,6 @@ namespace WinFormsApp4
 
         }
 
-        private void Sign_up_form_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
         private string SelectImageFile()
         {
             try
@@ -200,6 +188,21 @@ namespace WinFormsApp4
         }
 
 
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if(!checkBox2.Checked) { password_txtbox.UseSystemPasswordChar = true;
+                cpass_txtbox.UseSystemPasswordChar = true;
+            }
+            else {
+                password_txtbox.UseSystemPasswordChar = false;
+                cpass_txtbox.UseSystemPasswordChar = false;
+            }
+        }
+
+
+
+        // Empty Functions
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -246,15 +249,19 @@ namespace WinFormsApp4
 
         }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        private void Sign_up_form_Load(object sender, EventArgs e)
         {
-            if(!checkBox2.Checked) { password_txtbox.UseSystemPasswordChar = true;
-                cpass_txtbox.UseSystemPasswordChar = true;
-            }
-            else {
-                password_txtbox.UseSystemPasswordChar = false;
-                cpass_txtbox.UseSystemPasswordChar = false;
-            }
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
