@@ -60,6 +60,7 @@
             button1 = new Button();
             button8 = new Button();
             checkBox1 = new CheckBox();
+            btn_back = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel1.SuspendLayout();
@@ -349,9 +350,9 @@
             button7.FlatStyle = FlatStyle.Popup;
             button7.Font = new Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             button7.ForeColor = SystemColors.Control;
-            button7.Location = new Point(272, 463);
+            button7.Location = new Point(284, 420);
             button7.Name = "button7";
-            button7.Size = new Size(144, 35);
+            button7.Size = new Size(112, 35);
             button7.TabIndex = 26;
             button7.Text = "Save Changes";
             button7.UseVisualStyleBackColor = false;
@@ -359,6 +360,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(btn_back);
             panel2.Controls.Add(button4);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(pictureBox2);
@@ -375,9 +377,9 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(440, 463);
+            button1.Location = new Point(452, 420);
             button1.Name = "button1";
-            button1.Size = new Size(144, 35);
+            button1.Size = new Size(112, 35);
             button1.TabIndex = 45;
             button1.Text = "Delete Acount";
             button1.UseVisualStyleBackColor = false;
@@ -389,9 +391,9 @@
             button8.FlatStyle = FlatStyle.Popup;
             button8.Font = new Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             button8.ForeColor = SystemColors.Control;
-            button8.Location = new Point(605, 463);
+            button8.Location = new Point(617, 420);
             button8.Name = "button8";
-            button8.Size = new Size(144, 35);
+            button8.Size = new Size(112, 35);
             button8.TabIndex = 46;
             button8.Text = "Discard changes";
             button8.UseVisualStyleBackColor = false;
@@ -409,6 +411,20 @@
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
+            // btn_back
+            // 
+            btn_back.BackColor = Color.DarkSeaGreen;
+            btn_back.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_back.ForeColor = SystemColors.ButtonHighlight;
+            btn_back.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_back.Location = new Point(48, 475);
+            btn_back.Name = "btn_back";
+            btn_back.Size = new Size(96, 39);
+            btn_back.TabIndex = 49;
+            btn_back.Text = "Dashboard";
+            btn_back.UseVisualStyleBackColor = false;
+            btn_back.Click += btn_back_Click;
+            // 
             // Account
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -416,12 +432,13 @@
             ClientSize = new Size(836, 526);
             Controls.Add(checkBox1);
             Controls.Add(button8);
-            Controls.Add(button1);
             Controls.Add(label8);
+            Controls.Add(button1);
             Controls.Add(panel1);
             Controls.Add(label7);
             Controls.Add(user_txtbox);
             Controls.Add(label6);
+            Controls.Add(button7);
             Controls.Add(National_id_txtbox);
             Controls.Add(label5);
             Controls.Add(cpass_txtbox);
@@ -433,7 +450,6 @@
             Controls.Add(phone_num_txtbox);
             Controls.Add(label1);
             Controls.Add(name_txtbox);
-            Controls.Add(button7);
             Controls.Add(panel2);
             Controls.Add(button2);
             FormBorderStyle = FormBorderStyle.None;
@@ -483,5 +499,6 @@
         private Button button1;
         private Button button8;
         private CheckBox checkBox1;
+        private Button btn_back;
     }
 }

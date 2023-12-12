@@ -59,7 +59,7 @@ namespace WinFormsApp4
             this.WindowState = FormWindowState.Minimized;
         }
 
-        
+
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -71,6 +71,19 @@ namespace WinFormsApp4
                 this.WindowState = FormWindowState.Normal;
             else
                 this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void New_stu_reg_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            string employeeID = program_main_form.E_id;
+            program_main_form pp = new program_main_form(employeeID);
+            pp.Show();
+            this.Close();
         }
     }
 }

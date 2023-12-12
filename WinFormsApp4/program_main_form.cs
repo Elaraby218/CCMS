@@ -22,9 +22,11 @@ namespace WinFormsApp4
 
         string txt = "null";
         string cur_user_name;
+        public static string E_id = "";
 
         public program_main_form(string employee_n_id)
         {
+            E_id = employee_n_id;
             InitializeComponent();
             Reg_newstudbtn.Hide();
             this.employee_n_id = employee_n_id;
@@ -81,7 +83,7 @@ namespace WinFormsApp4
               MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-       
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -168,6 +170,7 @@ namespace WinFormsApp4
         {
             DataBaseMethods.StudentOut(StudNational_txtbox.Text, this.employee_n_id);
             reload();
+            StudNational_txtbox.Clear();
 
         }
         private void reload()
@@ -186,6 +189,26 @@ namespace WinFormsApp4
         {
             Form ac = new Account(employee_n_id);
             ac.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

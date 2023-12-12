@@ -239,13 +239,23 @@ namespace WinFormsApp4
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            if(!checkBox2.Checked) { password_txtbox.UseSystemPasswordChar = true;
+            if (!checkBox2.Checked)
+            {
+                password_txtbox.UseSystemPasswordChar = true;
                 cpass_txtbox.UseSystemPasswordChar = true;
             }
-            else {
+            else
+            {
                 password_txtbox.UseSystemPasswordChar = false;
                 cpass_txtbox.UseSystemPasswordChar = false;
             }
+        }
+
+        private void btn_log_Click(object sender, EventArgs e)
+        {
+            Login_Page l = new Login_Page();
+            l.Show();
+            this.Close();
         }
     }
 }

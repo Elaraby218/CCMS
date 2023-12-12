@@ -224,7 +224,7 @@ namespace funcs
                 cost = student.paper_printed * 0.5
             });
             db.SaveChanges();
-            MessageBox.Show("Successfully added", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Successfully removed", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public static EmployeeTable GetEmlpyeeByID(string id)

@@ -49,6 +49,7 @@
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             label8 = new Label();
             label9 = new Label();
+            btn_logg = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel4.SuspendLayout();
             SuspendLayout();
@@ -274,11 +275,26 @@
             label9.TabIndex = 42;
             label9.Text = "Step 2";
             // 
+            // btn_logg
+            // 
+            btn_logg.BackColor = Color.DarkSeaGreen;
+            btn_logg.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_logg.ForeColor = SystemColors.ButtonHighlight;
+            btn_logg.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_logg.Location = new Point(264, 432);
+            btn_logg.Name = "btn_logg";
+            btn_logg.Size = new Size(76, 33);
+            btn_logg.TabIndex = 43;
+            btn_logg.Text = "Login";
+            btn_logg.UseVisualStyleBackColor = false;
+            btn_logg.Click += btn_logg_Click;
+            // 
             // forget_pas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(719, 477);
+            Controls.Add(btn_logg);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label4);
@@ -327,5 +343,6 @@
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
         private Label label8;
         private Label label9;
+        private Button btn_logg;
     }
 }

@@ -43,6 +43,7 @@
             button4 = new Button();
             button3 = new Button();
             button5 = new Button();
+            btn_back = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -58,7 +59,7 @@
             // 
             // Faculty_txtbox
             // 
-            Faculty_txtbox.Location = new Point(70, 209);
+            Faculty_txtbox.Location = new Point(70, 180);
             Faculty_txtbox.Multiline = true;
             Faculty_txtbox.Name = "Faculty_txtbox";
             Faculty_txtbox.Size = new Size(235, 42);
@@ -67,7 +68,7 @@
             // 
             // N_id_txtbox
             // 
-            N_id_txtbox.Location = new Point(70, 120);
+            N_id_txtbox.Location = new Point(70, 108);
             N_id_txtbox.Multiline = true;
             N_id_txtbox.Name = "N_id_txtbox";
             N_id_txtbox.Size = new Size(235, 42);
@@ -76,7 +77,7 @@
             // 
             // Level_txtbox
             // 
-            Level_txtbox.Location = new Point(70, 288);
+            Level_txtbox.Location = new Point(70, 255);
             Level_txtbox.Multiline = true;
             Level_txtbox.Name = "Level_txtbox";
             Level_txtbox.Size = new Size(235, 42);
@@ -101,7 +102,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.SeaGreen;
-            label1.Location = new Point(70, 186);
+            label1.Location = new Point(70, 157);
             label1.Name = "label1";
             label1.Size = new Size(59, 20);
             label1.TabIndex = 9;
@@ -113,7 +114,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.SeaGreen;
-            label2.Location = new Point(70, 103);
+            label2.Location = new Point(70, 91);
             label2.Name = "label2";
             label2.Size = new Size(25, 20);
             label2.TabIndex = 10;
@@ -125,7 +126,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.SeaGreen;
-            label3.Location = new Point(70, 265);
+            label3.Location = new Point(70, 232);
             label3.Name = "label3";
             label3.Size = new Size(45, 20);
             label3.TabIndex = 11;
@@ -137,7 +138,7 @@
             Reg_newstudbtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             Reg_newstudbtn.ForeColor = SystemColors.ButtonHighlight;
             Reg_newstudbtn.ImageAlign = ContentAlignment.MiddleLeft;
-            Reg_newstudbtn.Location = new Point(107, 374);
+            Reg_newstudbtn.Location = new Point(115, 321);
             Reg_newstudbtn.Name = "Reg_newstudbtn";
             Reg_newstudbtn.Size = new Size(155, 36);
             Reg_newstudbtn.TabIndex = 22;
@@ -206,11 +207,26 @@
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click_1;
             // 
+            // btn_back
+            // 
+            btn_back.BackColor = Color.DarkSeaGreen;
+            btn_back.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_back.ForeColor = SystemColors.ButtonHighlight;
+            btn_back.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_back.Location = new Point(12, 392);
+            btn_back.Name = "btn_back";
+            btn_back.Size = new Size(75, 36);
+            btn_back.TabIndex = 36;
+            btn_back.Text = "Back";
+            btn_back.UseVisualStyleBackColor = false;
+            btn_back.Click += btn_back_Click;
+            // 
             // New_stu_reg
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(615, 440);
+            Controls.Add(btn_back);
             Controls.Add(Reg_newstudbtn);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -224,6 +240,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "New_stu_reg";
             Text = "reg";
+            Load += New_stu_reg_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             ResumeLayout(false);
@@ -246,5 +263,6 @@
         private Button button4;
         private Button button3;
         private Button button5;
+        private Button btn_back;
     }
 }

@@ -59,6 +59,7 @@ namespace WinFormsApp4
             button5 = new Button();
             checkBox1 = new CheckBox();
             checkBox2 = new CheckBox();
+            btn_log = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -248,9 +249,9 @@ namespace WinFormsApp4
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(413, 424);
+            button1.Location = new Point(540, 406);
             button1.Name = "button1";
-            button1.Size = new Size(208, 35);
+            button1.Size = new Size(178, 35);
             button1.TabIndex = 0;
             button1.Text = "Regisiter";
             button1.UseVisualStyleBackColor = false;
@@ -373,11 +374,26 @@ namespace WinFormsApp4
             checkBox2.UseVisualStyleBackColor = true;
             checkBox2.CheckedChanged += checkBox2_CheckedChanged;
             // 
+            // btn_log
+            // 
+            btn_log.BackColor = Color.DarkSeaGreen;
+            btn_log.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_log.ForeColor = SystemColors.ButtonHighlight;
+            btn_log.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_log.Location = new Point(281, 447);
+            btn_log.Name = "btn_log";
+            btn_log.Size = new Size(130, 34);
+            btn_log.TabIndex = 37;
+            btn_log.Text = "Have an Account";
+            btn_log.UseVisualStyleBackColor = false;
+            btn_log.Click += btn_log_Click;
+            // 
             // Sign_up_form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(816, 493);
+            Controls.Add(btn_log);
             Controls.Add(checkBox2);
             Controls.Add(checkBox1);
             Controls.Add(label8);
@@ -441,5 +457,6 @@ namespace WinFormsApp4
         private Button button4;
         private CheckBox checkBox1;
         private CheckBox checkBox2;
+        private Button btn_log;
     }
 }

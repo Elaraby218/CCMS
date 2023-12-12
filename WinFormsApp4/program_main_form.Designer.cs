@@ -46,7 +46,7 @@ namespace WinFormsApp4
             panel6 = new Panel();
             Reg_newstudbtn = new Button();
             button4 = new Button();
-            button5 = new Button();
+            btn_del = new Button();
             label1 = new Label();
             panel3 = new Panel();
             panel7 = new Panel();
@@ -151,6 +151,7 @@ namespace WinFormsApp4
             panel1.Name = "panel1";
             panel1.Size = new Size(176, 487);
             panel1.TabIndex = 9;
+            panel1.Paint += panel1_Paint;
             // 
             // button3
             // 
@@ -184,6 +185,7 @@ namespace WinFormsApp4
             button2.Text = "Print";
             button2.TextAlign = ContentAlignment.MiddleRight;
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -200,6 +202,7 @@ namespace WinFormsApp4
             button1.Text = "Setting";
             button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel2
             // 
@@ -216,7 +219,7 @@ namespace WinFormsApp4
             // 
             panel6.Controls.Add(Reg_newstudbtn);
             panel6.Controls.Add(button4);
-            panel6.Controls.Add(button5);
+            panel6.Controls.Add(btn_del);
             panel6.Dock = DockStyle.Bottom;
             panel6.Location = new Point(0, 429);
             panel6.Name = "panel6";
@@ -251,19 +254,19 @@ namespace WinFormsApp4
             button4.UseVisualStyleBackColor = false;
             button4.Click += AddStudBtn;
             // 
-            // button5
+            // btn_del
             // 
-            button5.BackColor = Color.FromArgb(192, 0, 0);
-            button5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button5.ForeColor = SystemColors.ButtonHighlight;
-            button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(390, 10);
-            button5.Name = "button5";
-            button5.Size = new Size(155, 36);
-            button5.TabIndex = 20;
-            button5.Text = "Remove Student";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
+            btn_del.BackColor = Color.FromArgb(192, 0, 0);
+            btn_del.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_del.ForeColor = SystemColors.ButtonHighlight;
+            btn_del.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_del.Location = new Point(390, 10);
+            btn_del.Name = "btn_del";
+            btn_del.Size = new Size(155, 36);
+            btn_del.TabIndex = 20;
+            btn_del.Text = "Remove Student";
+            btn_del.UseVisualStyleBackColor = false;
+            btn_del.Click += button5_Click;
             // 
             // label1
             // 
@@ -332,6 +335,7 @@ namespace WinFormsApp4
             dataGridView2.RowTemplate.Height = 25;
             dataGridView2.Size = new Size(660, 363);
             dataGridView2.TabIndex = 32;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick_1;
             // 
             // IdSTU
             // 
@@ -497,7 +501,7 @@ namespace WinFormsApp4
         private Panel panel3;
         private Button History;
         private Label label1;
-        private Button button5;
+        private Button btn_del;
         private Button button4;
         private Button button3;
         private Button button2;

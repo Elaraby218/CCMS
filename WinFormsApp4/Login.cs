@@ -12,14 +12,14 @@ namespace WinFormsApp4
             InitializeComponent();
             textBox2.UseSystemPasswordChar = true;
         }
-        
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Sign_up_form frm2 = new Sign_up_form();
             frm2.ShowDialog();
             //this.Hide();
         }
-        
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -126,6 +126,11 @@ namespace WinFormsApp4
                 textBox2.UseSystemPasswordChar = false;
             }
             else { textBox2.UseSystemPasswordChar = true; }
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

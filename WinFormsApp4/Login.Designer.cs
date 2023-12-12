@@ -262,6 +262,7 @@ namespace WinFormsApp4
             panel4.Name = "panel4";
             panel4.Size = new Size(546, 501);
             panel4.TabIndex = 0;
+            panel4.Paint += panel4_Paint;
             // 
             // checkBox1
             // 

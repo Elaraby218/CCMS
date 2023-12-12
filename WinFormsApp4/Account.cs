@@ -277,7 +277,15 @@ namespace WinFormsApp4
             {
                 password_txtbox.UseSystemPasswordChar = false;
             }
-            else { password_txtbox.UseSystemPasswordChar = true ;}
+            else { password_txtbox.UseSystemPasswordChar = true; }
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            string employeeID = program_main_form.E_id;
+            program_main_form pp = new program_main_form(employeeID);
+            pp.Show();
+            this.Close();
         }
     }
 }
