@@ -62,7 +62,7 @@
             Faculty_txtbox.Multiline = true;
             Faculty_txtbox.Name = "Faculty_txtbox";
             Faculty_txtbox.Size = new Size(235, 42);
-            Faculty_txtbox.TabIndex = 1;
+            Faculty_txtbox.TabIndex = 2;
             Faculty_txtbox.TextChanged += Faculty_txtbox_TextChanged;
             // 
             // N_id_txtbox
@@ -71,7 +71,7 @@
             N_id_txtbox.Multiline = true;
             N_id_txtbox.Name = "N_id_txtbox";
             N_id_txtbox.Size = new Size(235, 42);
-            N_id_txtbox.TabIndex = 2;
+            N_id_txtbox.TabIndex = 1;
             N_id_txtbox.TextChanged += N_id_txtbox_TextChanged;
             // 
             // Level_txtbox
@@ -104,7 +104,7 @@
             label1.Location = new Point(70, 186);
             label1.Name = "label1";
             label1.Size = new Size(59, 20);
-            label1.TabIndex = 9;
+            label1.TabIndex = 50;
             label1.Text = "Faculty";
             // 
             // label2
@@ -179,6 +179,7 @@
             button4.Size = new Size(34, 30);
             button4.TabIndex = 32;
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 

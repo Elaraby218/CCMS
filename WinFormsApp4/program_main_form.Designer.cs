@@ -60,9 +60,6 @@ namespace WinFormsApp4
             In_timeSTU = new DataGridViewTextBoxColumn();
             panel5 = new Panel();
             panel4 = new Panel();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
             button9 = new Button();
             pictureBox2 = new PictureBox();
             contextMenuStrip1 = new ContextMenuStrip(components);
@@ -376,9 +373,6 @@ namespace WinFormsApp4
             // 
             // panel4
             // 
-            panel4.Controls.Add(button6);
-            panel4.Controls.Add(button7);
-            panel4.Controls.Add(button8);
             panel4.Controls.Add(button9);
             panel4.Dock = DockStyle.Right;
             panel4.Location = new Point(480, 0);
@@ -386,45 +380,6 @@ namespace WinFormsApp4
             panel4.Size = new Size(180, 66);
             panel4.TabIndex = 27;
             panel4.Paint += panel4_Paint;
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.SeaGreen;
-            button6.FlatStyle = FlatStyle.Popup;
-            button6.ForeColor = SystemColors.ControlDarkDark;
-            button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.Location = new Point(137, 3);
-            button6.Name = "button6";
-            button6.Size = new Size(34, 30);
-            button6.TabIndex = 32;
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
-            // 
-            // button7
-            // 
-            button7.BackColor = Color.SeaGreen;
-            button7.FlatStyle = FlatStyle.Popup;
-            button7.ForeColor = SystemColors.ButtonHighlight;
-            button7.Image = Properties.Resources.icons8_minus_24;
-            button7.Location = new Point(36, 3);
-            button7.Name = "button7";
-            button7.Size = new Size(34, 30);
-            button7.TabIndex = 31;
-            button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
-            // 
-            // button8
-            // 
-            button8.BackColor = Color.SeaGreen;
-            button8.FlatStyle = FlatStyle.Popup;
-            button8.ForeColor = SystemColors.ControlDarkDark;
-            button8.Image = (Image)resources.GetObject("button8.Image");
-            button8.Location = new Point(87, 3);
-            button8.Name = "button8";
-            button8.Size = new Size(34, 30);
-            button8.TabIndex = 30;
-            button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click;
             // 
             // button9
             // 
@@ -442,7 +397,7 @@ namespace WinFormsApp4
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.Design_a_modern_and_sleek_logo_for_a_Computer_Center_Management;
-            pictureBox2.Location = new Point(195, 0);
+            pictureBox2.Location = new Point(202, -3);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(126, 69);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -503,9 +458,6 @@ namespace WinFormsApp4
         private Button button2;
         private Button button1;
         private Panel panel4;
-        private Button button6;
-        private Button button7;
-        private Button button8;
         private Panel panel5;
         private Button button9;
         private Panel panel6;

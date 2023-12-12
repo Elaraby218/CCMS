@@ -48,12 +48,8 @@ namespace WinFormsApp4
             // Check if the user clicked OK
             if (result == DialogResult.OK)
             {
-                // Show the first form
-                if (Application.OpenForms.Count > 0)
-                    Application.OpenForms[0].Show();
-
-                // Close the current form
                 this.Close();
+                Application.OpenForms[0].Show();
             }
         }
 
@@ -81,7 +77,7 @@ namespace WinFormsApp4
               MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-       
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -128,18 +124,10 @@ namespace WinFormsApp4
 
         private void AddStudBtn(object sender, EventArgs e)
         {
-            if (ValidationMethods.StudentNationalId(StudNational_txtbox.Text))
-            {
-                DataBaseMethods.AddToInStudent(StudNational_txtbox.Text);
-            }
-            else
-            {
-                MessageBox.Show("No such student found, please add new student", "NOT FOUND", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Reg_newstudbtn.Show();
-                // add new student button show 
-            }
-            reload();
 
+            ValidationMethods.StudentCheckIn(StudNational_txtbox.Text);
+            Reg_newstudbtn.Show();
+            reload();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -166,7 +154,7 @@ namespace WinFormsApp4
 
         private void button5_Click(object sender, EventArgs e)
         {
-            DataBaseMethods.StudentOut(StudNational_txtbox.Text, this.employee_n_id);
+            ValidationMethods.StudentCheckOut(StudNational_txtbox.Text, this.employee_n_id);
             reload();
 
         }

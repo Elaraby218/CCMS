@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormsApp4.data;
@@ -41,6 +42,26 @@ namespace WinFormsApp4
 
         private void Reg_newstudbtn_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrWhiteSpace(name_txtbox.Text))
+            {
+                MessageBox.Show("Name is required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!ValidationMethods.NationalIdLen(N_id_txtbox.Text))
+            {
+                MessageBox.Show("National ID must be 14 digits", "Error"
+                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!Regex.IsMatch(Level_txtbox.Text, "^(1|2|3|4|5)$"))
+
+            {
+                MessageBox.Show("Invalid Level", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             StudentsTable student = new StudentsTable()
             {
                 name = name_txtbox.Text,
@@ -48,8 +69,12 @@ namespace WinFormsApp4
                 faculty = Faculty_txtbox.Text,
                 level = Convert.ToInt32(Level_txtbox.Text)
             };
-            ValidationMethods.AddStudent(student);
+            DataBaseMethods.AddStudent(student);
+           // MessageBox.Show("Student Added", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
             this.Close();
+
         }
 
 
@@ -59,7 +84,7 @@ namespace WinFormsApp4
             this.WindowState = FormWindowState.Minimized;
         }
 
-        
+
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -72,5 +97,9 @@ namespace WinFormsApp4
             else
                 this.WindowState = FormWindowState.Maximized;
         }
+
+       
+
+        
     }
 }

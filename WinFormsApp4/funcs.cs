@@ -10,6 +10,7 @@ namespace funcs
 
     public static class ValidationMethods
     {
+        static AppDbContext db = AppDbContext.Instance;
         public static bool AddStudent(StudentsTable student)
         {
             DataBaseMethods.AddStudent(student);
@@ -82,7 +83,7 @@ namespace funcs
                 }
 
                 File.Copy(source, dest);
-          
+
                 emp.photo_path = dest;
 
                 return true;
@@ -102,7 +103,7 @@ namespace funcs
         }
         public static bool UserName(string username)
         {
-            AppDbContext db = new AppDbContext();
+            AppDbContext db =  AppDbContext.Instance;
             var IsUserFound = db.employees.
                    Where(a => a.user_name == username).FirstOrDefault();
             return (IsUserFound != null);
@@ -110,17 +111,30 @@ namespace funcs
         }
         public static bool NationalIdLen(string id)
         {
-            return ((id.Length == 14));
+
+            return Regex.IsMatch(id, @"^\d{14}$");
         }
         public static bool EmpNationalId(string id)
         {
             EmployeeTable IsUserFound = DataBaseMethods.getEmployee(id);
             return ((IsUserFound != null));
         }
-        public static bool StudentNationalId(string id)
+        public static bool IsStudent(string id)
         {
             StudentsTable IsUserFound = DataBaseMethods.getStudent(id);
             return ((IsUserFound != null));
+        }
+
+        public static bool StudentCheckOut(string id, string employee_id)
+        {
+            // return true if this student is in
+            if (!DataBaseMethods.IsIn(id))
+            {
+                MessageBox.Show("The Student is not in" , "Error" , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            DataBaseMethods.StudentCheckOut(id, employee_id);
+            return true ;
         }
         public static bool PhoneNumber(string Number)
         {
@@ -141,6 +155,25 @@ namespace funcs
                 return allowedExtensions.Contains(extension);
             }
             return false;
+        }
+        public static bool StudentCheckIn(string id){
+            if (!ValidationMethods.NationalIdLen(id)) 
+            {
+                MessageBox.Show("Invalid National ID", "NOT FOUND", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false ; 
+            }
+            if (!ValidationMethods.IsStudent(id)) 
+            {
+                MessageBox.Show("User Not found", "NOT FOUND", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (DataBaseMethods.IsIn(id)) 
+            {
+                MessageBox.Show("User Already in", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            DataBaseMethods.AddToInStudent(id);
+                return true;
         }
 
     }
@@ -185,7 +218,9 @@ namespace funcs
 
         public static void AddToInStudent(string id)
         {
-            db.in_students.Add(new InStudentsTable { student_n_id = id, in_time = DateTime.Now.ToString("hh:mm"), });
+            db.in_students.Add(
+                new InStudentsTable { student_n_id = id, in_time = DateTime.Now.ToString("hh:mm"), }
+                );
             db.SaveChanges();
             MessageBox.Show("Successfully added", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -210,7 +245,7 @@ namespace funcs
             MessageBox.Show("Successfully added", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public static void StudentOut(string id, string employee_id)
+        public static void StudentCheckOut(string id, string employee_id)
         {
             var student = db.in_students.Where((x) => x.student_n_id == id).FirstOrDefault();
             db.history.Add(new HistoryTable
@@ -223,8 +258,10 @@ namespace funcs
                 paper_count = student.paper_printed,
                 cost = student.paper_printed * 0.5
             });
+            db.in_students.Remove(student); // added to remove student 
             db.SaveChanges();
-            MessageBox.Show("Successfully added", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            MessageBox.Show("Successfully Checkout", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public static EmployeeTable GetEmlpyeeByID(string id)
@@ -259,6 +296,9 @@ namespace funcs
 
                 db.SaveChanges();
             }
+        }
+        public static bool IsIn(string id) {
+            return( db.in_students.Where((x) => x.student_n_id == id).FirstOrDefault() != null ); 
         }
 
 

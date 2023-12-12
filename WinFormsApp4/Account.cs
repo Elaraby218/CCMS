@@ -76,7 +76,7 @@ namespace WinFormsApp4
                 else
                 {
                     bool Validate = true;
-                    AppDbContext db = new AppDbContext();
+                    AppDbContext db =  AppDbContext.Instance;
 
 
                     if (db.employees.Count((x) => x.user_name == user_txtbox.Text) > 1)
