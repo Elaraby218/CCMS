@@ -26,7 +26,6 @@ namespace WinFormsApp4.data
             this.parentForm = parentForm;
             InitializeComponents(parentForm);
             Resize_event();
-            parentForm.Controls.Add(draggablePanel);
         }
 
         private void InitializeComponents(Form parentForm)
@@ -34,7 +33,7 @@ namespace WinFormsApp4.data
             // Create the draggable panel
             draggablePanel = new Panel
             {
-                BackColor = Color.Transparent,
+                BackColor = Color.SeaGreen,
                 Location = new Point(0, 0),
                 Name = "panel1",
                 Size = new Size(parentForm.ClientSize.Width, 42),
@@ -63,7 +62,7 @@ namespace WinFormsApp4.data
                 BackColor = Color.SeaGreen,
                 FlatStyle = FlatStyle.Popup,
                 ForeColor = SystemColors.ControlDarkDark,
-                Image=(Image)Resources.icons8_person_644,
+                Image = (Image)Resources.icons8_person_644,
                 Margin = new Padding(3, 4, 3, 4),
                 Name = "maxmize_button",
                 Size = new Size(36, 36),
@@ -86,7 +85,7 @@ namespace WinFormsApp4.data
 
             btnMinimize.Click += buttonMinimize_Click;
             btnMaximize.Click += buttonMaximize_Click;
-            btnClose.Click    += buttonClose_Click;
+            btnClose.Click += buttonClose_Click;
 
             draggablePanel.Controls.Add(btnMinimize);
             draggablePanel.Controls.Add(btnMaximize);
@@ -103,6 +102,7 @@ namespace WinFormsApp4.data
 
             draggablePanel.BringToFront();
 
+            parentForm.Controls.Add(draggablePanel);
         }
 
         private void Resize_event()
@@ -125,7 +125,7 @@ namespace WinFormsApp4.data
             btnMinimize.Location = new Point(rightmostX - 120, 0);
             btnMaximize.Location = new Point(rightmostX - 80, 0);
             btnClose.Location = new Point(rightmostX - 40, 0);
-
+            draggablePanel.BringToFront();
         }
 
 
@@ -143,11 +143,29 @@ namespace WinFormsApp4.data
         {
             if (isDragging)
             {
-                (draggablePanel.Parent as Form)?.Invoke(new MethodInvoker(() =>
+                Form parentForm = draggablePanel.Parent as Form;
+
+                if (parentForm != null)
                 {
-                    draggablePanel.Parent.Left = Math.Max(0, draggablePanel.Parent.Left + (e.X - xOffset));
-                    draggablePanel.Parent.Top = Math.Max(0, draggablePanel.Parent.Top + (e.Y - yOffset));
-                }));
+                    int newX = e.X + parentForm.Left - xOffset;
+                    int newY = e.Y + parentForm.Top - yOffset;
+
+                    Screen currentScreen = Screen.FromControl(parentForm);
+                    Rectangle screenBounds = currentScreen.WorkingArea;
+
+                    //if (newX < screenBounds.Left)
+                    //    newX = screenBounds.Left;
+                    //if (newY < screenBounds.Top)
+                    //    newY = screenBounds.Top;
+                    //if (newX + parentForm.Width > screenBounds.Right)
+                    //    newX = screenBounds.Right - parentForm.Width;
+                    //if (newY + parentForm.Height > screenBounds.Bottom)
+                    //    newY = screenBounds.Bottom - parentForm.Height;
+
+                    parentForm.Left = newX;
+                    parentForm.Top = newY;
+                }
+
             }
         }
 

@@ -27,8 +27,8 @@ namespace WinFormsApp4
             
             ApplicationConfiguration.Initialize();
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
 
             Application.Run(new Login_Page());
 
