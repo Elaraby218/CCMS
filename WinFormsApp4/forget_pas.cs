@@ -18,9 +18,16 @@ namespace WinFormsApp4
 {
     public partial class forget_pas : Form
     {
+
         public forget_pas()
         {
+
+            new DraggablePanel(this);
             InitializeComponent();
+
+            FormBorderStyle = FormBorderStyle.None;
+            StartPosition = FormStartPosition.CenterScreen;
+
         }
         string code;
         bool flag = false;
@@ -161,7 +168,7 @@ namespace WinFormsApp4
         private void button3_Click(object sender, EventArgs e)
         {
             string co = textBox1.Text;
-            if ( co== code)
+            if (co== code)
             {
                 MessageBox.Show("The code is Correct \nEnter the new Password");
                 flag = true;
@@ -169,7 +176,7 @@ namespace WinFormsApp4
             else
             {
                 MessageBox.Show("Not correct code");
-             
+
                 flag = false;
 
             }

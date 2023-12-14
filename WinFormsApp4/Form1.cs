@@ -7,10 +7,17 @@ namespace WinFormsApp4
 {
     public partial class Login_Page : Form
     {
+       
+
         public Login_Page()
         {
+            db.Database.EnsureCreated();
             InitializeComponent();
             textBox2.UseSystemPasswordChar = true;
+            new DraggablePanel(this);
+            
+            FormBorderStyle = FormBorderStyle.None;
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -129,6 +136,41 @@ namespace WinFormsApp4
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint_2(object sender, PaintEventArgs e)
         {
 
         }

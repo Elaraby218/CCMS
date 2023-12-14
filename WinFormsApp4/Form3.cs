@@ -17,6 +17,7 @@ namespace WinFormsApp4
     {
         public New_stu_reg()
         {
+            new DraggablePanel(this);
             InitializeComponent();
         }
 
@@ -75,7 +76,7 @@ namespace WinFormsApp4
                 level = Convert.ToInt32(Level_txtbox.Text)
             };
             DataBaseMethods.AddStudent(student);
-           // MessageBox.Show("Student Added", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            // MessageBox.Show("Student Added", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
             this.Close();
@@ -103,8 +104,14 @@ namespace WinFormsApp4
                 this.WindowState = FormWindowState.Maximized;
         }
 
-       
+        private void label2_Click(object sender, EventArgs e)
+        {
 
-        
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

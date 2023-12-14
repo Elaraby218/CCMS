@@ -122,8 +122,16 @@ namespace WinFormsApp4
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ValidationMethods.StudentCheckOut(StudNational_txtbox.Text, this.cur_employee_n_id);
-            UpdateGridView();
+            // Ask the user for confirmation using a message box
+            DialogResult result = MessageBox.Show("Are you sure you want to remove?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Check the user's response
+            if (result == DialogResult.Yes)
+            {
+                ValidationMethods.StudentCheckOut(StudNational_txtbox.Text, this.cur_employee_n_id);
+                UpdateGridView();
+            }
+
 
         }
         private void UpdateGridView()
@@ -145,9 +153,19 @@ namespace WinFormsApp4
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form ac = new Account(cur_employee_n_id);
-            ac.ShowDialog();
-            PreviewImageAndName();
+            string input = Prompt.ShowDialog("Enter Password","Confirmation Dialog",true);
+            var emp1 = DataBaseMethods.GetEmlpyeeByID(cur_employee_n_id);
+            if (emp1.password.Equals(input))
+            {
+                Form ac = new Account(cur_employee_n_id);
+                ac.ShowDialog();
+                PreviewImageAndName();
+            }
+            else
+            {
+                MessageBox.Show("Wrong Password", "Authentication Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
         }
 
         // -------------------- Empty Functions --------------------

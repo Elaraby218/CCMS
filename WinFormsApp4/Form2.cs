@@ -10,19 +10,22 @@ namespace WinFormsApp4
 {
     public partial class Sign_up_form : Form
     {
-
+        
 
         string imageSource = "";
         string imageDestinationFolderPath = Environment.CurrentDirectory + "\\images\\";
 
         public Sign_up_form()
         {
+
+            new DraggablePanel(this);
             InitializeComponent();
             //  MessageBox.Show(Environment.CurrentDirectory);
             // default photo on pt3
             pictureBox1.ImageLocation = imageSource;
             password_txtbox.UseSystemPasswordChar = true;
             cpass_txtbox.UseSystemPasswordChar = true;
+
         }
         private void ExecuteRegistration()
         {
@@ -94,7 +97,11 @@ namespace WinFormsApp4
                   , MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Validate = false;
                 }
-
+                else if (!File.Exists(imageSource))
+                {
+                    MessageBox.Show("Add Photo please");
+                    Validate = false;
+                }
 
 
 
@@ -285,5 +292,9 @@ namespace WinFormsApp4
 
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
