@@ -33,7 +33,7 @@ namespace WinFormsApp4.data
             // Create the draggable panel
             draggablePanel = new Panel
             {
-                BackColor = Color.SeaGreen,
+                BackColor = Color.Transparent,
                 Location = new Point(0, 0),
                 Name = "panel1",
                 Size = new Size(parentForm.ClientSize.Width, 42),
