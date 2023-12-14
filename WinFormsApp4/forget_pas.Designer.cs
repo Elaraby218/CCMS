@@ -29,256 +29,268 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(forget_pas));
-            email_txtbox = new TextBox();
-            label3 = new Label();
-            textBox1 = new TextBox();
-            label1 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            label5 = new Label();
-            label2 = new Label();
-            button1 = new Button();
-            pictureBox2 = new PictureBox();
-            panel4 = new Panel();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            label4 = new Label();
-            sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
-            label8 = new Label();
-            label9 = new Label();
+            email_txtbox=new TextBox();
+            label3=new Label();
+            textBox1=new TextBox();
+            label1=new Label();
+            textBox2=new TextBox();
+            textBox3=new TextBox();
+            label5=new Label();
+            label2=new Label();
+            button1=new Button();
+            pictureBox2=new PictureBox();
+            panel4=new Panel();
+            button6=new Button();
+            button7=new Button();
+            button8=new Button();
+            button2=new Button();
+            button3=new Button();
+            label4=new Label();
+            sqlCommand1=new Microsoft.Data.SqlClient.SqlCommand();
+            label8=new Label();
+            label9=new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel4.SuspendLayout();
             SuspendLayout();
             // 
             // email_txtbox
             // 
-            email_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            email_txtbox.ForeColor = Color.SeaGreen;
-            email_txtbox.Location = new Point(119, 55);
-            email_txtbox.Name = "email_txtbox";
-            email_txtbox.Size = new Size(221, 23);
-            email_txtbox.TabIndex = 11;
-            email_txtbox.TextChanged += email_txtbox_TextChanged;
+            email_txtbox.Font=new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            email_txtbox.ForeColor=Color.SeaGreen;
+            email_txtbox.Location=new Point(136, 73);
+            email_txtbox.Margin=new Padding(3, 4, 3, 4);
+            email_txtbox.Name="email_txtbox";
+            email_txtbox.Size=new Size(252, 27);
+            email_txtbox.TabIndex=11;
+            email_txtbox.TextChanged+=email_txtbox_TextChanged;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.SeaGreen;
-            label3.Location = new Point(119, 36);
-            label3.Name = "label3";
-            label3.Size = new Size(98, 16);
-            label3.TabIndex = 10;
-            label3.Text = "Enter an Email";
+            label3.AutoSize=true;
+            label3.Font=new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor=Color.SeaGreen;
+            label3.Location=new Point(136, 48);
+            label3.Name="label3";
+            label3.Size=new Size(132, 21);
+            label3.TabIndex=10;
+            label3.Text="Enter an Email";
             // 
             // textBox1
             // 
-            textBox1.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.ForeColor = Color.SeaGreen;
-            textBox1.Location = new Point(119, 187);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(221, 23);
-            textBox1.TabIndex = 13;
-            textBox1.TextChanged += textBox1_TextChanged;
+            textBox1.Font=new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.ForeColor=Color.SeaGreen;
+            textBox1.Location=new Point(136, 249);
+            textBox1.Margin=new Padding(3, 4, 3, 4);
+            textBox1.Name="textBox1";
+            textBox1.Size=new Size(252, 27);
+            textBox1.TabIndex=13;
+            textBox1.TextChanged+=textBox1_TextChanged;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.SeaGreen;
-            label1.Location = new Point(119, 168);
-            label1.Name = "label1";
-            label1.Size = new Size(221, 16);
-            label1.TabIndex = 12;
-            label1.Text = "Enter the code the send by email";
+            label1.AutoSize=true;
+            label1.Font=new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor=Color.SeaGreen;
+            label1.Location=new Point(136, 224);
+            label1.Name="label1";
+            label1.Size=new Size(286, 21);
+            label1.TabIndex=12;
+            label1.Text="Enter the code the sent by email";
             // 
             // textBox2
             // 
-            textBox2.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.ForeColor = Color.SeaGreen;
-            textBox2.Location = new Point(119, 307);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(221, 23);
-            textBox2.TabIndex = 15;
+            textBox2.Font=new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.ForeColor=Color.SeaGreen;
+            textBox2.Location=new Point(136, 409);
+            textBox2.Margin=new Padding(3, 4, 3, 4);
+            textBox2.Name="textBox2";
+            textBox2.Size=new Size(252, 27);
+            textBox2.TabIndex=15;
             // 
             // textBox3
             // 
-            textBox3.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.ForeColor = Color.SeaGreen;
-            textBox3.Location = new Point(119, 363);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(221, 23);
-            textBox3.TabIndex = 17;
+            textBox3.Font=new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox3.ForeColor=Color.SeaGreen;
+            textBox3.Location=new Point(136, 484);
+            textBox3.Margin=new Padding(3, 4, 3, 4);
+            textBox3.Name="textBox3";
+            textBox3.Size=new Size(252, 27);
+            textBox3.TabIndex=17;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.SeaGreen;
-            label5.Location = new Point(119, 288);
-            label5.Name = "label5";
-            label5.Size = new Size(70, 16);
-            label5.TabIndex = 18;
-            label5.Text = "Password";
+            label5.AutoSize=true;
+            label5.Font=new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor=Color.SeaGreen;
+            label5.Location=new Point(136, 384);
+            label5.Name="label5";
+            label5.Size=new Size(93, 21);
+            label5.TabIndex=18;
+            label5.Text="Password";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.SeaGreen;
-            label2.Location = new Point(119, 344);
-            label2.Name = "label2";
-            label2.Size = new Size(132, 16);
-            label2.TabIndex = 19;
-            label2.Text = "Re-Enter Password";
+            label2.AutoSize=true;
+            label2.Font=new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor=Color.SeaGreen;
+            label2.Location=new Point(136, 459);
+            label2.Name="label2";
+            label2.Size=new Size(172, 21);
+            label2.TabIndex=19;
+            label2.Text="Re-Enter Password";
             // 
             // button1
             // 
-            button1.BackColor = Color.SeaGreen;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(119, 91);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 20;
-            button1.Text = "Send email";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            button1.BackColor=Color.SeaGreen;
+            button1.FlatStyle=FlatStyle.Popup;
+            button1.ForeColor=SystemColors.ButtonHighlight;
+            button1.Location=new Point(136, 121);
+            button1.Margin=new Padding(3, 4, 3, 4);
+            button1.Name="button1";
+            button1.Size=new Size(86, 31);
+            button1.TabIndex=20;
+            button1.Text="Send email";
+            button1.UseVisualStyleBackColor=false;
+            button1.Click+=button1_Click;
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = Properties.Resources.Design_a_modern_and_sleek_logo_for_a_Computer_Center_Management;
-            pictureBox2.Location = new Point(395, 109);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(298, 239);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 34;
-            pictureBox2.TabStop = false;
+            pictureBox2.Image=Properties.Resources.Design_a_modern_and_sleek_logo_for_a_Computer_Center_Management;
+            pictureBox2.Location=new Point(451, 145);
+            pictureBox2.Margin=new Padding(3, 4, 3, 4);
+            pictureBox2.Name="pictureBox2";
+            pictureBox2.Size=new Size(341, 319);
+            pictureBox2.SizeMode=PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex=34;
+            pictureBox2.TabStop=false;
             // 
             // panel4
             // 
             panel4.Controls.Add(button6);
             panel4.Controls.Add(button7);
             panel4.Controls.Add(button8);
-            panel4.Dock = DockStyle.Right;
-            panel4.Location = new Point(539, 0);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(180, 477);
-            panel4.TabIndex = 35;
+            panel4.Dock=DockStyle.Right;
+            panel4.Location=new Point(616, 0);
+            panel4.Margin=new Padding(3, 4, 3, 4);
+            panel4.Name="panel4";
+            panel4.Size=new Size(206, 636);
+            panel4.TabIndex=35;
             // 
             // button6
             // 
-            button6.BackColor = Color.SeaGreen;
-            button6.FlatStyle = FlatStyle.Popup;
-            button6.ForeColor = SystemColors.ControlDarkDark;
-            button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.Location = new Point(137, 3);
-            button6.Name = "button6";
-            button6.Size = new Size(34, 30);
-            button6.TabIndex = 32;
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
+            button6.BackColor=Color.SeaGreen;
+            button6.FlatStyle=FlatStyle.Popup;
+            button6.ForeColor=SystemColors.ControlDarkDark;
+            button6.Image=(Image)resources.GetObject("button6.Image");
+            button6.Location=new Point(157, 4);
+            button6.Margin=new Padding(3, 4, 3, 4);
+            button6.Name="button6";
+            button6.Size=new Size(39, 40);
+            button6.TabIndex=32;
+            button6.UseVisualStyleBackColor=false;
+            button6.Click+=button6_Click;
             // 
             // button7
             // 
-            button7.BackColor = Color.SeaGreen;
-            button7.FlatStyle = FlatStyle.Popup;
-            button7.ForeColor = SystemColors.ButtonHighlight;
-            button7.Image = Properties.Resources.icons8_minus_24;
-            button7.Location = new Point(36, 3);
-            button7.Name = "button7";
-            button7.Size = new Size(34, 30);
-            button7.TabIndex = 31;
-            button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
+            button7.BackColor=Color.SeaGreen;
+            button7.FlatStyle=FlatStyle.Popup;
+            button7.ForeColor=SystemColors.ButtonHighlight;
+            button7.Image=Properties.Resources.icons8_minus_24;
+            button7.Location=new Point(41, 4);
+            button7.Margin=new Padding(3, 4, 3, 4);
+            button7.Name="button7";
+            button7.Size=new Size(39, 40);
+            button7.TabIndex=31;
+            button7.UseVisualStyleBackColor=false;
+            button7.Click+=button7_Click;
             // 
             // button8
             // 
-            button8.BackColor = Color.SeaGreen;
-            button8.FlatStyle = FlatStyle.Popup;
-            button8.ForeColor = SystemColors.ControlDarkDark;
-            button8.Image = (Image)resources.GetObject("button8.Image");
-            button8.Location = new Point(87, 3);
-            button8.Name = "button8";
-            button8.Size = new Size(34, 30);
-            button8.TabIndex = 30;
-            button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click;
+            button8.BackColor=Color.SeaGreen;
+            button8.FlatStyle=FlatStyle.Popup;
+            button8.ForeColor=SystemColors.ControlDarkDark;
+            button8.Image=(Image)resources.GetObject("button8.Image");
+            button8.Location=new Point(99, 4);
+            button8.Margin=new Padding(3, 4, 3, 4);
+            button8.Name="button8";
+            button8.Size=new Size(39, 40);
+            button8.TabIndex=30;
+            button8.UseVisualStyleBackColor=false;
+            button8.Click+=button8_Click;
             // 
             // button2
             // 
-            button2.BackColor = Color.SeaGreen;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(128, 399);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 36;
-            button2.Text = "Change";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            button2.BackColor=Color.SeaGreen;
+            button2.FlatStyle=FlatStyle.Popup;
+            button2.ForeColor=SystemColors.ButtonHighlight;
+            button2.Location=new Point(146, 532);
+            button2.Margin=new Padding(3, 4, 3, 4);
+            button2.Name="button2";
+            button2.Size=new Size(86, 31);
+            button2.TabIndex=36;
+            button2.Text="Change";
+            button2.UseVisualStyleBackColor=false;
+            button2.Click+=button2_Click;
             // 
             // button3
             // 
-            button3.BackColor = Color.SeaGreen;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Location = new Point(119, 223);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 37;
-            button3.Text = "Submit";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            button3.BackColor=Color.SeaGreen;
+            button3.FlatStyle=FlatStyle.Popup;
+            button3.ForeColor=SystemColors.ButtonHighlight;
+            button3.Location=new Point(136, 297);
+            button3.Margin=new Padding(3, 4, 3, 4);
+            button3.Name="button3";
+            button3.Size=new Size(86, 31);
+            button3.TabIndex=37;
+            button3.Text="Submit";
+            button3.UseVisualStyleBackColor=false;
+            button3.Click+=button3_Click;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.SeaGreen;
-            label4.Location = new Point(22, 55);
-            label4.Name = "label4";
-            label4.Size = new Size(57, 21);
-            label4.TabIndex = 38;
-            label4.Text = "Step 1";
+            label4.AutoSize=true;
+            label4.Font=new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor=Color.SeaGreen;
+            label4.Location=new Point(25, 73);
+            label4.Name="label4";
+            label4.Size=new Size(72, 28);
+            label4.TabIndex=38;
+            label4.Text="Step 1";
             // 
             // sqlCommand1
             // 
-            sqlCommand1.CommandTimeout = 30;
-            sqlCommand1.Connection = null;
-            sqlCommand1.Notification = null;
-            sqlCommand1.Transaction = null;
+            sqlCommand1.CommandTimeout=30;
+            sqlCommand1.Connection=null;
+            sqlCommand1.Notification=null;
+            sqlCommand1.Transaction=null;
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = Color.SeaGreen;
-            label8.Location = new Point(22, 339);
-            label8.Name = "label8";
-            label8.Size = new Size(57, 21);
-            label8.TabIndex = 41;
-            label8.Text = "Step 3";
+            label8.AutoSize=true;
+            label8.Font=new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor=Color.SeaGreen;
+            label8.Location=new Point(25, 452);
+            label8.Name="label8";
+            label8.Size=new Size(72, 28);
+            label8.TabIndex=41;
+            label8.Text="Step 3";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = Color.SeaGreen;
-            label9.Location = new Point(22, 187);
-            label9.Name = "label9";
-            label9.Size = new Size(57, 21);
-            label9.TabIndex = 42;
-            label9.Text = "Step 2";
+            label9.AutoSize=true;
+            label9.Font=new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor=Color.SeaGreen;
+            label9.Location=new Point(25, 249);
+            label9.Name="label9";
+            label9.Size=new Size(72, 28);
+            label9.TabIndex=42;
+            label9.Text="Step 2";
             // 
             // forget_pas
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(719, 477);
+            AutoScaleDimensions=new SizeF(8F, 20F);
+            AutoScaleMode=AutoScaleMode.Font;
+            ClientSize=new Size(822, 636);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label4);
@@ -295,10 +307,11 @@
             Controls.Add(label1);
             Controls.Add(email_txtbox);
             Controls.Add(label3);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "forget_pas";
-            Text = "forget_pas";
-            Load += forget_pas_Load;
+            FormBorderStyle=FormBorderStyle.None;
+            Margin=new Padding(3, 4, 3, 4);
+            Name="forget_pas";
+            Text="forget_pas";
+            Load+=forget_pas_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel4.ResumeLayout(false);
             ResumeLayout(false);

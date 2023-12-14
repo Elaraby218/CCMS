@@ -94,7 +94,11 @@ namespace WinFormsApp4
                   , MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Validate = false;
                 }
-
+                else if (!File.Exists(imageSource))
+                {
+                    MessageBox.Show("Add Photo please");
+                    Validate = false;
+                }
 
 
 
