@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(New_stu_reg));
             name_txtbox=new TextBox();
             Faculty_txtbox=new TextBox();
             N_id_txtbox=new TextBox();
@@ -40,9 +39,6 @@
             Reg_newstudbtn=new Button();
             pictureBox2=new PictureBox();
             panel1=new Panel();
-            button4=new Button();
-            button3=new Button();
-            button5=new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -165,9 +161,6 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button5);
             panel1.Controls.Add(pictureBox2);
             panel1.Dock=DockStyle.Right;
             panel1.Location=new Point(496, 0);
@@ -175,48 +168,7 @@
             panel1.Name="panel1";
             panel1.Size=new Size(207, 587);
             panel1.TabIndex=35;
-            // 
-            // button4
-            // 
-            button4.BackColor=Color.SeaGreen;
-            button4.FlatStyle=FlatStyle.Popup;
-            button4.ForeColor=SystemColors.ControlDarkDark;
-            button4.Image=(Image)resources.GetObject("button4.Image");
-            button4.Location=new Point(157, 4);
-            button4.Margin=new Padding(3, 4, 3, 4);
-            button4.Name="button4";
-            button4.Size=new Size(39, 40);
-            button4.TabIndex=32;
-            button4.UseVisualStyleBackColor=false;
-            button4.Click+=button4_Click;
-            // 
-            // button3
-            // 
-            button3.BackColor=Color.SeaGreen;
-            button3.FlatStyle=FlatStyle.Popup;
-            button3.ForeColor=SystemColors.ButtonHighlight;
-            button3.Image=Properties.Resources.icons8_minus_24;
-            button3.Location=new Point(41, 4);
-            button3.Margin=new Padding(3, 4, 3, 4);
-            button3.Name="button3";
-            button3.Size=new Size(39, 40);
-            button3.TabIndex=31;
-            button3.UseVisualStyleBackColor=false;
-            button3.Click+=button3_Click;
-            // 
-            // button5
-            // 
-            button5.BackColor=Color.SeaGreen;
-            button5.FlatStyle=FlatStyle.Popup;
-            button5.ForeColor=SystemColors.ControlDarkDark;
-            button5.Image=(Image)resources.GetObject("button5.Image");
-            button5.Location=new Point(99, 4);
-            button5.Margin=new Padding(3, 4, 3, 4);
-            button5.Name="button5";
-            button5.Size=new Size(39, 40);
-            button5.TabIndex=30;
-            button5.UseVisualStyleBackColor=false;
-            button5.Click+=button5_Click_1;
+            panel1.Paint+=panel1_Paint;
             // 
             // New_stu_reg
             // 
@@ -256,8 +208,5 @@
         private Button Reg_newstudbtn;
         private PictureBox pictureBox2;
         private Panel panel1;
-        private Button button4;
-        private Button button3;
-        private Button button5;
     }
 }

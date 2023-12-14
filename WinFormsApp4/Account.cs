@@ -22,6 +22,7 @@ namespace WinFormsApp4
 
         public Account(string employee_n_id)
         {
+            new DraggablePanel(this);
             InitializeComponent();
             emp = DataBaseMethods.GetEmlpyeeByID(employee_n_id);
             LoadEmployeeData(employee_n_id);
@@ -77,7 +78,7 @@ namespace WinFormsApp4
                 else
                 {
                     bool Validate = true;
-                    AppDbContext db =  AppDbContext.Instance;
+                    AppDbContext db = AppDbContext.Instance;
 
 
                     if (db.employees.Count((x) => x.user_name == user_txtbox.Text) > 1)
@@ -131,10 +132,10 @@ namespace WinFormsApp4
                         ValidationMethods.CopyImage(imageSource, newImagePath);
                         //if (ValidationMethods.CopyImage(updateemp.photo_path, updateemp.user_name, updateemp))
                         //{
-                            DataBaseMethods.UpdateEmployeeById(updateemp.employee_n_id, updateemp);
-                            MessageBox.Show("Your Account Updated successfully");
-                            Application.OpenForms[0].Show();
-                            this.Close();
+                        DataBaseMethods.UpdateEmployeeById(updateemp.employee_n_id, updateemp);
+                        MessageBox.Show("Your Account Updated successfully");
+                        Application.OpenForms[0].Show();
+                        this.Close();
                         //}
 
 
@@ -151,7 +152,7 @@ namespace WinFormsApp4
 
         }
 
-        
+
         private string SelectImageFile()
         {
             try
@@ -266,7 +267,12 @@ namespace WinFormsApp4
             {
                 password_txtbox.UseSystemPasswordChar = false;
             }
-            else { password_txtbox.UseSystemPasswordChar = true ;}
+            else { password_txtbox.UseSystemPasswordChar = true; }
+        }
+
+        private void Account_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

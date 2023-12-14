@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(forget_pas));
             email_txtbox=new TextBox();
             label3=new Label();
             textBox1=new TextBox();
@@ -39,10 +38,6 @@
             label2=new Label();
             button1=new Button();
             pictureBox2=new PictureBox();
-            panel4=new Panel();
-            button6=new Button();
-            button7=new Button();
-            button8=new Button();
             button2=new Button();
             button3=new Button();
             label4=new Label();
@@ -50,7 +45,6 @@
             label8=new Label();
             label9=new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // email_txtbox
@@ -164,60 +158,6 @@
             pictureBox2.TabIndex=34;
             pictureBox2.TabStop=false;
             // 
-            // panel4
-            // 
-            panel4.Controls.Add(button6);
-            panel4.Controls.Add(button7);
-            panel4.Controls.Add(button8);
-            panel4.Dock=DockStyle.Right;
-            panel4.Location=new Point(616, 0);
-            panel4.Margin=new Padding(3, 4, 3, 4);
-            panel4.Name="panel4";
-            panel4.Size=new Size(206, 636);
-            panel4.TabIndex=35;
-            // 
-            // button6
-            // 
-            button6.BackColor=Color.SeaGreen;
-            button6.FlatStyle=FlatStyle.Popup;
-            button6.ForeColor=SystemColors.ControlDarkDark;
-            button6.Image=(Image)resources.GetObject("button6.Image");
-            button6.Location=new Point(157, 4);
-            button6.Margin=new Padding(3, 4, 3, 4);
-            button6.Name="button6";
-            button6.Size=new Size(39, 40);
-            button6.TabIndex=32;
-            button6.UseVisualStyleBackColor=false;
-            button6.Click+=button6_Click;
-            // 
-            // button7
-            // 
-            button7.BackColor=Color.SeaGreen;
-            button7.FlatStyle=FlatStyle.Popup;
-            button7.ForeColor=SystemColors.ButtonHighlight;
-            button7.Image=Properties.Resources.icons8_minus_24;
-            button7.Location=new Point(41, 4);
-            button7.Margin=new Padding(3, 4, 3, 4);
-            button7.Name="button7";
-            button7.Size=new Size(39, 40);
-            button7.TabIndex=31;
-            button7.UseVisualStyleBackColor=false;
-            button7.Click+=button7_Click;
-            // 
-            // button8
-            // 
-            button8.BackColor=Color.SeaGreen;
-            button8.FlatStyle=FlatStyle.Popup;
-            button8.ForeColor=SystemColors.ControlDarkDark;
-            button8.Image=(Image)resources.GetObject("button8.Image");
-            button8.Location=new Point(99, 4);
-            button8.Margin=new Padding(3, 4, 3, 4);
-            button8.Name="button8";
-            button8.Size=new Size(39, 40);
-            button8.TabIndex=30;
-            button8.UseVisualStyleBackColor=false;
-            button8.Click+=button8_Click;
-            // 
             // button2
             // 
             button2.BackColor=Color.SeaGreen;
@@ -297,7 +237,6 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(pictureBox2);
-            Controls.Add(panel4);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label5);
@@ -313,7 +252,6 @@
             Text="forget_pas";
             Load+=forget_pas_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel4.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -330,10 +268,6 @@
         private Label label2;
         private Button button1;
         private PictureBox pictureBox2;
-        private Panel panel4;
-        private Button button6;
-        private Button button7;
-        private Button button8;
         private Button button2;
         private Button button3;
         private Label label4;

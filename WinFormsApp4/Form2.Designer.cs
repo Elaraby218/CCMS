@@ -53,17 +53,12 @@ namespace WinFormsApp4
             pictureBox3=new PictureBox();
             pictureBox2=new PictureBox();
             label8=new Label();
-            panel2=new Panel();
-            button4=new Button();
-            button3=new Button();
-            button5=new Button();
             checkBox1=new CheckBox();
             checkBox2=new CheckBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -271,7 +266,6 @@ namespace WinFormsApp4
             panel1.Controls.Add(button2);
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(pictureBox1);
-            panel1.Dock=DockStyle.Left;
             panel1.Location=new Point(0, 0);
             panel1.Margin=new Padding(3, 4, 3, 4);
             panel1.Name="panel1";
@@ -292,13 +286,14 @@ namespace WinFormsApp4
             // pictureBox2
             // 
             pictureBox2.Image=Properties.Resources.Design_a_modern_and_sleek_logo_for_a_Computer_Center_Management;
-            pictureBox2.Location=new Point(34, 52);
+            pictureBox2.Location=new Point(801, 72);
             pictureBox2.Margin=new Padding(3, 4, 3, 4);
             pictureBox2.Name="pictureBox2";
-            pictureBox2.Size=new Size(107, 116);
+            pictureBox2.Size=new Size(132, 116);
             pictureBox2.SizeMode=PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex=19;
             pictureBox2.TabStop=false;
+            pictureBox2.Click+=pictureBox2_Click;
             // 
             // label8
             // 
@@ -310,61 +305,6 @@ namespace WinFormsApp4
             label8.Size=new Size(130, 41);
             label8.TabIndex=20;
             label8.Text="Sign Up";
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(button4);
-            panel2.Controls.Add(button3);
-            panel2.Controls.Add(pictureBox2);
-            panel2.Controls.Add(button5);
-            panel2.Dock=DockStyle.Right;
-            panel2.Location=new Point(755, 0);
-            panel2.Margin=new Padding(3, 4, 3, 4);
-            panel2.Name="panel2";
-            panel2.Size=new Size(178, 657);
-            panel2.TabIndex=24;
-            // 
-            // button4
-            // 
-            button4.BackColor=Color.SeaGreen;
-            button4.FlatStyle=FlatStyle.Popup;
-            button4.ForeColor=SystemColors.ControlDarkDark;
-            button4.Image=(Image)resources.GetObject("button4.Image");
-            button4.Location=new Point(128, 4);
-            button4.Margin=new Padding(3, 4, 3, 4);
-            button4.Name="button4";
-            button4.Size=new Size(39, 40);
-            button4.TabIndex=29;
-            button4.UseVisualStyleBackColor=false;
-            button4.Click+=button4_Click;
-            // 
-            // button3
-            // 
-            button3.BackColor=Color.SeaGreen;
-            button3.FlatStyle=FlatStyle.Popup;
-            button3.ForeColor=SystemColors.ButtonHighlight;
-            button3.Image=Properties.Resources.icons8_minus_24;
-            button3.Location=new Point(13, 4);
-            button3.Margin=new Padding(3, 4, 3, 4);
-            button3.Name="button3";
-            button3.Size=new Size(39, 40);
-            button3.TabIndex=28;
-            button3.UseVisualStyleBackColor=false;
-            button3.Click+=button3_Click;
-            // 
-            // button5
-            // 
-            button5.BackColor=Color.SeaGreen;
-            button5.FlatStyle=FlatStyle.Popup;
-            button5.ForeColor=SystemColors.ControlDarkDark;
-            button5.Image=(Image)resources.GetObject("button5.Image");
-            button5.Location=new Point(71, 4);
-            button5.Margin=new Padding(3, 4, 3, 4);
-            button5.Name="button5";
-            button5.Size=new Size(39, 40);
-            button5.TabIndex=27;
-            button5.UseVisualStyleBackColor=false;
-            button5.Click+=button5_Click;
             // 
             // checkBox1
             // 
@@ -398,6 +338,7 @@ namespace WinFormsApp4
             ClientSize=new Size(933, 657);
             Controls.Add(checkBox2);
             Controls.Add(checkBox1);
+            Controls.Add(pictureBox2);
             Controls.Add(label8);
             Controls.Add(panel1);
             Controls.Add(label7);
@@ -415,7 +356,6 @@ namespace WinFormsApp4
             Controls.Add(label1);
             Controls.Add(name_txtbox);
             Controls.Add(button1);
-            Controls.Add(panel2);
             FormBorderStyle=FormBorderStyle.None;
             Margin=new Padding(3, 4, 3, 4);
             Name="Sign_up_form";
@@ -428,7 +368,6 @@ namespace WinFormsApp4
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -456,10 +395,6 @@ namespace WinFormsApp4
         private Label label8;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
-        private Panel panel2;
-        private Button button5;
-        private Button button3;
-        private Button button4;
         private CheckBox checkBox1;
         private CheckBox checkBox2;
     }

@@ -18,9 +18,16 @@ namespace WinFormsApp4
 {
     public partial class forget_pas : Form
     {
+
         public forget_pas()
         {
+
+            new DraggablePanel(this);
             InitializeComponent();
+
+            FormBorderStyle = FormBorderStyle.None;
+            StartPosition = FormStartPosition.CenterScreen;
+
         }
         string code;
         bool flag = false;
