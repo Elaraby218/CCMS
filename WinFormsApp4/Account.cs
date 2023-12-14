@@ -26,6 +26,7 @@ namespace WinFormsApp4
             InitializeComponent();
             emp = DataBaseMethods.GetEmlpyeeByID(employee_n_id);
             LoadEmployeeData(employee_n_id);
+            
             imageSource = emp.photo_path;
         }
 
@@ -34,8 +35,8 @@ namespace WinFormsApp4
             name_txtbox.Text = emp.name;
             user_txtbox.Text = emp.user_name;
             National_id_txtbox.Text = emp.employee_n_id;
-            password_txtbox.Text = emp.password;
-            cpass_txtbox.Text = emp.password;
+            //password_txtbox.Text = emp.password;
+            //cpass_txtbox.Text = emp.password;
             phone_num_txtbox.Text = emp.phone_number;
             email_txtbox.Text = emp.email;
             pictureBox1.ImageLocation = emp.photo_path;
@@ -122,24 +123,29 @@ namespace WinFormsApp4
                             , MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Validate = false;
                     }
-
-                    string confirmed_pass = this.cpass_txtbox.Text;
-                    if (Validate && ValidationMethods.password(updateemp, confirmed_pass))
+                    else if(!password_txtbox.Text.Equals(cpass_txtbox.Text))
                     {
-
-
+                        MessageBox.Show("Check the Passwords\" ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validate = false;
+                    }
+                    if (string.IsNullOrWhiteSpace(cpass_txtbox.Text))
+                    {
+                        updateemp.password= emp.password;
+                    }
+                    string confirmed_pass = this.cpass_txtbox.Text;
+                    if (Validate)
+                    { 
                         string newImagePath = ValidationMethods.CreateEmployeeImageFilePath(imageDestinationFolderPath, emp);
                         ValidationMethods.CopyImage(imageSource, newImagePath);
-                        //if (ValidationMethods.CopyImage(updateemp.photo_path, updateemp.user_name, updateemp))
-                        //{
+                       
                         DataBaseMethods.UpdateEmployeeById(updateemp.employee_n_id, updateemp);
                         MessageBox.Show("Your Account Updated successfully");
                         Application.OpenForms[0].Show();
                         this.Close();
-                        //}
-
+                       
 
                     }
+                    
                 }
             }
 
@@ -271,6 +277,16 @@ namespace WinFormsApp4
         }
 
         private void Account_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_txtbox_TextChanged(object sender, EventArgs e)
         {
 
         }

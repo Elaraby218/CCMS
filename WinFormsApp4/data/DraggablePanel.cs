@@ -9,8 +9,6 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace WinFormsApp4.data
 {
-
-
     public class DraggablePanel
     {
         private int space_leave_to_right = 0;
@@ -152,15 +150,6 @@ namespace WinFormsApp4.data
 
                     Screen currentScreen = Screen.FromControl(parentForm);
                     Rectangle screenBounds = currentScreen.WorkingArea;
-
-                    //if (newX < screenBounds.Left)
-                    //    newX = screenBounds.Left;
-                    //if (newY < screenBounds.Top)
-                    //    newY = screenBounds.Top;
-                    //if (newX + parentForm.Width > screenBounds.Right)
-                    //    newX = screenBounds.Right - parentForm.Width;
-                    //if (newY + parentForm.Height > screenBounds.Bottom)
-                    //    newY = screenBounds.Bottom - parentForm.Height;
 
                     parentForm.Left = newX;
                     parentForm.Top = newY;

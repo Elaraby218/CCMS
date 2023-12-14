@@ -91,10 +91,10 @@
             // pictureBox2
             // 
             pictureBox2.Image=Properties.Resources.Design_a_modern_and_sleek_logo_for_a_Computer_Center_Management;
-            pictureBox2.Location=new Point(34, 52);
+            pictureBox2.Location=new Point(27, 52);
             pictureBox2.Margin=new Padding(3, 4, 3, 4);
             pictureBox2.Name="pictureBox2";
-            pictureBox2.Size=new Size(107, 116);
+            pictureBox2.Size=new Size(126, 116);
             pictureBox2.SizeMode=PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex=19;
             pictureBox2.TabStop=false;
@@ -220,9 +220,9 @@
             label5.ForeColor=Color.SeaGreen;
             label5.Location=new Point(617, 360);
             label5.Name="label5";
-            label5.Size=new Size(136, 21);
+            label5.Size=new Size(209, 21);
             label5.TabIndex=36;
-            label5.Text="New Password";
+            label5.Text="Confirm New Password";
             // 
             // cpass_txtbox
             // 
@@ -283,17 +283,19 @@
             password_txtbox.Size=new Size(207, 27);
             password_txtbox.TabIndex=31;
             password_txtbox.TextAlign=HorizontalAlignment.Center;
+            password_txtbox.TextChanged+=password_txtbox_TextChanged;
             // 
             // label2
             // 
             label2.AutoSize=true;
             label2.Font=new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor=Color.SeaGreen;
-            label2.Location=new Point(623, 259);
+            label2.Location=new Point(617, 259);
             label2.Name="label2";
-            label2.Size=new Size(93, 21);
+            label2.Size=new Size(136, 21);
             label2.TabIndex=30;
-            label2.Text="Password";
+            label2.Text="New Password";
+            label2.Click+=label2_Click;
             // 
             // phone_num_txtbox
             // 
@@ -388,7 +390,7 @@
             // 
             checkBox1.AutoSize=true;
             checkBox1.Font=new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox1.Location=new Point(617, 323);
+            checkBox1.Location=new Point(617, 420);
             checkBox1.Margin=new Padding(3, 4, 3, 4);
             checkBox1.Name="checkBox1";
             checkBox1.Size=new Size(126, 23);

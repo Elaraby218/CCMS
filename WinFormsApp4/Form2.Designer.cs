@@ -168,6 +168,7 @@ namespace WinFormsApp4
             cpass_txtbox.Name="cpass_txtbox";
             cpass_txtbox.Size=new Size(207, 26);
             cpass_txtbox.TabIndex=7;
+            cpass_txtbox.TextChanged+=cpass_txtbox_TextChanged;
             // 
             // label6
             // 

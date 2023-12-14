@@ -10,7 +10,7 @@ namespace WinFormsApp4
 {
     public partial class Sign_up_form : Form
     {
-        
+
 
         string imageSource = "";
         string imageDestinationFolderPath = Environment.CurrentDirectory + "\\images\\";
@@ -293,6 +293,11 @@ namespace WinFormsApp4
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cpass_txtbox_TextChanged(object sender, EventArgs e)
         {
 
         }
