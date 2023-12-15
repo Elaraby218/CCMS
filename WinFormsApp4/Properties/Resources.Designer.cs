@@ -69,7 +69,9 @@ namespace WinFormsApp4.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
+      
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -199,7 +201,16 @@ namespace WinFormsApp4.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
+        internal static System.Drawing.Bitmap icons8
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("icons8-square-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -209,5 +220,7 @@ namespace WinFormsApp4.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+       
     }
 }

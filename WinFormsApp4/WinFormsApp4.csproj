@@ -9,6 +9,32 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Resources\**" />
+    <EmbeddedResource Remove="Resources\**" />
+    <None Remove="Resources\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\1410285.png" />
+    <Content Include="Resources\Design_a_modern_and_sleek_logo_for_a_Computer_Center_Management.png" />
+    <Content Include="Resources\icons8-account-64.png" />
+    <Content Include="Resources\icons8-account-641.png" />
+    <Content Include="Resources\icons8-close-30 %281%29.png" />
+    <Content Include="Resources\icons8-logout-24.png" />
+    <Content Include="Resources\icons8-logout-50 %281%29.png" />
+    <Content Include="Resources\icons8-logout-50 %281%291.png" />
+    <Content Include="Resources\icons8-minus-24.png" />
+    <Content Include="Resources\icons8-person-64.png" />
+    <Content Include="Resources\icons8-person-641.png" />
+    <Content Include="Resources\icons8-person-642.png" />
+    <Content Include="Resources\icons8-person-643.png" />
+    <Content Include="Resources\icons8-person-644.png" />
+    <Content Include="Resources\icons8-square-24.png" />
+    <Content Include="Resources\icons8_close_30_1.png" />
+    <Content Include="Resources\Settings_512px.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.25" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.25" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.25" />

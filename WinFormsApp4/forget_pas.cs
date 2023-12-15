@@ -27,6 +27,8 @@ namespace WinFormsApp4
 
             FormBorderStyle = FormBorderStyle.None;
             StartPosition = FormStartPosition.CenterScreen;
+            textBox2.UseSystemPasswordChar = true;
+            textBox3.UseSystemPasswordChar = true;
 
         }
         string code;
@@ -80,10 +82,28 @@ namespace WinFormsApp4
                     smtp.Credentials = new NetworkCredential(yourGmailAddress, yourAppSpecificPassword);
 
                     try
+
                     {
                         smtp.Send(mailMessage);
+                      
 
-                        MessageBox.Show("Email sent successfully! \n Check Your Email Inbox", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        string input = Prompt.ShowDialog("Code Sent Successfully! Check Your Email Inbox and Enter The Authentication Code ", "Authentication Code", true);
+
+                        if (input == code)
+                        {
+                            flag = true;
+                            MessageBox.Show("The Code is Correct", "Authentication Code ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("The Code is Not Correct","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                            flag = false;
+                        }
+                  
+      
                     }
                     catch (Exception ex)
                     {
@@ -94,15 +114,13 @@ namespace WinFormsApp4
                 }
                 else
                 {
-                    MessageBox.Show("Email Not Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Email Not Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
                 MessageBox.Show("Please Enter an Email");
             }
-            textBox1.Text = "";
-            textBox2.Text = "";
 
         }
 
@@ -149,13 +167,13 @@ namespace WinFormsApp4
                         emp.password = pass;
                         db.Update(emp);
                         db.SaveChanges();
-                        MessageBox.Show("Your Password Changed");
+                        MessageBox.Show("Your Password Has Changed");
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Please check that password is the same as comfirmed passwoard"
-                    , "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Please Check that Password is the Same as Comfirmed Passwoard"
+                    , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         textBox2.Text = "";
                         textBox3.Text = "";
                     }
@@ -165,20 +183,18 @@ namespace WinFormsApp4
             else { MessageBox.Show("Enter the Authentication Code"); }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            string co = textBox1.Text;
-            if (co== code)
+
+            if (!checkBox2.Checked)
             {
-                MessageBox.Show("The code is Correct \nEnter the new Password");
-                flag = true;
+                textBox2.UseSystemPasswordChar = true;
+                textBox3.UseSystemPasswordChar = true;
             }
             else
             {
-                MessageBox.Show("Not correct code");
-
-                flag = false;
-
+                textBox2.UseSystemPasswordChar = false;
+                textBox3.UseSystemPasswordChar = false;
             }
         }
     }

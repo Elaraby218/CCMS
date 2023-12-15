@@ -56,7 +56,7 @@ namespace WinFormsApp4
             }
             if (ValidationMethods.IsStudent(N_id_txtbox.Text))
             {
-                MessageBox.Show("Wrong National Id", "Error"
+                MessageBox.Show(" Student is Already Exist", "Error"
                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }

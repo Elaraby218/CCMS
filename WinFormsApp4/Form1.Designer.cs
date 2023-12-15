@@ -37,16 +37,16 @@ namespace WinFormsApp4
             pictureBox2 = new PictureBox();
             panel3 = new Panel();
             panel4 = new Panel();
-            textBox2 = new TextBox();
-            label6 = new Label();
-            button1 = new Button();
-            label8 = new Label();
-            linkLabel2 = new LinkLabel();
-            label1 = new Label();
-            textBox1 = new TextBox();
-            linkLabel1 = new LinkLabel();
-            pictureBox1 = new PictureBox();
             checkBox1 = new CheckBox();
+            pictureBox1 = new PictureBox();
+            linkLabel1 = new LinkLabel();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            linkLabel2 = new LinkLabel();
+            label8 = new Label();
+            button1 = new Button();
+            label6 = new Label();
+            textBox2 = new TextBox();
             panel2 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel3.SuspendLayout();
@@ -116,7 +116,7 @@ namespace WinFormsApp4
             // 
             panel3.Anchor = AnchorStyles.None;
             panel3.Controls.Add(pictureBox2);
-            panel3.Location = new Point(0, 0);
+            panel3.Location = new Point(17, -12);
             panel3.Name = "panel3";
             panel3.Size = new Size(221, 501);
             panel3.TabIndex = 35;
@@ -140,91 +140,31 @@ namespace WinFormsApp4
             panel4.TabIndex = 0;
             panel4.Paint += panel4_Paint_1;
             // 
-            // textBox2
+            // checkBox1
             // 
-            textBox2.Anchor = AnchorStyles.None;
-            textBox2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(262, 263);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(242, 23);
-            textBox2.TabIndex = 1;
-            textBox2.TextChanged += textBox2_TextChanged;
+            checkBox1.Anchor = AnchorStyles.None;
+            checkBox1.AutoSize = true;
+            checkBox1.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox1.Location = new Point(262, 294);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(107, 17);
+            checkBox1.TabIndex = 3;
+            checkBox1.Text = "Show Password";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
-            // label6
+            // pictureBox1
             // 
-            label6.Anchor = AnchorStyles.None;
-            label6.AutoSize = true;
-            label6.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.SeaGreen;
-            label6.Location = new Point(262, 180);
-            label6.Name = "label6";
-            label6.Size = new Size(129, 16);
-            label6.TabIndex = 23;
-            label6.Text = "User Name or Email";
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.None;
-            button1.BackColor = Color.SeaGreen;
-            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(262, 329);
-            button1.Name = "button1";
-            button1.Size = new Size(242, 43);
-            button1.TabIndex = 4;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // label8
-            // 
-            label8.Anchor = AnchorStyles.None;
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.ForeColor = Color.FromArgb(64, 64, 64);
-            label8.Location = new Point(245, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(219, 30);
-            label8.TabIndex = 21;
-            label8.Text = "Login to Your Account";
-            label8.Click += label8_Click;
-            // 
-            // linkLabel2
-            // 
-            linkLabel2.Anchor = AnchorStyles.None;
-            linkLabel2.AutoSize = true;
-            linkLabel2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            linkLabel2.LinkColor = Color.SeaGreen;
-            linkLabel2.Location = new Point(310, 375);
-            linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(113, 17);
-            linkLabel2.TabIndex = 5;
-            linkLabel2.TabStop = true;
-            linkLabel2.Text = "Forgot Password?";
-            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.SeaGreen;
-            label1.Location = new Point(262, 244);
-            label1.Name = "label1";
-            label1.Size = new Size(70, 16);
-            label1.TabIndex = 22;
-            label1.Text = "Password";
-            // 
-            // textBox1
-            // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.ForeColor = SystemColors.ActiveCaptionText;
-            textBox1.Location = new Point(262, 199);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(242, 23);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.BackColor = Color.SeaGreen;
+            pictureBox1.Image = Properties.Resources.icons8_person_642;
+            pictureBox1.Location = new Point(310, 49);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(132, 119);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 24;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // linkLabel1
             // 
@@ -240,37 +180,97 @@ namespace WinFormsApp4
             linkLabel1.Text = "New User?";
             linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
-            // pictureBox1
+            // textBox1
             // 
-            pictureBox1.Anchor = AnchorStyles.None;
-            pictureBox1.BackColor = Color.SeaGreen;
-            pictureBox1.Image = Properties.Resources.icons8_person_642;
-            pictureBox1.Location = new Point(310, 49);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(132, 119);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 24;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            textBox1.Anchor = AnchorStyles.None;
+            textBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.ForeColor = SystemColors.ActiveCaptionText;
+            textBox1.Location = new Point(262, 199);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(242, 23);
+            textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // checkBox1
+            // label1
             // 
-            checkBox1.Anchor = AnchorStyles.None;
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox1.Location = new Point(262, 294);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(107, 17);
-            checkBox1.TabIndex = 3;
-            checkBox1.Text = "Show Password";
-            checkBox1.UseVisualStyleBackColor = true;
-            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.SeaGreen;
+            label1.Location = new Point(262, 244);
+            label1.Name = "label1";
+            label1.Size = new Size(70, 16);
+            label1.TabIndex = 22;
+            label1.Text = "Password";
+            // 
+            // linkLabel2
+            // 
+            linkLabel2.Anchor = AnchorStyles.None;
+            linkLabel2.AutoSize = true;
+            linkLabel2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            linkLabel2.LinkColor = Color.SeaGreen;
+            linkLabel2.Location = new Point(310, 375);
+            linkLabel2.Name = "linkLabel2";
+            linkLabel2.Size = new Size(113, 17);
+            linkLabel2.TabIndex = 5;
+            linkLabel2.TabStop = true;
+            linkLabel2.Text = "Forgot Password?";
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
+            // 
+            // label8
+            // 
+            label8.Anchor = AnchorStyles.None;
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.ForeColor = Color.FromArgb(64, 64, 64);
+            label8.Location = new Point(267, 4);
+            label8.Name = "label8";
+            label8.Size = new Size(219, 30);
+            label8.TabIndex = 21;
+            label8.Text = "Login to Your Account";
+            label8.Click += label8_Click;
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.None;
+            button1.BackColor = Color.SeaGreen;
+            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(262, 329);
+            button1.Name = "button1";
+            button1.Size = new Size(242, 43);
+            button1.TabIndex = 4;
+            button1.Text = "Login";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.None;
+            label6.AutoSize = true;
+            label6.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.SeaGreen;
+            label6.Location = new Point(262, 180);
+            label6.Name = "label6";
+            label6.Size = new Size(129, 16);
+            label6.TabIndex = 23;
+            label6.Text = "User Name or Email";
+            // 
+            // textBox2
+            // 
+            textBox2.Anchor = AnchorStyles.None;
+            textBox2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Location = new Point(262, 263);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(242, 23);
+            textBox2.TabIndex = 1;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // panel2
             // 
             panel2.Anchor = AnchorStyles.None;
             panel2.Controls.Add(panel4);
-            panel2.Location = new Point(0, 0);
+            panel2.Location = new Point(17, -12);
             panel2.Name = "panel2";
             panel2.Size = new Size(546, 501);
             panel2.TabIndex = 34;
@@ -280,7 +280,7 @@ namespace WinFormsApp4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(729, 501);
+            ClientSize = new Size(762, 477);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);

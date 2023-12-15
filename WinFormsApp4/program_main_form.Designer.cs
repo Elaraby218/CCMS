@@ -40,6 +40,7 @@ namespace WinFormsApp4
             textBox1 = new TextBox();
             panel1 = new Panel();
             button3 = new Button();
+            pictureBox2 = new PictureBox();
             button2 = new Button();
             button1 = new Button();
             panel2 = new Panel();
@@ -59,20 +60,16 @@ namespace WinFormsApp4
             LevelSTU = new DataGridViewTextBoxColumn();
             In_timeSTU = new DataGridViewTextBoxColumn();
             panel5 = new Panel();
-            panel4 = new Panel();
-            button9 = new Button();
-            pictureBox2 = new PictureBox();
             contextMenuStrip1 = new ContextMenuStrip(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
             panel6.SuspendLayout();
             panel3.SuspendLayout();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             panel5.SuspendLayout();
-            panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // History
@@ -92,18 +89,20 @@ namespace WinFormsApp4
             // 
             // Log_out_btn
             // 
-            Log_out_btn.BackColor = Color.SeaGreen;
+            Log_out_btn.AutoSize = true;
+            Log_out_btn.BackColor = Color.FromArgb(64, 64, 64);
+            Log_out_btn.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            Log_out_btn.FlatStyle = FlatStyle.Flat;
             Log_out_btn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Log_out_btn.ForeColor = SystemColors.ButtonHighlight;
             Log_out_btn.Image = Properties.Resources.icons8_logout_24;
             Log_out_btn.ImageAlign = ContentAlignment.MiddleLeft;
-            Log_out_btn.Location = new Point(12, 360);
+            Log_out_btn.Location = new Point(3, 334);
             Log_out_btn.Name = "Log_out_btn";
             Log_out_btn.Padding = new Padding(15, 0, 15, 0);
-            Log_out_btn.Size = new Size(147, 48);
+            Log_out_btn.Size = new Size(173, 48);
             Log_out_btn.TabIndex = 0;
             Log_out_btn.Text = "Log out";
-            Log_out_btn.TextAlign = ContentAlignment.MiddleRight;
             Log_out_btn.UseVisualStyleBackColor = false;
             Log_out_btn.Click += Log_out_btn_Click;
             // 
@@ -120,9 +119,9 @@ namespace WinFormsApp4
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(32, 24);
+            pictureBox1.Location = new Point(3, 3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
+            pictureBox1.Size = new Size(54, 58);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -130,22 +129,24 @@ namespace WinFormsApp4
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.DarkSeaGreen;
-            textBox1.Location = new Point(32, 0);
+            textBox1.BackColor = SystemColors.ButtonHighlight;
+            textBox1.Location = new Point(63, 36);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(100, 25);
             textBox1.TabIndex = 1;
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(64, 64, 64);
             panel1.Controls.Add(button3);
+            panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(Log_out_btn);
-            panel1.Controls.Add(panel2);
             panel1.Controls.Add(History);
+            panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Left;
+            panel1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(50, 3, 3, 3);
             panel1.Name = "panel1";
@@ -154,62 +155,78 @@ namespace WinFormsApp4
             // 
             // button3
             // 
-            button3.BackColor = Color.SeaGreen;
+            button3.AutoSize = true;
+            button3.BackColor = Color.FromArgb(64, 64, 64);
+            button3.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.ButtonHighlight;
             button3.Image = (Image)resources.GetObject("button3.Image");
             button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(12, 158);
+            button3.Location = new Point(0, 172);
             button3.Name = "button3";
             button3.Padding = new Padding(15, 0, 15, 0);
-            button3.Size = new Size(147, 48);
+            button3.Size = new Size(176, 48);
             button3.TabIndex = 6;
             button3.Text = "Account";
-            button3.TextAlign = ContentAlignment.MiddleRight;
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(22, 76);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(120, 90);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 34;
+            pictureBox2.TabStop = false;
+            // 
             // button2
             // 
-            button2.BackColor = Color.SeaGreen;
+            button2.AutoSize = true;
+            button2.BackColor = Color.FromArgb(64, 64, 64);
+            button2.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonHighlight;
             button2.Image = (Image)resources.GetObject("button2.Image");
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(12, 226);
+            button2.Location = new Point(3, 226);
             button2.Name = "button2";
             button2.Padding = new Padding(15, 0, 25, 0);
-            button2.Size = new Size(147, 48);
+            button2.Size = new Size(176, 48);
             button2.TabIndex = 5;
             button2.Text = "Print";
-            button2.TextAlign = ContentAlignment.MiddleRight;
             button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
-            button1.BackColor = Color.SeaGreen;
+            button1.AutoSize = true;
+            button1.BackColor = Color.FromArgb(64, 64, 64);
+            button1.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ButtonHighlight;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(12, 293);
+            button1.Location = new Point(3, 280);
             button1.Name = "button1";
             button1.Padding = new Padding(15, 0, 15, 0);
-            button1.Size = new Size(147, 48);
+            button1.Size = new Size(176, 48);
             button1.TabIndex = 4;
             button1.Text = "Setting";
-            button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
-            panel2.BackColor = Color.SeaGreen;
+            panel2.BackColor = Color.FromArgb(64, 64, 64);
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(textBox1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(176, 69);
+            panel2.Size = new Size(176, 66);
             panel2.TabIndex = 0;
             // 
             // panel6
@@ -217,6 +234,7 @@ namespace WinFormsApp4
             panel6.Controls.Add(Reg_newstudbtn);
             panel6.Controls.Add(button4);
             panel6.Controls.Add(button5);
+            panel6.Cursor = Cursors.Default;
             panel6.Dock = DockStyle.Bottom;
             panel6.Location = new Point(0, 429);
             panel6.Name = "panel6";
@@ -270,7 +288,7 @@ namespace WinFormsApp4
             label1.AutoSize = true;
             label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(3, 4);
+            label1.Location = new Point(171, 9);
             label1.Name = "label1";
             label1.Size = new Size(186, 45);
             label1.TabIndex = 11;
@@ -294,6 +312,7 @@ namespace WinFormsApp4
             // 
             panel7.Controls.Add(StudNational_txtbox);
             panel7.Controls.Add(label2);
+            panel7.Cursor = Cursors.Default;
             panel7.Dock = DockStyle.Bottom;
             panel7.Location = new Point(0, 388);
             panel7.Name = "panel7";
@@ -325,12 +344,13 @@ namespace WinFormsApp4
             dataGridView2.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { IdSTU, NameSTU, FacultySTU, LevelSTU, In_timeSTU });
+            dataGridView2.Cursor = Cursors.Default;
             dataGridView2.Dock = DockStyle.Fill;
             dataGridView2.GridColor = SystemColors.ButtonHighlight;
-            dataGridView2.Location = new Point(0, 66);
+            dataGridView2.Location = new Point(0, 63);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(660, 363);
+            dataGridView2.Size = new Size(660, 366);
             dataGridView2.TabIndex = 32;
             // 
             // IdSTU
@@ -365,47 +385,13 @@ namespace WinFormsApp4
             // 
             // panel5
             // 
-            panel5.Controls.Add(panel4);
             panel5.Controls.Add(label1);
-            panel5.Controls.Add(pictureBox2);
+            panel5.Cursor = Cursors.Default;
             panel5.Dock = DockStyle.Top;
             panel5.Location = new Point(0, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(660, 66);
+            panel5.Size = new Size(660, 63);
             panel5.TabIndex = 28;
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(button9);
-            panel4.Dock = DockStyle.Right;
-            panel4.Location = new Point(480, 0);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(180, 66);
-            panel4.TabIndex = 27;
-            panel4.Paint += panel4_Paint;
-            // 
-            // button9
-            // 
-            button9.BackColor = SystemColors.ControlDarkDark;
-            button9.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            button9.ForeColor = SystemColors.ButtonHighlight;
-            button9.Location = new Point(0, 381);
-            button9.Name = "button9";
-            button9.Size = new Size(221, 37);
-            button9.TabIndex = 6;
-            button9.Text = "Check Connection";
-            button9.UseVisualStyleBackColor = false;
-            button9.Visible = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.Design_a_modern_and_sleek_logo_for_a_Computer_Center_Management;
-            pictureBox2.Location = new Point(202, -3);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(126, 69);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 34;
-            pictureBox2.TabStop = false;
             // 
             // contextMenuStrip1
             // 
@@ -420,13 +406,15 @@ namespace WinFormsApp4
             Controls.Add(panel3);
             Controls.Add(panel1);
             Controls.Add(emp_name);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "program_main_form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "program_main_form";
             Load += program_main_form_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel6.ResumeLayout(false);
@@ -436,8 +424,6 @@ namespace WinFormsApp4
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
-            panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -460,9 +446,7 @@ namespace WinFormsApp4
         private Button button3;
         private Button button2;
         private Button button1;
-        private Panel panel4;
         private Panel panel5;
-        private Button button9;
         private Panel panel6;
         private PictureBox pictureBox2;
         private TextBox StudNational_txtbox;

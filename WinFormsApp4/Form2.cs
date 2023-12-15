@@ -18,14 +18,14 @@ namespace WinFormsApp4
         public Sign_up_form()
         {
 
-            new DraggablePanel(this);
+           
             InitializeComponent();
             //  MessageBox.Show(Environment.CurrentDirectory);
             // default photo on pt3
             pictureBox1.ImageLocation = imageSource;
             password_txtbox.UseSystemPasswordChar = true;
             cpass_txtbox.UseSystemPasswordChar = true;
-
+            new DraggablePanel(this);
         }
         private void ExecuteRegistration()
         {

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormsApp4.Properties;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
+using System.Data;
 
 namespace WinFormsApp4.data
 {
@@ -31,12 +32,14 @@ namespace WinFormsApp4.data
             // Create the draggable panel
             draggablePanel = new Panel
             {
-                BackColor = Color.Transparent,
+                BackColor = Color.SeaGreen,
                 Location = new Point(0, 0),
                 Name = "panel1",
                 Size = new Size(parentForm.ClientSize.Width, 42),
                 TabIndex = 26,
                 AutoSize = true,
+                Dock = DockStyle.Top,
+                Height = 10,
 
             };
 
@@ -44,23 +47,23 @@ namespace WinFormsApp4.data
 
             btnMinimize = new Button
             {
-                BackColor = Color.SeaGreen,
-                FlatStyle = FlatStyle.Popup,
-                ForeColor = SystemColors.ControlDarkDark,
+             //  BackColor = Color.SeaGreen,
+             //   FlatStyle = FlatStyle.Popup,
+              //  ForeColor = SystemColors.ControlDarkDark,
                 Image = Resources.icons8_minus_24,
                 Name = "minimize_button",
                 Margin = new Padding(3, 4, 3, 4),
                 Size = new Size(36, 36),
-                TabIndex = 29,
+                TabIndex = 10,
                 UseVisualStyleBackColor = false
             };
 
             btnMaximize = new Button
             {
                 BackColor = Color.SeaGreen,
-                FlatStyle = FlatStyle.Popup,
-                ForeColor = SystemColors.ControlDarkDark,
-                Image = (Image)Resources.icons8_person_644,
+              ///  FlatStyle = FlatStyle.Popup,
+              //  ForeColor = SystemColors.ControlDarkDark,
+                Image = (Image)Resources.icons8,
                 Margin = new Padding(3, 4, 3, 4),
                 Name = "maxmize_button",
                 Size = new Size(36, 36),
@@ -70,9 +73,9 @@ namespace WinFormsApp4.data
 
             btnClose = new Button
             {
-                BackColor = Color.SeaGreen,
-                FlatStyle = FlatStyle.Popup,
-                ForeColor = SystemColors.ControlDarkDark,
+                //BackColor = Color.SeaGreen,
+               // FlatStyle = FlatStyle.Popup,
+             //   ForeColor = SystemColors.ControlDarkDark,
                 Image = Properties.Resources.icons8_close_30__1_,
                 Margin = new Padding(3, 4, 3, 4),
                 Name = "Close_buttton",

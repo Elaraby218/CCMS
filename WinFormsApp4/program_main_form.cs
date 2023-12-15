@@ -26,7 +26,9 @@ namespace WinFormsApp4
 
         public program_main_form(string employee_n_id)
         {
+           
             InitializeComponent();
+         
             this.cur_employee_n_id = employee_n_id;
         }
 
@@ -150,6 +152,21 @@ namespace WinFormsApp4
         {
             this.Close();
         }
+        
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+                this.WindowState = FormWindowState.Normal;
+            else
+                this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void button7ck(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
 
         private void button3_Click(object sender, EventArgs e)
         {
