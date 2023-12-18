@@ -41,6 +41,10 @@
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             label8 = new Label();
             checkBox2 = new CheckBox();
+            label1 = new Label();
+            button3 = new Button();
+            textBox1 = new TextBox();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -48,7 +52,7 @@
             // 
             email_txtbox.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             email_txtbox.ForeColor = Color.SeaGreen;
-            email_txtbox.Location = new Point(119, 128);
+            email_txtbox.Location = new Point(119, 88);
             email_txtbox.Name = "email_txtbox";
             email_txtbox.Size = new Size(221, 23);
             email_txtbox.TabIndex = 11;
@@ -59,7 +63,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.SeaGreen;
-            label3.Location = new Point(119, 109);
+            label3.Location = new Point(119, 69);
             label3.Name = "label3";
             label3.Size = new Size(113, 16);
             label3.TabIndex = 10;
@@ -110,7 +114,7 @@
             button1.BackColor = Color.SeaGreen;
             button1.FlatStyle = FlatStyle.Popup;
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(119, 164);
+            button1.Location = new Point(119, 115);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 20;
@@ -146,7 +150,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.SeaGreen;
-            label4.Location = new Point(22, 128);
+            label4.Location = new Point(22, 88);
             label4.Name = "label4";
             label4.Size = new Size(57, 21);
             label4.TabIndex = 38;
@@ -168,7 +172,7 @@
             label8.Name = "label8";
             label8.Size = new Size(57, 21);
             label8.TabIndex = 41;
-            label8.Text = "Step 2";
+            label8.Text = "Step 3";
             // 
             // checkBox2
             // 
@@ -182,11 +186,59 @@
             checkBox2.UseVisualStyleBackColor = true;
             checkBox2.CheckedChanged += checkBox2_CheckedChanged;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.SeaGreen;
+            label1.Location = new Point(22, 176);
+            label1.Name = "label1";
+            label1.Size = new Size(57, 21);
+            label1.TabIndex = 47;
+            label1.Text = "Step 2";
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.SeaGreen;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.ForeColor = SystemColors.ButtonHighlight;
+            button3.Location = new Point(119, 203);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 23);
+            button3.TabIndex = 46;
+            button3.Text = "Submit";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.ForeColor = Color.SeaGreen;
+            textBox1.Location = new Point(119, 176);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(221, 23);
+            textBox1.TabIndex = 45;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.SeaGreen;
+            label6.Location = new Point(119, 157);
+            label6.Name = "label6";
+            label6.Size = new Size(179, 16);
+            label6.TabIndex = 44;
+            label6.Text = "Enter Authentication Code";
+            // 
             // forget_pas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(699, 432);
+            Controls.Add(label1);
+            Controls.Add(button3);
+            Controls.Add(textBox1);
+            Controls.Add(label6);
             Controls.Add(checkBox2);
             Controls.Add(label8);
             Controls.Add(label4);
@@ -223,5 +275,9 @@
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
         private Label label8;
         private CheckBox checkBox2;
+        private Label label1;
+        private Button button3;
+        private TextBox textBox1;
+        private Label label6;
     }
 }

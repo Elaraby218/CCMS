@@ -130,7 +130,7 @@ namespace WinFormsApp4
             // textBox1
             // 
             textBox1.BackColor = SystemColors.ButtonHighlight;
-            textBox1.Location = new Point(63, 36);
+            textBox1.Location = new Point(63, 20);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 25);
             textBox1.TabIndex = 1;

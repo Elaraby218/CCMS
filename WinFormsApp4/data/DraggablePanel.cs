@@ -47,9 +47,9 @@ namespace WinFormsApp4.data
 
             btnMinimize = new Button
             {
-             //  BackColor = Color.SeaGreen,
-             //   FlatStyle = FlatStyle.Popup,
-              //  ForeColor = SystemColors.ControlDarkDark,
+              BackColor = Color.SeaGreen,
+               FlatStyle = FlatStyle.Popup,
+                ForeColor = SystemColors.ControlDarkDark,
                 Image = Resources.icons8_minus_24,
                 Name = "minimize_button",
                 Margin = new Padding(3, 4, 3, 4),
@@ -61,8 +61,8 @@ namespace WinFormsApp4.data
             btnMaximize = new Button
             {
                 BackColor = Color.SeaGreen,
-              ///  FlatStyle = FlatStyle.Popup,
-              //  ForeColor = SystemColors.ControlDarkDark,
+                FlatStyle = FlatStyle.Popup,
+                ForeColor = SystemColors.ControlDarkDark,
                 Image = (Image)Resources.icons8,
                 Margin = new Padding(3, 4, 3, 4),
                 Name = "maxmize_button",
@@ -73,9 +73,9 @@ namespace WinFormsApp4.data
 
             btnClose = new Button
             {
-                //BackColor = Color.SeaGreen,
-               // FlatStyle = FlatStyle.Popup,
-             //   ForeColor = SystemColors.ControlDarkDark,
+                BackColor = Color.SeaGreen,
+               FlatStyle = FlatStyle.Popup,
+               ForeColor = SystemColors.ControlDarkDark,
                 Image = Properties.Resources.icons8_close_30__1_,
                 Margin = new Padding(3, 4, 3, 4),
                 Name = "Close_buttton",

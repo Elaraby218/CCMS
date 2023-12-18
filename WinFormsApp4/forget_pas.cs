@@ -30,9 +30,10 @@ namespace WinFormsApp4
             textBox2.UseSystemPasswordChar = true;
             textBox3.UseSystemPasswordChar = true;
 
+
         }
         string code;
-        bool flag = false;
+        bool flag = false,flag2=false;
         string emai;
 
         private void forget_pas_Load(object sender, EventArgs e)
@@ -85,36 +86,21 @@ namespace WinFormsApp4
 
                     {
                         smtp.Send(mailMessage);
-                      
-
-                        string input = Prompt.ShowDialog("Code Sent Successfully! Check Your Email Inbox and Enter The Authentication Code ", "Authentication Code", true);
-
-                        if (input == code)
-                        {
-                            flag = true;
-                            MessageBox.Show("The Code is Correct", "Authentication Code ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("The Code is Not Correct","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
-                            flag = false;
-                        }
-                  
-      
+                       
+                        MessageBox.Show("Code Sent Successfully! Check Your Email Inbox and Enter The Authentication Code ", "Authentication Code", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        flag2 = true;
+                    
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Error sending email Check yout internt connection: ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-
+                        flag2 = false;
                     }
                 }
                 else
                 {
                     MessageBox.Show("Email Not Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    flag2 = false;
                 }
             }
             else
@@ -196,6 +182,31 @@ namespace WinFormsApp4
                 textBox2.UseSystemPasswordChar = false;
                 textBox3.UseSystemPasswordChar = false;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string input = textBox1.Text;
+            if (flag2)
+            {
+                if (input == code)
+                {
+                    flag = true;
+                    MessageBox.Show("The Code is Correct", "Authentication Code ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("The Code is Not Correct", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    flag = false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Enter an Email");
+            }
+
         }
     }
 }
