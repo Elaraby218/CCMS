@@ -182,14 +182,7 @@ namespace WinFormsApp4
             // 
             // textBox1
             // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.ForeColor = SystemColors.ActiveCaptionText;
-            textBox1.Location = new Point(262, 199);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(242, 23);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+           
             // 
             // label1
             // 

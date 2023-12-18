@@ -86,14 +86,13 @@ namespace WinFormsApp4
 
                     {
                         smtp.Send(mailMessage);
-                       
                         MessageBox.Show("Code Sent Successfully! Check Your Email Inbox and Enter The Authentication Code ", "Authentication Code", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         flag2 = true;
                     
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error sending email Check yout internt connection: ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Error In Sending Email Check yout internt Connection: ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         flag2 = false;
                     }
                 }
