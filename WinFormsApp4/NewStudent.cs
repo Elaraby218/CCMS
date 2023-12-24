@@ -60,8 +60,8 @@ namespace WinFormsApp4
                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (!Regex.IsMatch(Level_txtbox.Text, "^(1|2|3|4|5)$"))
 
+            if (!Regex.IsMatch(Level_txtbox.Text, "^(1|2|3|4|5)$"))
             {
                 MessageBox.Show("Invalid Level", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

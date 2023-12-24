@@ -149,12 +149,14 @@ namespace funcs
         public static bool EmpNationalId(string id)
         {
             EmployeeTable IsUserFound = DataBaseMethods.getEmployee(id);
-            return ((IsUserFound != null));
+            //MessageBox.Show("" +(IsUserFound != null));
+            return ((IsUserFound != null)); // return true if id exist
         }
         public static bool IsStudent(string id)
         {
             StudentsTable IsUserFound = DataBaseMethods.getStudent(id);
-            return ((IsUserFound != null) && (!ValidationMethods.EmpNationalId(id)));
+            //MessageBox.Show("" + ((IsUserFound != null) && (ValidationMethods.EmpNationalId(id))));
+            return ((IsUserFound != null) || (ValidationMethods.EmpNationalId(id)));
         }
 
         public static bool StudentCheckOut(string id, string employee_id)
