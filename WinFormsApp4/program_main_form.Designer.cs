@@ -121,9 +121,10 @@ namespace WinFormsApp4
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(32, 24);
+            pictureBox1.Location = new Point(0, 35);
+            pictureBox1.Margin = new Padding(0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
+            pictureBox1.Size = new Size(70, 83);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -131,11 +132,17 @@ namespace WinFormsApp4
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.DarkSeaGreen;
-            textBox1.Location = new Point(32, 0);
+            textBox1.BackColor = Color.SeaGreen;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox1.ForeColor = SystemColors.Window;
+            textBox1.Location = new Point(73, 69);
+            textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(94, 23);
             textBox1.TabIndex = 1;
+            textBox1.TextAlign = HorizontalAlignment.Center;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // panel1
             // 
@@ -213,7 +220,7 @@ namespace WinFormsApp4
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(176, 69);
+            panel2.Size = new Size(176, 118);
             panel2.TabIndex = 0;
             // 
             // panel6
@@ -274,7 +281,7 @@ namespace WinFormsApp4
             label1.AutoSize = true;
             label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(3, 4);
+            label1.Location = new Point(6, 56);
             label1.Name = "label1";
             label1.Size = new Size(186, 45);
             label1.TabIndex = 11;
@@ -331,10 +338,10 @@ namespace WinFormsApp4
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { IdSTU, NameSTU, FacultySTU, LevelSTU, In_timeSTU });
             dataGridView2.Dock = DockStyle.Fill;
             dataGridView2.GridColor = SystemColors.ButtonHighlight;
-            dataGridView2.Location = new Point(0, 66);
+            dataGridView2.Location = new Point(0, 118);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(660, 363);
+            dataGridView2.Size = new Size(660, 311);
             dataGridView2.TabIndex = 32;
             // 
             // IdSTU
@@ -371,20 +378,20 @@ namespace WinFormsApp4
             // 
             panel5.Controls.Add(panel4);
             panel5.Controls.Add(label1);
-            panel5.Controls.Add(pictureBox2);
             panel5.Dock = DockStyle.Top;
             panel5.Location = new Point(0, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(660, 66);
+            panel5.Size = new Size(660, 118);
             panel5.TabIndex = 28;
             // 
             // panel4
             // 
             panel4.Controls.Add(button9);
+            panel4.Controls.Add(pictureBox2);
             panel4.Dock = DockStyle.Right;
             panel4.Location = new Point(480, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(180, 66);
+            panel4.Size = new Size(180, 118);
             panel4.TabIndex = 27;
             panel4.Paint += panel4_Paint;
             // 
@@ -404,9 +411,9 @@ namespace WinFormsApp4
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.Design_a_modern_and_sleek_logo_for_a_Computer_Center_Management;
-            pictureBox2.Location = new Point(202, -3);
+            pictureBox2.Location = new Point(54, 43);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(126, 69);
+            pictureBox2.Size = new Size(126, 72);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 34;
             pictureBox2.TabStop = false;
@@ -429,6 +436,9 @@ namespace WinFormsApp4
             StartPosition = FormStartPosition.CenterScreen;
             Text = "program_main_form";
             Load += program_main_form_Load;
+            Controls.SetChildIndex(emp_name, 0);
+            Controls.SetChildIndex(panel1, 0);
+            Controls.SetChildIndex(panel3, 0);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
