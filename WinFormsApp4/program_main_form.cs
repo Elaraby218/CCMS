@@ -28,6 +28,7 @@ namespace WinFormsApp4
         {
             InitializeComponent();
             this.cur_employee_n_id = employee_n_id;
+
         }
 
         private void Log_out_btn_Click(object sender, EventArgs e)

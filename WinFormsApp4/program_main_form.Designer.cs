@@ -92,8 +92,9 @@ namespace WinFormsApp4
             // 
             // Log_out_btn
             // 
-            Log_out_btn.BackColor = Color.SeaGreen;
-            Log_out_btn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Log_out_btn.BackColor = Color.FromArgb(64, 64, 64);
+            Log_out_btn.FlatStyle = FlatStyle.Flat;
+            Log_out_btn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             Log_out_btn.ForeColor = SystemColors.ButtonHighlight;
             Log_out_btn.Image = Properties.Resources.icons8_logout_24;
             Log_out_btn.ImageAlign = ContentAlignment.MiddleLeft;
@@ -154,8 +155,9 @@ namespace WinFormsApp4
             // 
             // button3
             // 
-            button3.BackColor = Color.SeaGreen;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.BackColor = Color.FromArgb(64, 64, 64);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.ButtonHighlight;
             button3.Image = (Image)resources.GetObject("button3.Image");
             button3.ImageAlign = ContentAlignment.MiddleLeft;
@@ -171,8 +173,9 @@ namespace WinFormsApp4
             // 
             // button2
             // 
-            button2.BackColor = Color.SeaGreen;
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.BackColor = Color.FromArgb(64, 64, 64);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonHighlight;
             button2.Image = (Image)resources.GetObject("button2.Image");
             button2.ImageAlign = ContentAlignment.MiddleLeft;
@@ -187,8 +190,9 @@ namespace WinFormsApp4
             // 
             // button1
             // 
-            button1.BackColor = Color.SeaGreen;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.BackColor = Color.FromArgb(64, 64, 64);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ButtonHighlight;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
@@ -197,7 +201,7 @@ namespace WinFormsApp4
             button1.Padding = new Padding(15, 0, 15, 0);
             button1.Size = new Size(147, 48);
             button1.TabIndex = 4;
-            button1.Text = "Setting";
+            button1.Text = "    Configure";
             button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = false;
             // 
@@ -217,7 +221,6 @@ namespace WinFormsApp4
             panel6.Controls.Add(Reg_newstudbtn);
             panel6.Controls.Add(button4);
             panel6.Controls.Add(button5);
-            panel6.Cursor = Cursors.Default;
             panel6.Dock = DockStyle.Bottom;
             panel6.Location = new Point(0, 429);
             panel6.Name = "panel6";
@@ -295,7 +298,6 @@ namespace WinFormsApp4
             // 
             panel7.Controls.Add(StudNational_txtbox);
             panel7.Controls.Add(label2);
-            panel7.Cursor = Cursors.Default;
             panel7.Dock = DockStyle.Bottom;
             panel7.Location = new Point(0, 388);
             panel7.Name = "panel7";
@@ -327,7 +329,6 @@ namespace WinFormsApp4
             dataGridView2.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { IdSTU, NameSTU, FacultySTU, LevelSTU, In_timeSTU });
-            dataGridView2.Cursor = Cursors.Default;
             dataGridView2.Dock = DockStyle.Fill;
             dataGridView2.GridColor = SystemColors.ButtonHighlight;
             dataGridView2.Location = new Point(0, 66);
@@ -380,7 +381,6 @@ namespace WinFormsApp4
             // panel4
             // 
             panel4.Controls.Add(button9);
-            panel4.Cursor = Cursors.Default;
             panel4.Dock = DockStyle.Right;
             panel4.Location = new Point(480, 0);
             panel4.Name = "panel4";
