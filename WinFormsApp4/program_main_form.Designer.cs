@@ -101,7 +101,7 @@ namespace WinFormsApp4
             Log_out_btn.Location = new Point(12, 360);
             Log_out_btn.Name = "Log_out_btn";
             Log_out_btn.Padding = new Padding(15, 0, 15, 0);
-            Log_out_btn.Size = new Size(147, 48);
+            Log_out_btn.Size = new Size(144, 48);
             Log_out_btn.TabIndex = 0;
             Log_out_btn.Text = "Log out";
             Log_out_btn.TextAlign = ContentAlignment.MiddleRight;
@@ -171,7 +171,7 @@ namespace WinFormsApp4
             button3.Location = new Point(12, 158);
             button3.Name = "button3";
             button3.Padding = new Padding(15, 0, 15, 0);
-            button3.Size = new Size(147, 48);
+            button3.Size = new Size(144, 48);
             button3.TabIndex = 6;
             button3.Text = "Account";
             button3.TextAlign = ContentAlignment.MiddleRight;
@@ -189,7 +189,7 @@ namespace WinFormsApp4
             button2.Location = new Point(12, 226);
             button2.Name = "button2";
             button2.Padding = new Padding(15, 0, 25, 0);
-            button2.Size = new Size(147, 48);
+            button2.Size = new Size(144, 48);
             button2.TabIndex = 5;
             button2.Text = "Print";
             button2.TextAlign = ContentAlignment.MiddleRight;
@@ -206,7 +206,7 @@ namespace WinFormsApp4
             button1.Location = new Point(12, 293);
             button1.Name = "button1";
             button1.Padding = new Padding(15, 0, 15, 0);
-            button1.Size = new Size(147, 48);
+            button1.Size = new Size(144, 48);
             button1.TabIndex = 4;
             button1.Text = "    Configure";
             button1.TextAlign = ContentAlignment.MiddleRight;
