@@ -73,6 +73,16 @@ namespace WinFormsApp4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8191671 {
+            get {
+                object obj = ResourceManager.GetObject("_8191671", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Design_a_modern_and_sleek_logo_for_a_Computer_Center_Management {
             get {
                 object obj = ResourceManager.GetObject("Design_a_modern_and_sleek_logo_for_a_Computer_Center_Management", resourceCulture);
@@ -203,19 +213,29 @@ namespace WinFormsApp4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Settings_512px {
+        internal static System.Drawing.Bitmap icons8_square {
             get {
-                object obj = ResourceManager.GetObject("Settings_512px", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_square", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap icons8_square_645 {
             get {
                 object obj = ResourceManager.GetObject("icons8_square_645", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Settings_512px {
+            get {
+                object obj = ResourceManager.GetObject("Settings_512px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

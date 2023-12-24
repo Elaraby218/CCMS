@@ -55,14 +55,13 @@ namespace WinFormsApp4
 
             btnMaximize = new Button
             {
+
                 BackColor = Color.SeaGreen,
                 FlatStyle = FlatStyle.Popup,
                 ForeColor = SystemColors.ControlDarkDark,
-                //icons8_person_644
-                // icons8_square_644
-                Image = Resources.icons8_square_645,
+                Image = Resources.icons8_square,
+                Name = "minimize_button",
                 Margin = new Padding(3, 4, 3, 4),
-                Name = "maxmize_button",
                 Size = new Size(36, 36),
                 TabIndex = 27,
                 UseVisualStyleBackColor = false
