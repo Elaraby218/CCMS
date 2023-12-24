@@ -132,24 +132,25 @@ namespace WinFormsApp4
                 var stud = db.in_students
                                   .Where(h => h.student_n_id == StudNational_txtbox.Text)
                                   .FirstOrDefault();
-                
-                
+
+
                 var timeIn = Convert.ToDateTime(stud.in_time);
-                var timeOut =DateTime.Now;
+                var timeOut = DateTime.Now;
                 totalTime += timeOut - timeIn;
 
                 var hours = totalTime.Hours;
                 var minutes = totalTime.Minutes;
                 var totalMinutes = totalTime.TotalMinutes;
                 var costPerMinute = 0.10;
-                var totalCost = totalMinutes * costPerMinute;
+                var paperCost = 0.10;
+                var totalCost = totalMinutes * costPerMinute + stud.paper_printed * paperCost;
 
                 MessageBox.Show($"Student with ID {StudNational_txtbox.Text} removed\n" +
                 $"Time spent: {hours} hours and {minutes} minutes\n" +
                 $"Total cost: {totalCost:F2} Pound", "Student Removal Confirmation",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                ValidationMethods.StudentCheckOut(StudNational_txtbox.Text, this.cur_employee_n_id);
+                ValidationMethods.StudentCheckOut(StudNational_txtbox.Text, this.cur_employee_n_id,Convert.ToDouble(totalCost));
                 UpdateGridView();
             }
 
@@ -230,6 +231,12 @@ namespace WinFormsApp4
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void History_btn_Click(object sender, EventArgs e)
+        {
+            HistoryForm frm = new HistoryForm(); 
+            frm.ShowDialog();
         }
     }
 }

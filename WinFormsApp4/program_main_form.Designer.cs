@@ -39,6 +39,7 @@ namespace WinFormsApp4
             pictureBox1 = new PictureBox();
             textBox1 = new TextBox();
             panel1 = new Panel();
+            History_btn = new Button();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
@@ -97,7 +98,7 @@ namespace WinFormsApp4
             Log_out_btn.ForeColor = SystemColors.ButtonHighlight;
             Log_out_btn.Image = Properties.Resources.icons8_logout_24;
             Log_out_btn.ImageAlign = ContentAlignment.MiddleLeft;
-            Log_out_btn.Location = new Point(12, 360);
+            Log_out_btn.Location = new Point(12, 370);
             Log_out_btn.Name = "Log_out_btn";
             Log_out_btn.Padding = new Padding(15, 0, 15, 0);
             Log_out_btn.Size = new Size(147, 48);
@@ -139,6 +140,7 @@ namespace WinFormsApp4
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(64, 64, 64);
+            panel1.Controls.Add(History_btn);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
@@ -152,6 +154,23 @@ namespace WinFormsApp4
             panel1.Size = new Size(176, 487);
             panel1.TabIndex = 9;
             // 
+            // History_btn
+            // 
+            History_btn.BackColor = Color.SeaGreen;
+            History_btn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            History_btn.ForeColor = SystemColors.ButtonHighlight;
+            History_btn.Image = (Image)resources.GetObject("History_btn.Image");
+            History_btn.ImageAlign = ContentAlignment.MiddleLeft;
+            History_btn.Location = new Point(12, 306);
+            History_btn.Name = "History_btn";
+            History_btn.Padding = new Padding(15, 0, 15, 0);
+            History_btn.Size = new Size(147, 48);
+            History_btn.TabIndex = 7;
+            History_btn.Text = "History";
+            History_btn.TextAlign = ContentAlignment.MiddleRight;
+            History_btn.UseVisualStyleBackColor = false;
+            History_btn.Click += History_btn_Click;
+            // 
             // button3
             // 
             button3.BackColor = Color.SeaGreen;
@@ -159,7 +178,7 @@ namespace WinFormsApp4
             button3.ForeColor = SystemColors.ButtonHighlight;
             button3.Image = (Image)resources.GetObject("button3.Image");
             button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(12, 158);
+            button3.Location = new Point(12, 106);
             button3.Name = "button3";
             button3.Padding = new Padding(15, 0, 15, 0);
             button3.Size = new Size(147, 48);
@@ -176,7 +195,7 @@ namespace WinFormsApp4
             button2.ForeColor = SystemColors.ButtonHighlight;
             button2.Image = (Image)resources.GetObject("button2.Image");
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(12, 226);
+            button2.Location = new Point(12, 174);
             button2.Name = "button2";
             button2.Padding = new Padding(15, 0, 25, 0);
             button2.Size = new Size(147, 48);
@@ -192,7 +211,7 @@ namespace WinFormsApp4
             button1.ForeColor = SystemColors.ButtonHighlight;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(12, 293);
+            button1.Location = new Point(12, 241);
             button1.Name = "button1";
             button1.Padding = new Padding(15, 0, 15, 0);
             button1.Size = new Size(147, 48);
@@ -217,7 +236,6 @@ namespace WinFormsApp4
             panel6.Controls.Add(Reg_newstudbtn);
             panel6.Controls.Add(button4);
             panel6.Controls.Add(button5);
-            panel6.Cursor = Cursors.Default;
             panel6.Dock = DockStyle.Bottom;
             panel6.Location = new Point(0, 429);
             panel6.Name = "panel6";
@@ -295,7 +313,6 @@ namespace WinFormsApp4
             // 
             panel7.Controls.Add(StudNational_txtbox);
             panel7.Controls.Add(label2);
-            panel7.Cursor = Cursors.Default;
             panel7.Dock = DockStyle.Bottom;
             panel7.Location = new Point(0, 388);
             panel7.Name = "panel7";
@@ -327,7 +344,6 @@ namespace WinFormsApp4
             dataGridView2.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { IdSTU, NameSTU, FacultySTU, LevelSTU, In_timeSTU });
-            dataGridView2.Cursor = Cursors.Default;
             dataGridView2.Dock = DockStyle.Fill;
             dataGridView2.GridColor = SystemColors.ButtonHighlight;
             dataGridView2.Location = new Point(0, 66);
@@ -380,7 +396,6 @@ namespace WinFormsApp4
             // panel4
             // 
             panel4.Controls.Add(button9);
-            panel4.Cursor = Cursors.Default;
             panel4.Dock = DockStyle.Right;
             panel4.Location = new Point(480, 0);
             panel4.Name = "panel4";
@@ -480,6 +495,7 @@ namespace WinFormsApp4
         private DataGridViewTextBoxColumn LevelSTU;
         private DataGridViewTextBoxColumn In_timeSTU;
         private Panel panel7;
+        private Button History_btn;
     }
 
 }

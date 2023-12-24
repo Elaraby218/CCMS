@@ -5,6 +5,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Diagnostics.Eventing.Reader;
 
 using WinFormsApp4.data;
+using System.Security.Cryptography.X509Certificates;
+using System.Collections.Generic;
 
 namespace funcs
 {
@@ -127,7 +129,7 @@ namespace funcs
         }
         */
 
-        
+
         public static bool Email(string email)
         {
             string expectedEmailFormat = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
@@ -150,11 +152,11 @@ namespace funcs
         public static bool EmpNationalId(string id)
         {
             // elaraby comment this 
-           //EmployeeTable IsUserFound = DataBaseMethods.getEmployee(id);
+            //EmployeeTable IsUserFound = DataBaseMethods.getEmployee(id);
             ////MessageBox.Show("" +(IsUserFound != null));
             //return ((IsUserFound != null)); // return true if id exist
 
-            return (IsNationalExist(id)); 
+            return (IsNationalExist(id));
         }
         public static bool IsStudent(string id)
         {
@@ -163,18 +165,18 @@ namespace funcs
             ////MessageBox.Show("" + ((IsUserFound != null) && (ValidationMethods.EmpNationalId(id))));
             //return ((IsUserFound != null) || (ValidationMethods.EmpNationalId(id)));
 
-            return(IsNationalExist(id));
+            return (IsNationalExist(id));
         }
 
         // elaraby add this 
         public static bool IsNationalExist(string id)
         {
             StudentsTable IsStudentExist = DataBaseMethods.getStudent(id);
-            EmployeeTable IsEmpExist     = DataBaseMethods.getEmployee(id);       
-            return( (IsEmpExist!= null) || (IsStudentExist!=null) );
+            EmployeeTable IsEmpExist = DataBaseMethods.getEmployee(id);
+            return ((IsEmpExist != null) || (IsStudentExist != null));
         }
 
-        public static bool StudentCheckOut(string id, string employee_id)
+        public static bool StudentCheckOut(string id, string employee_id ,double cost)
         {
             // return true if this student is in
             if (!DataBaseMethods.IsIn(id))
@@ -182,7 +184,7 @@ namespace funcs
                 MessageBox.Show("The Student is not in", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            DataBaseMethods.StudentCheckOut(id, employee_id);
+            DataBaseMethods.StudentCheckOut(id, employee_id, cost);
             return true;
         }
         public static bool PhoneNumber(string Number)
@@ -287,6 +289,39 @@ namespace funcs
                 y.in_time,
             }).ToList();
         }
+        public static List<List<string>> GetInHistoryView(string id)
+        {
+            return db.history
+              .Where((x) => ((x.student_n_id == id) || (x.employee_n_id == id)))
+              .Select((x) =>
+              new List<string>(){
+                x.employee_n_id,
+                x.student_n_id,
+                x.time_in,
+                x.time_out,
+                x.date,
+                x.cost.ToString(),
+                x.paper_count.ToString()
+
+              })
+              .ToList();
+        }
+
+        public static List<List<string>> GetInHistoryView()
+        {
+            return db.history.Select((x) =>
+              new List<string>(){
+                x.employee_n_id,
+                x.student_n_id,
+                x.time_in,
+                x.time_out,
+                x.date,
+                x.cost.ToString(),
+                x.paper_count.ToString()
+
+              }).ToList();
+        }
+
 
         public static void AddStudent(StudentsTable student)
         {
@@ -295,22 +330,21 @@ namespace funcs
             MessageBox.Show("Successfully added", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public static void StudentCheckOut(string id, string employee_id)
+        public static void StudentCheckOut(string id, string employee_id, double cost)
         {
             var student = db.in_students.Where((x) => x.student_n_id == id).FirstOrDefault();
             db.history.Add(new HistoryTable
             {
                 student_n_id = id,
                 time_in = student.in_time,
-                time_out = DateTime.Now.ToString("hh:mm"),
+                time_out = DateTime.Now.ToString("HH:mm"),
                 date = DateTime.Now.ToString("dd/MM/yyyy"),
                 employee_n_id = employee_id,
                 paper_count = student.paper_printed,
-                cost = student.paper_printed * 0.5
+                cost = cost
             });
             db.in_students.Remove(student); // added to remove student 
             db.SaveChanges();
-
             MessageBox.Show("Successfully Checkout", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

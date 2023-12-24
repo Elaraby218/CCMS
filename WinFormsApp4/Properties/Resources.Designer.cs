@@ -93,6 +93,16 @@ namespace WinFormsApp4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap history_icon_0 {
+            get {
+                object obj = ResourceManager.GetObject("history-icon-0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_account_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-account-64", resourceCulture);
@@ -226,6 +236,16 @@ namespace WinFormsApp4.Properties {
         internal static System.Drawing.Bitmap icons8_square_645 {
             get {
                 object obj = ResourceManager.GetObject("icons8_square_645", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngaaa_com_4875945 {
+            get {
+                object obj = ResourceManager.GetObject("pngaaa.com-4875945", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
