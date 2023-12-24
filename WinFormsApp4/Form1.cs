@@ -5,17 +5,15 @@ using WinFormsApp4;
 
 namespace WinFormsApp4
 {
-    public partial class Login_Page : Form
+    public partial class Login_Page : DraggablePanel
     {
        
 
         public Login_Page()
         {
-            db.Database.EnsureCreated();
+            
             InitializeComponent();
             textBox2.UseSystemPasswordChar = true;
-            new DraggablePanel(this);
-            
             FormBorderStyle = FormBorderStyle.None;
             StartPosition = FormStartPosition.CenterScreen;
         }

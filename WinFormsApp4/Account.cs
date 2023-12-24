@@ -12,7 +12,7 @@ using WinFormsApp4.data;
 
 namespace WinFormsApp4
 {
-    public partial class Account : Form
+    public partial class Account : DraggablePanel
     {
         string employee_n_id;
         string org_image_path;
@@ -22,7 +22,7 @@ namespace WinFormsApp4
 
         public Account(string employee_n_id)
         {
-            new DraggablePanel(this);
+            //new DraggablePanel(this);
             InitializeComponent();
             emp = DataBaseMethods.GetEmlpyeeByID(employee_n_id);
             LoadEmployeeData(employee_n_id);

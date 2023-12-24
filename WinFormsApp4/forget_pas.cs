@@ -16,13 +16,13 @@ using funcs;
 using System.Web;
 namespace WinFormsApp4
 {
-    public partial class forget_pas : Form
+    public partial class forget_pas : DraggablePanel
     {
 
         public forget_pas()
         {
 
-            new DraggablePanel(this);
+            //new DraggablePanel(this);
             InitializeComponent();
 
             FormBorderStyle = FormBorderStyle.None;

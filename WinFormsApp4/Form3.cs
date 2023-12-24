@@ -13,11 +13,11 @@ using WinFormsApp4.data;
 
 namespace WinFormsApp4
 {
-    public partial class New_stu_reg : Form
+    public partial class New_stu_reg : DraggablePanel
     {
         public New_stu_reg()
         {
-            new DraggablePanel(this);
+            //new DraggablePanel(this);
             InitializeComponent();
         }
 

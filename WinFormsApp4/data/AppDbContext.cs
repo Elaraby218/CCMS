@@ -22,8 +22,8 @@ namespace WinFormsApp4.data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-             optionsBuilder.UseSqlServer("Data Source=CGMO11\\SQLEXPRESS;Initial Catalog=Reda_draging_task;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
-            //optionsBuilder.UseSqlite("Data Source=mydatabase.db");
+             //optionsBuilder.UseSqlServer("Data Source=CGMO11\\SQLEXPRESS;Initial Catalog=Reda_draging_task;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+            optionsBuilder.UseSqlite("Data Source=mydatabase.db");
         }
     }
 }

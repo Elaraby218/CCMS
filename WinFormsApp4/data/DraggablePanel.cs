@@ -7,26 +7,24 @@ using System.Windows.Forms;
 using WinFormsApp4.Properties;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
-namespace WinFormsApp4.data
+namespace WinFormsApp4
 {
-    public class DraggablePanel
+    public class DraggablePanel: Form
     {
         private int space_leave_to_right = 0;
         private Panel draggablePanel;
         private bool isDragging = false;
         private int xOffset, yOffset;
-        private Form parentForm;
         private Button btnMinimize;
         private Button btnMaximize;
         private Button btnClose;
-        public DraggablePanel(Form parentForm)
+        public DraggablePanel()
         {
-            this.parentForm = parentForm;
-            InitializeComponents(parentForm);
+            InitializeComponents();
             Resize_event();
         }
 
-        private void InitializeComponents(Form parentForm)
+        private void InitializeComponents()
         {
             // Create the draggable panel
             draggablePanel = new Panel
@@ -34,13 +32,13 @@ namespace WinFormsApp4.data
                 BackColor = Color.Transparent,
                 Location = new Point(0, 0),
                 Name = "panel1",
-                Size = new Size(parentForm.ClientSize.Width, 42),
+                Size = new Size(this.ClientSize.Width, 42),
                 TabIndex = 26,
                 AutoSize = true,
 
             };
 
-            draggablePanel.Parent = parentForm;
+            draggablePanel.Parent = this;
 
             btnMinimize = new Button
             {
@@ -89,7 +87,7 @@ namespace WinFormsApp4.data
             draggablePanel.Controls.Add(btnMaximize);
             draggablePanel.Controls.Add(btnClose);
 
-            int rightmostX = parentForm.Width - space_leave_to_right;
+            int rightmostX = this.Width - space_leave_to_right;
             btnMinimize.Location = new Point(rightmostX - 120, 0);
             btnMaximize.Location = new Point(rightmostX - 80, 0);
             btnClose.Location = new Point(rightmostX - 40, 0);
@@ -100,12 +98,12 @@ namespace WinFormsApp4.data
 
             draggablePanel.BringToFront();
 
-            parentForm.Controls.Add(draggablePanel);
+            this.Controls.Add(draggablePanel);
         }
 
         private void Resize_event()
         {
-            parentForm.SizeChanged += ParentForm_SizeChanged;
+            this.SizeChanged += ParentForm_SizeChanged;
         }
 
         private void ParentForm_SizeChanged(object sender, EventArgs e)
@@ -116,10 +114,10 @@ namespace WinFormsApp4.data
         private void ResizePanel()
         {
             // Adjust the size and location of the panel based on the form's size
-            draggablePanel.Size = new Size(parentForm.Width, 40);
+            draggablePanel.Size = new Size(this.Width, 40);
             draggablePanel.Location = new Point(0, 0);
 
-            int rightmostX = parentForm.Width - space_leave_to_right;
+            int rightmostX = this.Width - space_leave_to_right;
             btnMinimize.Location = new Point(rightmostX - 120, 0);
             btnMaximize.Location = new Point(rightmostX - 80, 0);
             btnClose.Location = new Point(rightmostX - 40, 0);
@@ -141,18 +139,16 @@ namespace WinFormsApp4.data
         {
             if (isDragging)
             {
-                Form parentForm = draggablePanel.Parent as Form;
-
-                if (parentForm != null)
+                if (this != null)
                 {
-                    int newX = e.X + parentForm.Left - xOffset;
-                    int newY = e.Y + parentForm.Top - yOffset;
+                    int newX = e.X + this.Left - xOffset;
+                    int newY = e.Y + this.Top - yOffset;
 
-                    Screen currentScreen = Screen.FromControl(parentForm);
+                    Screen currentScreen = Screen.FromControl(this);
                     Rectangle screenBounds = currentScreen.WorkingArea;
 
-                    parentForm.Left = newX;
-                    parentForm.Top = newY;
+                    this.Left = newX;
+                    this.Top = newY;
                 }
 
             }
@@ -167,17 +163,17 @@ namespace WinFormsApp4.data
         }
         private void buttonMinimize_Click(object sender, EventArgs e)
         {
-            parentForm.WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void buttonMaximize_Click(object sender, EventArgs e)
         {
-            parentForm.WindowState = (parentForm.WindowState == FormWindowState.Maximized) ? FormWindowState.Normal : FormWindowState.Maximized;
+            this.WindowState = (this.WindowState == FormWindowState.Maximized) ? FormWindowState.Normal : FormWindowState.Maximized;
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            parentForm.Close();
+            this.Close();
         }
 
     }

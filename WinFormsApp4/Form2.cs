@@ -8,8 +8,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WinFormsApp4
 {
-    public partial class Sign_up_form : Form
+    public partial class Sign_up_form : DraggablePanel
     {
+
 
 
         string imageSource = "";
@@ -18,7 +19,6 @@ namespace WinFormsApp4
         public Sign_up_form()
         {
 
-            new DraggablePanel(this);
             InitializeComponent();
             //  MessageBox.Show(Environment.CurrentDirectory);
             // default photo on pt3

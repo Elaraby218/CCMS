@@ -1,8 +1,10 @@
 ﻿using WinFormsApp4;
 using System.Text.RegularExpressions;
-using WinFormsApp4.data;
+
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Diagnostics.Eventing.Reader;
+
+using WinFormsApp4.data;
 
 namespace funcs
 {
@@ -152,7 +154,7 @@ namespace funcs
         public static bool IsStudent(string id)
         {
             StudentsTable IsUserFound = DataBaseMethods.getStudent(id);
-            return ((IsUserFound != null));
+            return ((IsUserFound != null) && (!ValidationMethods.EmpNationalId(id)));
         }
 
         public static bool StudentCheckOut(string id, string employee_id)
