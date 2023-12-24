@@ -93,22 +93,21 @@ namespace WinFormsApp4
             // 
             // Log_out_btn
             // 
-            Log_out_btn.BackColor=Color.FromArgb(64, 64, 64);
-            Log_out_btn.FlatStyle=FlatStyle.Flat;
-            Log_out_btn.Font=new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            Log_out_btn.ForeColor=SystemColors.ButtonHighlight;
-            Log_out_btn.Image=Properties.Resources.icons8_logout_24;
-            Log_out_btn.ImageAlign=ContentAlignment.MiddleLeft;
-            Log_out_btn.Location=new Point(14, 480);
-            Log_out_btn.Margin=new Padding(3, 4, 3, 4);
-            Log_out_btn.Name="Log_out_btn";
-            Log_out_btn.Padding=new Padding(17, 0, 17, 0);
-            Log_out_btn.Size=new Size(168, 64);
-            Log_out_btn.TabIndex=0;
-            Log_out_btn.Text="Log out";
-            Log_out_btn.TextAlign=ContentAlignment.MiddleRight;
-            Log_out_btn.UseVisualStyleBackColor=false;
-            Log_out_btn.Click+=Log_out_btn_Click;
+            Log_out_btn.BackColor = Color.FromArgb(64, 64, 64);
+            Log_out_btn.FlatStyle = FlatStyle.Flat;
+            Log_out_btn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            Log_out_btn.ForeColor = SystemColors.ButtonHighlight;
+            Log_out_btn.Image = Properties.Resources.icons8_logout_24;
+            Log_out_btn.ImageAlign = ContentAlignment.MiddleLeft;
+            Log_out_btn.Location = new Point(12, 360);
+            Log_out_btn.Name = "Log_out_btn";
+            Log_out_btn.Padding = new Padding(15, 0, 15, 0);
+            Log_out_btn.Size = new Size(144, 48);
+            Log_out_btn.TabIndex = 0;
+            Log_out_btn.Text = "Log out";
+            Log_out_btn.TextAlign = ContentAlignment.MiddleRight;
+            Log_out_btn.UseVisualStyleBackColor = false;
+            Log_out_btn.Click += Log_out_btn_Click;
             // 
             // emp_name
             // 
@@ -165,59 +164,55 @@ namespace WinFormsApp4
             // 
             // button3
             // 
-            button3.BackColor=Color.FromArgb(64, 64, 64);
-            button3.FlatStyle=FlatStyle.Flat;
-            button3.Font=new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor=SystemColors.ButtonHighlight;
-            button3.Image=(Image)resources.GetObject("button3.Image");
-            button3.ImageAlign=ContentAlignment.MiddleLeft;
-            button3.Location=new Point(14, 211);
-            button3.Margin=new Padding(3, 4, 3, 4);
-            button3.Name="button3";
-            button3.Padding=new Padding(17, 0, 17, 0);
-            button3.Size=new Size(168, 64);
-            button3.TabIndex=6;
-            button3.Text="Account";
-            button3.TextAlign=ContentAlignment.MiddleRight;
-            button3.UseVisualStyleBackColor=false;
-            button3.Click+=button3_Click;
+            button3.BackColor = Color.FromArgb(64, 64, 64);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = SystemColors.ButtonHighlight;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.ImageAlign = ContentAlignment.MiddleLeft;
+            button3.Location = new Point(12, 158);
+            button3.Name = "button3";
+            button3.Padding = new Padding(15, 0, 15, 0);
+            button3.Size = new Size(147, 48);
+            button3.TabIndex = 6;
+            button3.Text = "Account";
+            button3.TextAlign = ContentAlignment.MiddleRight;
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
-            button2.BackColor=Color.FromArgb(64, 64, 64);
-            button2.FlatStyle=FlatStyle.Flat;
-            button2.Font=new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor=SystemColors.ButtonHighlight;
-            button2.Image=(Image)resources.GetObject("button2.Image");
-            button2.ImageAlign=ContentAlignment.MiddleLeft;
-            button2.Location=new Point(14, 301);
-            button2.Margin=new Padding(3, 4, 3, 4);
-            button2.Name="button2";
-            button2.Padding=new Padding(17, 0, 29, 0);
-            button2.Size=new Size(168, 64);
-            button2.TabIndex=5;
-            button2.Text="Print";
-            button2.TextAlign=ContentAlignment.MiddleRight;
-            button2.UseVisualStyleBackColor=false;
-            button2.Click+=button2_Click;
+            button2.BackColor = Color.FromArgb(64, 64, 64);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.ButtonHighlight;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(12, 226);
+            button2.Name = "button2";
+            button2.Padding = new Padding(15, 0, 25, 0);
+            button2.Size = new Size(147, 48);
+            button2.TabIndex = 5;
+            button2.Text = "Print";
+            button2.TextAlign = ContentAlignment.MiddleRight;
+            button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
-            button1.BackColor=Color.FromArgb(64, 64, 64);
-            button1.FlatStyle=FlatStyle.Flat;
-            button1.Font=new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor=SystemColors.ButtonHighlight;
-            button1.Image=(Image)resources.GetObject("button1.Image");
-            button1.ImageAlign=ContentAlignment.MiddleLeft;
-            button1.Location=new Point(14, 391);
-            button1.Margin=new Padding(3, 4, 3, 4);
-            button1.Name="button1";
-            button1.Padding=new Padding(17, 0, 17, 0);
-            button1.Size=new Size(168, 64);
-            button1.TabIndex=4;
-            button1.Text="    Configure";
-            button1.TextAlign=ContentAlignment.MiddleRight;
-            button1.UseVisualStyleBackColor=false;
+            button1.BackColor = Color.FromArgb(64, 64, 64);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(12, 293);
+            button1.Name = "button1";
+            button1.Padding = new Padding(15, 0, 15, 0);
+            button1.Size = new Size(147, 48);
+            button1.TabIndex = 4;
+            button1.Text = "    Configure";
+            button1.TextAlign = ContentAlignment.MiddleRight;
+            button1.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
