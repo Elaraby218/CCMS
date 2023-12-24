@@ -98,11 +98,11 @@ namespace WinFormsApp4
             Log_out_btn.ForeColor = SystemColors.ButtonHighlight;
             Log_out_btn.Image = Properties.Resources.icons8_logout_24;
             Log_out_btn.ImageAlign = ContentAlignment.MiddleLeft;
-            Log_out_btn.Location = new Point(16, 320);
+            Log_out_btn.Location = new Point(16, 335);
             Log_out_btn.Margin = new Padding(3, 2, 3, 2);
             Log_out_btn.Name = "Log_out_btn";
             Log_out_btn.Padding = new Padding(13, 0, 13, 0);
-            Log_out_btn.Size = new Size(139, 36);
+            Log_out_btn.Size = new Size(151, 36);
             Log_out_btn.TabIndex = 0;
             Log_out_btn.Text = "Log out";
             Log_out_btn.TextAlign = ContentAlignment.MiddleRight;
@@ -158,7 +158,7 @@ namespace WinFormsApp4
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(50, 3, 3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(176, 487);
+            panel1.Size = new Size(191, 487);
             panel1.TabIndex = 9;
             // 
             // button3
@@ -173,7 +173,7 @@ namespace WinFormsApp4
             button3.Margin = new Padding(3, 2, 3, 2);
             button3.Name = "button3";
             button3.Padding = new Padding(13, 0, 13, 0);
-            button3.Size = new Size(139, 36);
+            button3.Size = new Size(151, 36);
             button3.TabIndex = 6;
             button3.Text = "Account";
             button3.TextAlign = ContentAlignment.MiddleRight;
@@ -188,11 +188,11 @@ namespace WinFormsApp4
             button2.ForeColor = SystemColors.ButtonHighlight;
             button2.Image = (Image)resources.GetObject("button2.Image");
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(16, 220);
+            button2.Location = new Point(16, 225);
             button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
             button2.Padding = new Padding(13, 0, 22, 0);
-            button2.Size = new Size(139, 36);
+            button2.Size = new Size(151, 36);
             button2.TabIndex = 5;
             button2.Text = "Print";
             button2.TextAlign = ContentAlignment.MiddleRight;
@@ -206,11 +206,11 @@ namespace WinFormsApp4
             button1.ForeColor = SystemColors.ButtonHighlight;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(16, 270);
+            button1.Location = new Point(16, 280);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
             button1.Padding = new Padding(13, 0, 13, 0);
-            button1.Size = new Size(139, 36);
+            button1.Size = new Size(151, 36);
             button1.TabIndex = 4;
             button1.Text = "    Configure";
             button1.TextAlign = ContentAlignment.MiddleRight;
@@ -224,7 +224,7 @@ namespace WinFormsApp4
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(176, 118);
+            panel2.Size = new Size(191, 118);
             panel2.TabIndex = 0;
             // 
             // panel6
@@ -235,7 +235,7 @@ namespace WinFormsApp4
             panel6.Dock = DockStyle.Bottom;
             panel6.Location = new Point(0, 429);
             panel6.Name = "panel6";
-            panel6.Size = new Size(660, 58);
+            panel6.Size = new Size(645, 58);
             panel6.TabIndex = 21;
             // 
             // Reg_newstudbtn
@@ -300,9 +300,9 @@ namespace WinFormsApp4
             panel3.Controls.Add(panel5);
             panel3.Cursor = Cursors.Cross;
             panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(176, 0);
+            panel3.Location = new Point(191, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(660, 487);
+            panel3.Size = new Size(645, 487);
             panel3.TabIndex = 10;
             // 
             // panel7
@@ -312,7 +312,7 @@ namespace WinFormsApp4
             panel7.Dock = DockStyle.Bottom;
             panel7.Location = new Point(0, 388);
             panel7.Name = "panel7";
-            panel7.Size = new Size(660, 41);
+            panel7.Size = new Size(645, 41);
             panel7.TabIndex = 33;
             // 
             // StudNational_txtbox
@@ -346,7 +346,7 @@ namespace WinFormsApp4
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(660, 311);
+            dataGridView2.Size = new Size(645, 311);
             dataGridView2.TabIndex = 32;
             // 
             // IdSTU
@@ -396,7 +396,7 @@ namespace WinFormsApp4
             panel5.Dock = DockStyle.Top;
             panel5.Location = new Point(0, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(660, 118);
+            panel5.Size = new Size(645, 118);
             panel5.TabIndex = 28;
             // 
             // panel4
@@ -404,7 +404,7 @@ namespace WinFormsApp4
             panel4.Controls.Add(button9);
             panel4.Controls.Add(pictureBox2);
             panel4.Dock = DockStyle.Right;
-            panel4.Location = new Point(480, 0);
+            panel4.Location = new Point(465, 0);
             panel4.Name = "panel4";
             panel4.Size = new Size(180, 118);
             panel4.TabIndex = 27;
