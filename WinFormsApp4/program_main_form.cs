@@ -16,7 +16,7 @@ namespace WinFormsApp4
 
 
     // branch
-    public partial class program_main_form : Form
+    public partial class program_main_form : DraggablePanel
     {
 
 
@@ -133,10 +133,10 @@ namespace WinFormsApp4
                 var stud = db.in_students
                                   .Where(h => h.student_n_id == StudNational_txtbox.Text)
                                   .FirstOrDefault();
-                
-                
+
+
                 var timeIn = Convert.ToDateTime(stud.in_time);
-                var timeOut =DateTime.Now;
+                var timeOut = DateTime.Now;
                 totalTime += timeOut - timeIn;
 
                 var hours = totalTime.Hours;
@@ -229,6 +229,11 @@ namespace WinFormsApp4
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
