@@ -146,17 +146,32 @@ namespace funcs
 
             return Regex.IsMatch(id, @"^\d{14}$");
         }
+
         public static bool EmpNationalId(string id)
         {
-            EmployeeTable IsUserFound = DataBaseMethods.getEmployee(id);
-            //MessageBox.Show("" +(IsUserFound != null));
-            return ((IsUserFound != null)); // return true if id exist
+            // elaraby comment this 
+           //EmployeeTable IsUserFound = DataBaseMethods.getEmployee(id);
+            ////MessageBox.Show("" +(IsUserFound != null));
+            //return ((IsUserFound != null)); // return true if id exist
+
+            return (IsNationalExist(id)); 
         }
         public static bool IsStudent(string id)
         {
-            StudentsTable IsUserFound = DataBaseMethods.getStudent(id);
-            //MessageBox.Show("" + ((IsUserFound != null) && (ValidationMethods.EmpNationalId(id))));
-            return ((IsUserFound != null) || (ValidationMethods.EmpNationalId(id)));
+            //elaraby comment this
+            //StudentsTable IsUserFound = DataBaseMethods.getStudent(id);
+            ////MessageBox.Show("" + ((IsUserFound != null) && (ValidationMethods.EmpNationalId(id))));
+            //return ((IsUserFound != null) || (ValidationMethods.EmpNationalId(id)));
+
+            return(IsNationalExist(id));
+        }
+
+        // elaraby add this 
+        public static bool IsNationalExist(string id)
+        {
+            StudentsTable IsStudentExist = DataBaseMethods.getStudent(id);
+            EmployeeTable IsEmpExist     = DataBaseMethods.getEmployee(id);       
+            return( (IsEmpExist!= null) || (IsStudentExist!=null) );
         }
 
         public static bool StudentCheckOut(string id, string employee_id)

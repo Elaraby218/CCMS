@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormsApp4.Properties;
+using System.Windows.Forms.Design;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace WinFormsApp4
@@ -23,7 +24,6 @@ namespace WinFormsApp4
             InitializeComponents();
             Resize_event();
         }
-
         private void InitializeComponents()
         {
             // Create the draggable panel
@@ -58,7 +58,9 @@ namespace WinFormsApp4
                 BackColor = Color.SeaGreen,
                 FlatStyle = FlatStyle.Popup,
                 ForeColor = SystemColors.ControlDarkDark,
-                Image = (Image)Resources.icons8_person_644,
+                //icons8_person_644
+                // icons8_square_644
+                Image = Resources.icons8_square_645,
                 Margin = new Padding(3, 4, 3, 4),
                 Name = "maxmize_button",
                 Size = new Size(36, 36),
