@@ -33,8 +33,8 @@
             panel1=new Panel();
             label2=new Label();
             name_lbl=new Label();
-            N_id_txtbox=new TextBox();
-            name_txtbox=new TextBox();
+            tt_cost=new TextBox();
+            Num_pg_tb=new TextBox();
             label1=new Label();
             label3=new Label();
             textBox1=new TextBox();
@@ -91,22 +91,23 @@
             name_lbl.TabIndex=45;
             name_lbl.Text="Number Of Pages";
             // 
-            // N_id_txtbox
+            // tt_cost
             // 
-            N_id_txtbox.Location=new Point(381, 357);
-            N_id_txtbox.Margin=new Padding(3, 4, 3, 4);
-            N_id_txtbox.Name="N_id_txtbox";
-            N_id_txtbox.ReadOnly=true;
-            N_id_txtbox.Size=new Size(178, 27);
-            N_id_txtbox.TabIndex=44;
+            tt_cost.Location=new Point(381, 357);
+            tt_cost.Margin=new Padding(3, 4, 3, 4);
+            tt_cost.Name="tt_cost";
+            tt_cost.ReadOnly=true;
+            tt_cost.Size=new Size(178, 27);
+            tt_cost.TabIndex=44;
             // 
-            // name_txtbox
+            // Num_pg_tb
             // 
-            name_txtbox.Location=new Point(381, 290);
-            name_txtbox.Margin=new Padding(3, 4, 3, 4);
-            name_txtbox.Name="name_txtbox";
-            name_txtbox.Size=new Size(177, 27);
-            name_txtbox.TabIndex=43;
+            Num_pg_tb.Location=new Point(381, 290);
+            Num_pg_tb.Margin=new Padding(3, 4, 3, 4);
+            Num_pg_tb.Name="Num_pg_tb";
+            Num_pg_tb.Size=new Size(177, 27);
+            Num_pg_tb.TabIndex=43;
+            Num_pg_tb.TextChanged+=Num_pg_tb_TextChanged;
             // 
             // label1
             // 
@@ -154,6 +155,7 @@
             button1.TabIndex=51;
             button1.Text="Exit";
             button1.UseVisualStyleBackColor=false;
+            button1.Click+=button1_Click;
             // 
             // button2
             // 
@@ -168,6 +170,7 @@
             button2.TabIndex=52;
             button2.Text="Print";
             button2.UseVisualStyleBackColor=false;
+            button2.Click+=button2_Click;
             // 
             // Print
             // 
@@ -182,16 +185,16 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(name_lbl);
-            Controls.Add(N_id_txtbox);
-            Controls.Add(name_txtbox);
+            Controls.Add(tt_cost);
+            Controls.Add(Num_pg_tb);
             Controls.Add(panel1);
             FormBorderStyle=FormBorderStyle.None;
             Name="Print";
             Text="Print";
             Load+=Print_Load;
             Controls.SetChildIndex(panel1, 0);
-            Controls.SetChildIndex(name_txtbox, 0);
-            Controls.SetChildIndex(N_id_txtbox, 0);
+            Controls.SetChildIndex(Num_pg_tb, 0);
+            Controls.SetChildIndex(tt_cost, 0);
             Controls.SetChildIndex(name_lbl, 0);
             Controls.SetChildIndex(label2, 0);
             Controls.SetChildIndex(label3, 0);
@@ -211,8 +214,8 @@
         private Panel panel1;
         private Label label2;
         private Label name_lbl;
-        private TextBox N_id_txtbox;
-        private TextBox name_txtbox;
+        private TextBox tt_cost;
+        private TextBox Num_pg_tb;
         private Label label1;
         private Label label3;
         private TextBox textBox1;

@@ -237,6 +237,14 @@ namespace WinFormsApp4
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Print ppt = new Print();
+            
+            ppt.ShowDialog();
+
+        }
     }
 }
 

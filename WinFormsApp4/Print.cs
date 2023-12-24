@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WinFormsApp4
 {
@@ -27,6 +28,35 @@ namespace WinFormsApp4
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (Application.OpenForms.Count > 0)
+                Application.OpenForms[0].Show();
+            this.Close();
+        }
+
+        private void Num_pg_tb_TextChanged(object sender, EventArgs e)
+        {
+            // Perform the calculation when the text in TextBox1 changes
+            if (int.TryParse(Num_pg_tb.Text, out int inputValue))
+            {
+
+                double result = inputValue * 1.5;
+                tt_cost.Text = result.ToString();
+            }
+            else
+            {
+                
+                tt_cost.Text = "Invalid input";
+            }
         }
     }
 }
