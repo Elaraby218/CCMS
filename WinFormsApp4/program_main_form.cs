@@ -128,6 +128,27 @@ namespace WinFormsApp4
             // Check the user's response
             if (result == DialogResult.Yes)
             {
+                var totalTime = new TimeSpan(0);
+                var stud = db.in_students
+                                  .Where(h => h.student_n_id == StudNational_txtbox.Text)
+                                  .FirstOrDefault();
+                
+                
+                var timeIn = Convert.ToDateTime(stud.in_time);
+                var timeOut =DateTime.Now;
+                totalTime += timeOut - timeIn;
+
+                var hours = totalTime.Hours;
+                var minutes = totalTime.Minutes;
+                var totalMinutes = totalTime.TotalMinutes;
+                var costPerMinute = 0.10;
+                var totalCost = totalMinutes * costPerMinute;
+
+                MessageBox.Show($"Student with ID {StudNational_txtbox.Text} removed\n" +
+                $"Time spent: {hours} hours and {minutes} minutes\n" +
+                $"Total cost: {totalCost:F2} Pound", "Student Removal Confirmation",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 ValidationMethods.StudentCheckOut(StudNational_txtbox.Text, this.cur_employee_n_id);
                 UpdateGridView();
             }
@@ -153,7 +174,7 @@ namespace WinFormsApp4
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string input = Prompt.ShowDialog("Enter Password","Confirmation Dialog",true);
+            string input = Prompt.ShowDialog("Enter Password", "Confirmation Dialog", true);
             var emp1 = DataBaseMethods.GetEmlpyeeByID(cur_employee_n_id);
             if (emp1.password.Equals(input))
             {

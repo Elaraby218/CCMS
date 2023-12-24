@@ -254,7 +254,7 @@ namespace funcs
         public static void AddToInStudent(string id)
         {
             db.in_students.Add(
-                new InStudentsTable { student_n_id = id, in_time = DateTime.Now.ToString("hh:mm"), }
+                new InStudentsTable { student_n_id = id, in_time = DateTime.Now.ToString("HH:mm"), }
                 );
             db.SaveChanges();
             MessageBox.Show("Successfully added", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);

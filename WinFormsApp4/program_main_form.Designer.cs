@@ -217,6 +217,7 @@ namespace WinFormsApp4
             panel6.Controls.Add(Reg_newstudbtn);
             panel6.Controls.Add(button4);
             panel6.Controls.Add(button5);
+            panel6.Cursor = Cursors.Default;
             panel6.Dock = DockStyle.Bottom;
             panel6.Location = new Point(0, 429);
             panel6.Name = "panel6";
@@ -294,6 +295,7 @@ namespace WinFormsApp4
             // 
             panel7.Controls.Add(StudNational_txtbox);
             panel7.Controls.Add(label2);
+            panel7.Cursor = Cursors.Default;
             panel7.Dock = DockStyle.Bottom;
             panel7.Location = new Point(0, 388);
             panel7.Name = "panel7";
@@ -325,6 +327,7 @@ namespace WinFormsApp4
             dataGridView2.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { IdSTU, NameSTU, FacultySTU, LevelSTU, In_timeSTU });
+            dataGridView2.Cursor = Cursors.Default;
             dataGridView2.Dock = DockStyle.Fill;
             dataGridView2.GridColor = SystemColors.ButtonHighlight;
             dataGridView2.Location = new Point(0, 66);
@@ -377,6 +380,7 @@ namespace WinFormsApp4
             // panel4
             // 
             panel4.Controls.Add(button9);
+            panel4.Cursor = Cursors.Default;
             panel4.Dock = DockStyle.Right;
             panel4.Location = new Point(480, 0);
             panel4.Name = "panel4";
