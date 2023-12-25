@@ -1,4 +1,5 @@
-﻿using System;
+﻿using funcs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp4.data;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WinFormsApp4
@@ -33,6 +35,27 @@ namespace WinFormsApp4
         private void button2_Click(object sender, EventArgs e)
         {
 
+            AppDbContext db = AppDbContext.Instance;
+            int price= int.Parse(tt_cost.Text);
+            var res = db.in_students.Where(st => st.student_n_id == textBox1.Text).FirstOrDefault();
+            if (res != null)
+            {
+                res.paper_printed += price;
+                db.in_students.Update(res);
+                db.SaveChanges();
+            }
+
+            else
+            {
+                InStudentsTable st = new InStudentsTable()
+                {
+                    student_n_id = "1",
+                    in_time = DateTime.Now.ToString("HH:mm"),
+                    paper_printed = price, 
+                };
+
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
