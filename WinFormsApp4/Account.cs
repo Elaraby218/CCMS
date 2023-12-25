@@ -26,7 +26,8 @@ namespace WinFormsApp4
             InitializeComponent();
             emp = DataBaseMethods.GetEmlpyeeByID(employee_n_id);
             LoadEmployeeData(employee_n_id);
-            
+            password_txtbox.UseSystemPasswordChar = true;
+            cpass_txtbox.UseSystemPasswordChar = true;
             imageSource = emp.photo_path;
         }
 
@@ -269,11 +270,16 @@ namespace WinFormsApp4
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (!checkBox1.Checked)
+            if (checkBox1.Checked)
             {
                 password_txtbox.UseSystemPasswordChar = false;
+                cpass_txtbox.UseSystemPasswordChar = false;
             }
-            else { password_txtbox.UseSystemPasswordChar = true; }
+            else {
+
+                password_txtbox.UseSystemPasswordChar = true;
+                cpass_txtbox.UseSystemPasswordChar = true;
+            }
         }
 
         private void Account_Load(object sender, EventArgs e)

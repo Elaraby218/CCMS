@@ -16,7 +16,7 @@ namespace WinFormsApp4
 
 
     // branch
-    public partial class program_main_form : Form
+    public partial class program_main_form : DraggablePanel
     {
 
 
@@ -241,6 +241,18 @@ namespace WinFormsApp4
 
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Print ppt = new Print();
+            
+            ppt.ShowDialog();
+
+        }
     }
 }
 
