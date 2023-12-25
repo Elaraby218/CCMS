@@ -58,8 +58,9 @@ namespace WinFormsApp4
                     .Where((x) => x.employee_n_id == cur_employee_n_id).FirstOrDefault().photo_path;
                 pictureBox1.ImageLocation = photo_path_to_show;
             }
-            catch (Exception ex) { 
-                
+            catch (Exception ex)
+            {
+
                 this.Close();
                 Application.OpenForms[0].Show();
 
@@ -250,6 +251,11 @@ namespace WinFormsApp4
         {
             Print print = new Print(this.cur_employee_n_id);
             print.ShowDialog();
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

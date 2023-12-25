@@ -7,11 +7,11 @@ namespace WinFormsApp4
 {
     public partial class Login_Page : DraggablePanel
     {
-       
+
 
         public Login_Page()
         {
-            
+
             InitializeComponent();
             textBox2.UseSystemPasswordChar = true;
             FormBorderStyle = FormBorderStyle.None;

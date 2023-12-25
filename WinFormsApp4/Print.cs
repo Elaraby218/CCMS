@@ -15,7 +15,7 @@ namespace WinFormsApp4
 {
     public partial class Print : DraggablePanel
     {
-        string emp_id=" ";
+        string emp_id = " ";
         float result = 0;
         public Print(string cur_employee_n_id)
         {
@@ -24,8 +24,8 @@ namespace WinFormsApp4
             StartPosition = FormStartPosition.CenterScreen;
             this.emp_id = cur_employee_n_id;
         }
-       
-       
+
+
         private void Print_Load(object sender, EventArgs e)
         {
 
@@ -48,7 +48,7 @@ namespace WinFormsApp4
                 db.SaveChanges();
             }
 
-            else
+            else if(ValidationMethods.NationalIdLen(textBox1.Text))
             {
                 db.history.Add(new HistoryTable
                 {
@@ -63,8 +63,13 @@ namespace WinFormsApp4
                 db.SaveChanges();
 
             }
-            MessageBox.Show("Cost Added"," Print",MessageBoxButtons.OK,MessageBoxIcon.Information);
-           this.Close();
+            else
+            {
+                MessageBox.Show("Invalid ID", " Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            MessageBox.Show("Cost Added", " Print", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
 
         }
 

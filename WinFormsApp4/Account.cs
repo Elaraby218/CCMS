@@ -124,7 +124,7 @@ namespace WinFormsApp4
                             , MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Validate = false;
                     }
-                    else if(!password_txtbox.Text.Equals(cpass_txtbox.Text))
+                    else if (!password_txtbox.Text.Equals(cpass_txtbox.Text))
                     {
                         MessageBox.Show("Check the Passwords\" ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Validate = false;
@@ -135,18 +135,18 @@ namespace WinFormsApp4
                     }
                     string confirmed_pass = this.cpass_txtbox.Text;
                     if (Validate)
-                    { 
+                    {
                         string newImagePath = ValidationMethods.CreateEmployeeImageFilePath(imageDestinationFolderPath, emp);
                         ValidationMethods.CopyImage(imageSource, newImagePath);
-                       
+
                         DataBaseMethods.UpdateEmployeeById(updateemp.employee_n_id, updateemp);
                         MessageBox.Show("Your Account Updated successfully");
-                  
+
                         this.Close();
-                       
+
 
                     }
-                    
+
                 }
             }
 
@@ -220,11 +220,11 @@ namespace WinFormsApp4
             if (result == DialogResult.OK)
             {
                 DataBaseMethods.DeleteEmployeeById(National_id_txtbox.Text);
-                 this.Close();
+                this.Close();
 
                 // Show the first form
-               
-               
+
+
             }
         }
 
@@ -268,7 +268,8 @@ namespace WinFormsApp4
                 password_txtbox.UseSystemPasswordChar = false;
                 cpass_txtbox.UseSystemPasswordChar = false;
             }
-            else {
+            else
+            {
 
                 password_txtbox.UseSystemPasswordChar = true;
                 cpass_txtbox.UseSystemPasswordChar = true;

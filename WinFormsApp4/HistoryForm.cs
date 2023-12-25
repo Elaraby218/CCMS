@@ -57,7 +57,7 @@ namespace WinFormsApp4
                 fun();
                 return;
             }
-            else if(Search_txtbox.Text=="1")
+            else if (Search_txtbox.Text=="1")
             {
                 fun("1");
                 return;
@@ -82,7 +82,7 @@ namespace WinFormsApp4
 
         private void Clear_filter_btn_Click(object sender, EventArgs e)
         {
-            fun(); 
+            fun();
         }
     }
 }

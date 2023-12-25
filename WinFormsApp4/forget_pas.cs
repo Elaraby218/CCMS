@@ -92,8 +92,8 @@ namespace WinFormsApp4
                     }
                     catch (Exception ex)
                     {
-                      //  MessageBox.Show("Error In Sending Email Check yout internt Connection: ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                      //  flag2 = false;
+                        //  MessageBox.Show("Error In Sending Email Check yout internt Connection: ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        //  flag2 = false;
                     }
                 }
                 else
@@ -209,6 +209,6 @@ namespace WinFormsApp4
 
         }
 
-       
+
     }
 }
