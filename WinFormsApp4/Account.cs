@@ -141,7 +141,7 @@ namespace WinFormsApp4
                        
                         DataBaseMethods.UpdateEmployeeById(updateemp.employee_n_id, updateemp);
                         MessageBox.Show("Your Account Updated successfully");
-                        Application.OpenForms[0].Show();
+                  
                         this.Close();
                        
 
@@ -220,12 +220,11 @@ namespace WinFormsApp4
             if (result == DialogResult.OK)
             {
                 DataBaseMethods.DeleteEmployeeById(National_id_txtbox.Text);
+                 this.Close();
+
                 // Show the first form
-                Login_Page login_Page = new Login_Page();
-                login_Page.ShowDialog();
-                this.Close();
-
-
+               
+               
             }
         }
 
@@ -237,13 +236,7 @@ namespace WinFormsApp4
             // Check if the user clicked OK
             if (result == DialogResult.OK)
             {
-                // Show the first form
-                if (Application.OpenForms.Count > 0)
-                    Application.OpenForms[0].Show();
-                // Close the current form
                 this.Close();
-
-
             }
         }
 

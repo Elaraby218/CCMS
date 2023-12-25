@@ -46,15 +46,25 @@ namespace WinFormsApp4
 
         private void PreviewImageAndName()
         {
-            name_label_text = db.employees
-                .Where((x) => x.employee_n_id == cur_employee_n_id).FirstOrDefault().name;
-            cur_user_name = name_label_text = db.employees
-                .Where((x) => x.employee_n_id == cur_employee_n_id).FirstOrDefault().user_name;
-            txt = name_label_text;
-            textBox1.Text = txt;
-            string photo_path_to_show = db.employees
-                .Where((x) => x.employee_n_id == cur_employee_n_id).FirstOrDefault().photo_path;
-            pictureBox1.ImageLocation = photo_path_to_show;
+            try
+            {
+                name_label_text = db.employees
+                 .Where((x) => x.employee_n_id == cur_employee_n_id).FirstOrDefault().name;
+                cur_user_name = name_label_text = db.employees
+                    .Where((x) => x.employee_n_id == cur_employee_n_id).FirstOrDefault().user_name;
+                txt = name_label_text;
+                textBox1.Text = txt;
+                string photo_path_to_show = db.employees
+                    .Where((x) => x.employee_n_id == cur_employee_n_id).FirstOrDefault().photo_path;
+                pictureBox1.ImageLocation = photo_path_to_show;
+            }
+            catch (Exception ex) { 
+                
+                this.Close();
+                Application.OpenForms[0].Show();
+
+
+            }
         }
 
         private void program_main_form_Load(object sender, EventArgs e)
@@ -136,7 +146,7 @@ namespace WinFormsApp4
                 var hours = totalTime.Hours;
                 var minutes = totalTime.Minutes;
                 var totalMinutes = totalTime.TotalMinutes;
-                var totalCost = (totalMinutes * SharedValues.CostPerHour) + (stud.paper_printed * SharedValues.CostPerPaper);
+                var totalCost = ((totalMinutes * SharedValues.CostPerHour)/60) + (stud.paper_printed * SharedValues.CostPerPaper);
 
                 MessageBox.Show($"Student with ID {StudNational_txtbox.Text} removed\n" +
                 $"Time spent: {hours} hours and {minutes} minutes\n" +
