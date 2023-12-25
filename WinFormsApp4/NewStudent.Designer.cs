@@ -46,36 +46,32 @@
             // name_txtbox
             // 
             name_txtbox.Location = new Point(64, 72);
-            name_txtbox.Multiline = true;
             name_txtbox.Name = "name_txtbox";
-            name_txtbox.Size = new Size(235, 42);
+            name_txtbox.Size = new Size(235, 23);
             name_txtbox.TabIndex = 0;
             name_txtbox.TextChanged += name_txtbox_TextChanged;
             // 
             // Faculty_txtbox
             // 
-            Faculty_txtbox.Location = new Point(64, 240);
-            Faculty_txtbox.Multiline = true;
+            Faculty_txtbox.Location = new Point(64, 184);
             Faculty_txtbox.Name = "Faculty_txtbox";
-            Faculty_txtbox.Size = new Size(235, 42);
+            Faculty_txtbox.Size = new Size(235, 23);
             Faculty_txtbox.TabIndex = 2;
             Faculty_txtbox.TextChanged += Faculty_txtbox_TextChanged;
             // 
             // N_id_txtbox
             // 
-            N_id_txtbox.Location = new Point(64, 151);
-            N_id_txtbox.Multiline = true;
+            N_id_txtbox.Location = new Point(64, 127);
             N_id_txtbox.Name = "N_id_txtbox";
-            N_id_txtbox.Size = new Size(235, 42);
+            N_id_txtbox.Size = new Size(235, 23);
             N_id_txtbox.TabIndex = 1;
             N_id_txtbox.TextChanged += N_id_txtbox_TextChanged;
             // 
             // Level_txtbox
             // 
-            Level_txtbox.Location = new Point(64, 319);
-            Level_txtbox.Multiline = true;
+            Level_txtbox.Location = new Point(64, 242);
             Level_txtbox.Name = "Level_txtbox";
-            Level_txtbox.Size = new Size(235, 42);
+            Level_txtbox.Size = new Size(235, 23);
             Level_txtbox.TabIndex = 3;
             Level_txtbox.TextChanged += Level_txtbox_TextChanged;
             // 
@@ -97,7 +93,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.SeaGreen;
-            label1.Location = new Point(64, 217);
+            label1.Location = new Point(64, 161);
             label1.Name = "label1";
             label1.Size = new Size(59, 20);
             label1.TabIndex = 50;
@@ -109,7 +105,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.SeaGreen;
-            label2.Location = new Point(64, 134);
+            label2.Location = new Point(64, 110);
             label2.Name = "label2";
             label2.Size = new Size(89, 20);
             label2.TabIndex = 10;
@@ -122,7 +118,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.SeaGreen;
-            label3.Location = new Point(64, 296);
+            label3.Location = new Point(64, 219);
             label3.Name = "label3";
             label3.Size = new Size(45, 20);
             label3.TabIndex = 11;
@@ -134,7 +130,7 @@
             Reg_newstudbtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             Reg_newstudbtn.ForeColor = SystemColors.ButtonHighlight;
             Reg_newstudbtn.ImageAlign = ContentAlignment.MiddleLeft;
-            Reg_newstudbtn.Location = new Point(107, 374);
+            Reg_newstudbtn.Location = new Point(107, 296);
             Reg_newstudbtn.Name = "Reg_newstudbtn";
             Reg_newstudbtn.Size = new Size(155, 36);
             Reg_newstudbtn.TabIndex = 22;
@@ -181,6 +177,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "New_stu_reg";
             Text = "reg";
+            Load += New_stu_reg_Load;
             Controls.SetChildIndex(panel1, 0);
             Controls.SetChildIndex(name_txtbox, 0);
             Controls.SetChildIndex(Faculty_txtbox, 0);

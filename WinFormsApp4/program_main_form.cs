@@ -16,7 +16,7 @@ namespace WinFormsApp4
 
 
     // branch
-    public partial class program_main_form : Form
+    public partial class program_main_form : DraggablePanel
     {
 
 
@@ -28,6 +28,7 @@ namespace WinFormsApp4
         {
             InitializeComponent();
             this.cur_employee_n_id = employee_n_id;
+
         }
 
         private void Log_out_btn_Click(object sender, EventArgs e)
@@ -190,6 +191,14 @@ namespace WinFormsApp4
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Configure configure = new Configure();
+            configure.ShowDialog();
+
+        }
+
         // -------------------- Empty Functions --------------------
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -233,10 +242,24 @@ namespace WinFormsApp4
 
         }
 
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Print ppt = new Print();
+            
+            ppt.ShowDialog();
+        }
+
         private void History_btn_Click(object sender, EventArgs e)
         {
             HistoryForm frm = new HistoryForm(); 
             frm.ShowDialog();
+
         }
     }
 }

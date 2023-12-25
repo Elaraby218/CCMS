@@ -97,6 +97,14 @@ namespace funcs
             File.Copy(imagePath, newImagePath);
         }
 
+        public static decimal RoundMoney(decimal amount, decimal roundingValue)
+        {
+            decimal roundedAmount = Math.Round(amount / roundingValue) * roundingValue;
+            return roundedAmount;
+        }
+
+
+
 
 
 

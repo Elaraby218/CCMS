@@ -14,6 +14,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using funcs;
 using System.Web;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 namespace WinFormsApp4
 {
     public partial class forget_pas : DraggablePanel
@@ -22,15 +23,17 @@ namespace WinFormsApp4
         public forget_pas()
         {
 
-            //new DraggablePanel(this);
             InitializeComponent();
 
             FormBorderStyle = FormBorderStyle.None;
             StartPosition = FormStartPosition.CenterScreen;
+            textBox2.UseSystemPasswordChar = true;
+            textBox3.UseSystemPasswordChar = true;
+
 
         }
         string code;
-        bool flag = false;
+        bool flag = false, flag2 = false;
         string emai;
 
         private void forget_pas_Load(object sender, EventArgs e)
@@ -80,29 +83,29 @@ namespace WinFormsApp4
                     smtp.Credentials = new NetworkCredential(yourGmailAddress, yourAppSpecificPassword);
 
                     try
+
                     {
                         smtp.Send(mailMessage);
+                        MessageBox.Show("Code Sent Successfully! Check Your Email Inbox ", "Authentication Code", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        flag2 = true;
 
-                        MessageBox.Show("Email sent successfully! \n Check Your Email Inbox", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error sending email Check yout internt connection: ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-
+                        MessageBox.Show("Error In Sending Email Check yout internt Connection: ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        flag2 = false;
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Email Not Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Email Not Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    flag2 = false;
                 }
             }
             else
             {
                 MessageBox.Show("Please Enter an Email");
             }
-            textBox1.Text = "";
-            textBox2.Text = "";
 
         }
 
@@ -149,13 +152,14 @@ namespace WinFormsApp4
                         emp.password = pass;
                         db.Update(emp);
                         db.SaveChanges();
-                        MessageBox.Show("Your Password Changed");
+                        MessageBox.Show("Your Password Has Changed");
+
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Please check that password is the same as comfirmed passwoard"
-                    , "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Please Check that Password is the Same as Comfirmed Passwoard"
+                    , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         textBox2.Text = "";
                         textBox3.Text = "";
                     }
@@ -165,22 +169,46 @@ namespace WinFormsApp4
             else { MessageBox.Show("Enter the Authentication Code"); }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            string co = textBox1.Text;
-            if (co== code)
+
+            if (!checkBox1.Checked)
             {
-                MessageBox.Show("The code is Correct \nEnter the new Password");
-                flag = true;
+                textBox2.UseSystemPasswordChar = true;
+                textBox3.UseSystemPasswordChar = true;
             }
             else
             {
-                MessageBox.Show("Not correct code");
-
-                flag = false;
-
+                textBox2.UseSystemPasswordChar = false;
+                textBox3.UseSystemPasswordChar = false;
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string input = textBox1.Text;
+            if (flag2)
+            {
+                if (input == code)
+                {
+                    flag = true;
+                    MessageBox.Show("The Code is Correct", "Authentication Code ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("The Code is Not Correct", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    flag = false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Enter an Email");
+            }
+
+        }
+
+       
     }
 }
-

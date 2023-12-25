@@ -93,15 +93,17 @@ namespace WinFormsApp4
             // 
             // Log_out_btn
             // 
-            Log_out_btn.BackColor = Color.SeaGreen;
-            Log_out_btn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Log_out_btn.BackColor = Color.FromArgb(64, 64, 64);
+            Log_out_btn.FlatStyle = FlatStyle.Flat;
+            Log_out_btn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             Log_out_btn.ForeColor = SystemColors.ButtonHighlight;
             Log_out_btn.Image = Properties.Resources.icons8_logout_24;
             Log_out_btn.ImageAlign = ContentAlignment.MiddleLeft;
+
             Log_out_btn.Location = new Point(12, 370);
             Log_out_btn.Name = "Log_out_btn";
-            Log_out_btn.Padding = new Padding(15, 0, 15, 0);
-            Log_out_btn.Size = new Size(147, 48);
+            Log_out_btn.Padding = new Padding(13, 0, 13, 0);
+            Log_out_btn.Size = new Size(151, 36);
             Log_out_btn.TabIndex = 0;
             Log_out_btn.Text = "Log out";
             Log_out_btn.TextAlign = ContentAlignment.MiddleRight;
@@ -121,9 +123,10 @@ namespace WinFormsApp4
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(32, 24);
+            pictureBox1.Location = new Point(0, 35);
+            pictureBox1.Margin = new Padding(0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
+            pictureBox1.Size = new Size(70, 83);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -131,11 +134,17 @@ namespace WinFormsApp4
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.DarkSeaGreen;
-            textBox1.Location = new Point(32, 0);
+            textBox1.BackColor = Color.SeaGreen;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox1.ForeColor = SystemColors.Window;
+            textBox1.Location = new Point(73, 69);
+            textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(94, 23);
             textBox1.TabIndex = 1;
+            textBox1.TextAlign = HorizontalAlignment.Center;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // panel1
             // 
@@ -151,7 +160,7 @@ namespace WinFormsApp4
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(50, 3, 3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(176, 487);
+            panel1.Size = new Size(191, 487);
             panel1.TabIndex = 9;
             // 
             // History_btn
@@ -173,15 +182,18 @@ namespace WinFormsApp4
             // 
             // button3
             // 
-            button3.BackColor = Color.SeaGreen;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.BackColor = Color.FromArgb(64, 64, 64);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.ButtonHighlight;
             button3.Image = (Image)resources.GetObject("button3.Image");
             button3.ImageAlign = ContentAlignment.MiddleLeft;
+
             button3.Location = new Point(12, 106);
+
             button3.Name = "button3";
-            button3.Padding = new Padding(15, 0, 15, 0);
-            button3.Size = new Size(147, 48);
+            button3.Padding = new Padding(13, 0, 13, 0);
+            button3.Size = new Size(151, 36);
             button3.TabIndex = 6;
             button3.Text = "Account";
             button3.TextAlign = ContentAlignment.MiddleRight;
@@ -190,15 +202,17 @@ namespace WinFormsApp4
             // 
             // button2
             // 
-            button2.BackColor = Color.SeaGreen;
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.BackColor = Color.FromArgb(64, 64, 64);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonHighlight;
             button2.Image = (Image)resources.GetObject("button2.Image");
             button2.ImageAlign = ContentAlignment.MiddleLeft;
+
             button2.Location = new Point(12, 174);
             button2.Name = "button2";
-            button2.Padding = new Padding(15, 0, 25, 0);
-            button2.Size = new Size(147, 48);
+            button2.Padding = new Padding(13, 0, 22, 0);
+            button2.Size = new Size(151, 36);
             button2.TabIndex = 5;
             button2.Text = "Print";
             button2.TextAlign = ContentAlignment.MiddleRight;
@@ -206,19 +220,23 @@ namespace WinFormsApp4
             // 
             // button1
             // 
-            button1.BackColor = Color.SeaGreen;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.BackColor = Color.FromArgb(64, 64, 64);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ButtonHighlight;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
+
             button1.Location = new Point(12, 241);
+
             button1.Name = "button1";
-            button1.Padding = new Padding(15, 0, 15, 0);
-            button1.Size = new Size(147, 48);
+            button1.Padding = new Padding(13, 0, 13, 0);
+            button1.Size = new Size(151, 36);
             button1.TabIndex = 4;
-            button1.Text = "Setting";
+            button1.Text = "    Configure";
             button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel2
             // 
@@ -228,7 +246,7 @@ namespace WinFormsApp4
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(176, 69);
+            panel2.Size = new Size(191, 118);
             panel2.TabIndex = 0;
             // 
             // panel6
@@ -239,7 +257,7 @@ namespace WinFormsApp4
             panel6.Dock = DockStyle.Bottom;
             panel6.Location = new Point(0, 429);
             panel6.Name = "panel6";
-            panel6.Size = new Size(660, 58);
+            panel6.Size = new Size(645, 58);
             panel6.TabIndex = 21;
             // 
             // Reg_newstudbtn
@@ -289,7 +307,7 @@ namespace WinFormsApp4
             label1.AutoSize = true;
             label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(3, 4);
+            label1.Location = new Point(6, 56);
             label1.Name = "label1";
             label1.Size = new Size(186, 45);
             label1.TabIndex = 11;
@@ -304,9 +322,9 @@ namespace WinFormsApp4
             panel3.Controls.Add(panel5);
             panel3.Cursor = Cursors.Cross;
             panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(176, 0);
+            panel3.Location = new Point(191, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(660, 487);
+            panel3.Size = new Size(645, 487);
             panel3.TabIndex = 10;
             // 
             // panel7
@@ -316,7 +334,7 @@ namespace WinFormsApp4
             panel7.Dock = DockStyle.Bottom;
             panel7.Location = new Point(0, 388);
             panel7.Name = "panel7";
-            panel7.Size = new Size(660, 41);
+            panel7.Size = new Size(645, 41);
             panel7.TabIndex = 33;
             // 
             // StudNational_txtbox
@@ -346,60 +364,72 @@ namespace WinFormsApp4
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { IdSTU, NameSTU, FacultySTU, LevelSTU, In_timeSTU });
             dataGridView2.Dock = DockStyle.Fill;
             dataGridView2.GridColor = SystemColors.ButtonHighlight;
-            dataGridView2.Location = new Point(0, 66);
+            dataGridView2.Location = new Point(0, 118);
             dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(660, 363);
+            dataGridView2.Size = new Size(645, 311);
             dataGridView2.TabIndex = 32;
             // 
             // IdSTU
             // 
             IdSTU.HeaderText = "National Id";
+            IdSTU.MinimumWidth = 6;
             IdSTU.Name = "IdSTU";
             IdSTU.ReadOnly = true;
+            IdSTU.Width = 125;
             // 
             // NameSTU
             // 
             NameSTU.HeaderText = "Name";
+            NameSTU.MinimumWidth = 6;
             NameSTU.Name = "NameSTU";
             NameSTU.ReadOnly = true;
+            NameSTU.Width = 125;
             // 
             // FacultySTU
             // 
             FacultySTU.HeaderText = "Faculty";
+            FacultySTU.MinimumWidth = 6;
             FacultySTU.Name = "FacultySTU";
             FacultySTU.ReadOnly = true;
+            FacultySTU.Width = 125;
             // 
             // LevelSTU
             // 
             LevelSTU.HeaderText = "Level";
+            LevelSTU.MinimumWidth = 6;
             LevelSTU.Name = "LevelSTU";
             LevelSTU.ReadOnly = true;
+            LevelSTU.Width = 125;
             // 
             // In_timeSTU
             // 
             In_timeSTU.HeaderText = "Time in";
+            In_timeSTU.MinimumWidth = 6;
             In_timeSTU.Name = "In_timeSTU";
             In_timeSTU.ReadOnly = true;
+            In_timeSTU.Width = 125;
             // 
             // panel5
             // 
             panel5.Controls.Add(panel4);
             panel5.Controls.Add(label1);
-            panel5.Controls.Add(pictureBox2);
             panel5.Dock = DockStyle.Top;
             panel5.Location = new Point(0, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(660, 66);
+            panel5.Size = new Size(645, 118);
             panel5.TabIndex = 28;
             // 
             // panel4
             // 
             panel4.Controls.Add(button9);
+            panel4.Controls.Add(pictureBox2);
+
             panel4.Dock = DockStyle.Right;
-            panel4.Location = new Point(480, 0);
+            panel4.Location = new Point(465, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(180, 66);
+            panel4.Size = new Size(180, 118);
             panel4.TabIndex = 27;
             panel4.Paint += panel4_Paint;
             // 
@@ -419,15 +449,16 @@ namespace WinFormsApp4
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.Design_a_modern_and_sleek_logo_for_a_Computer_Center_Management;
-            pictureBox2.Location = new Point(202, -3);
+            pictureBox2.Location = new Point(54, 43);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(126, 69);
+            pictureBox2.Size = new Size(126, 72);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 34;
             pictureBox2.TabStop = false;
             // 
             // contextMenuStrip1
             // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
@@ -444,6 +475,9 @@ namespace WinFormsApp4
             StartPosition = FormStartPosition.CenterScreen;
             Text = "program_main_form";
             Load += program_main_form_Load;
+            Controls.SetChildIndex(emp_name, 0);
+            Controls.SetChildIndex(panel1, 0);
+            Controls.SetChildIndex(panel3, 0);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);

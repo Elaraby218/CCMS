@@ -36,10 +36,15 @@ namespace WinFormsApp4.data
     public string faculty { get; set; }
     public int level { get; set; }
   }
-  [Table("in_students")]
-  public record InStudentsTable
-  {
-    [Key]
+    [Table("in_students")]
+    public record InStudentsTable
+    {
+        public InStudentsTable()
+        {
+            paper_printed=0;
+        }
+
+       [Key]
     [Column(TypeName = "varchar(15)")]
     [ForeignKey("StudentsTable")]
     public string student_n_id { get; set; }
