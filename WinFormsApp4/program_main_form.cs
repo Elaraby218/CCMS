@@ -133,10 +133,10 @@ namespace WinFormsApp4
                 var stud = db.in_students
                                   .Where(h => h.student_n_id == StudNational_txtbox.Text)
                                   .FirstOrDefault();
-                
-                
+
+
                 var timeIn = Convert.ToDateTime(stud.in_time);
-                var timeOut =DateTime.Now;
+                var timeOut = DateTime.Now;
                 totalTime += timeOut - timeIn;
 
                 var hours = totalTime.Hours;
@@ -190,6 +190,14 @@ namespace WinFormsApp4
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Configure configure = new Configure();
+            configure.ShowDialog();
+
+        }
+
         // -------------------- Empty Functions --------------------
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -232,6 +240,7 @@ namespace WinFormsApp4
         {
 
         }
+
     }
 }
 

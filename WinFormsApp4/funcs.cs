@@ -95,6 +95,14 @@ namespace funcs
             File.Copy(imagePath, newImagePath);
         }
 
+        public static decimal RoundMoney(decimal amount, decimal roundingValue)
+        {
+            decimal roundedAmount = Math.Round(amount / roundingValue) * roundingValue;
+            return roundedAmount;
+        }
+
+
+
 
 
 
@@ -127,7 +135,7 @@ namespace funcs
         }
         */
 
-        
+
         public static bool Email(string email)
         {
             string expectedEmailFormat = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";

@@ -113,5 +113,10 @@ namespace WinFormsApp4
         {
 
         }
+
+        private void New_stu_reg_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

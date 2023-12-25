@@ -181,6 +181,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "New_stu_reg";
             Text = "reg";
+            Load += New_stu_reg_Load;
             Controls.SetChildIndex(panel1, 0);
             Controls.SetChildIndex(name_txtbox, 0);
             Controls.SetChildIndex(Faculty_txtbox, 0);
