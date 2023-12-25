@@ -65,7 +65,7 @@ namespace WinFormsApp4
             UpdateGridView();
         }
 
-      
+
         private void FindSTU_btn_Click(object sender, EventArgs e)
         {
             MessageBox.Show("NOT IMPLEMENTED YET", "Sorry",
@@ -123,28 +123,10 @@ namespace WinFormsApp4
             // Check the user's response
             if (result == DialogResult.Yes)
             {
-                var totalTime = new TimeSpan(0);
-                var stud = db.in_students
-                                  .Where(h => h.student_n_id == StudNational_txtbox.Text)
-                                  .FirstOrDefault();
 
-
-                var timeIn = Convert.ToDateTime(stud.in_time);
-                var timeOut = DateTime.Now;
-                totalTime += timeOut - timeIn;
-
-                var hours = totalTime.Hours;
-                var minutes = totalTime.Minutes;
-                var totalMinutes = totalTime.TotalMinutes;
-                var totalCost = (totalMinutes * SharedValues.CostPerHour) + (stud.paper_printed * SharedValues.CostPerPaper);
-
-                MessageBox.Show($"Student with ID {StudNational_txtbox.Text} removed\n" +
-                $"Time spent: {hours} hours and {minutes} minutes\n" +
-                $"Total cost: {totalCost:F2} Pound", "Student Removal Confirmation",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                ValidationMethods.StudentCheckOut(StudNational_txtbox.Text, this.cur_employee_n_id, Convert.ToDouble(totalCost));
+                ValidationMethods.StudentCheckOut(StudNational_txtbox.Text, this.cur_employee_n_id);
                 UpdateGridView();
+
             }
 
 
@@ -240,13 +222,13 @@ namespace WinFormsApp4
 
         }
 
-       /* private void button2_Click(object sender, EventArgs e)
-        {
-            Print ppt = new Print();
+        /* private void button2_Click(object sender, EventArgs e)
+         {
+             Print ppt = new Print();
 
-            ppt.ShowDialog();
-        }
-       */
+             ppt.ShowDialog();
+         }
+        */
         private void History_btn_Click(object sender, EventArgs e)
         {
             HistoryForm frm = new HistoryForm();

@@ -184,15 +184,33 @@ namespace funcs
             return ((IsEmpExist != null) || (IsStudentExist != null));
         }
 
-        public static bool StudentCheckOut(string id, string employee_id ,double cost)
+        public static bool StudentCheckOut(string id, string employee_id)
         {
             // return true if this student is in
             if (!DataBaseMethods.IsIn(id))
             {
-                MessageBox.Show("The Student is not in", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Check The ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            DataBaseMethods.StudentCheckOut(id, employee_id, cost);
+            var totalTime = new TimeSpan(0);
+
+            var stud = db.in_students
+                                 .Where(h => h.student_n_id == id)
+                                 .FirstOrDefault();
+
+            var timeIn = Convert.ToDateTime(stud.in_time);
+            var timeOut = DateTime.Now;
+            totalTime += timeOut - timeIn;
+
+            var totalMinutes = totalTime.TotalMinutes/60.0;
+            var totalCost = (totalMinutes * SharedValues.CostPerHour) + (stud.paper_printed * SharedValues.CostPerPaper);
+            totalCost = Math.Min(totalCost, SharedValues.CostPerHour/2);
+            totalCost = (SharedValues.EnableRound ? (double)ValidationMethods.RoundMoney((decimal)totalCost, (decimal)SharedValues.RoundingValue) : totalCost);
+            MessageBox.Show($"Student with ID {id} removed\n" +
+            $"Time spent: {totalTime.Hours} hours and {totalTime.Minutes} minutes\n" +
+            $"Total cost: {totalCost:F2} Pound", "Student Removal Confirmation",
+            MessageBoxButtons.OK, MessageBoxIcon.Information);
+            DataBaseMethods.StudentCheckOut(id, employee_id, totalCost);
             return true;
         }
         public static bool PhoneNumber(string Number)
@@ -246,17 +264,18 @@ namespace funcs
         {
             //if (ValidationMethods.CopyImage(emp.photo_path, emp.user_name, emp)) // Edited by Abbas & Araby, Cuz image copy should be indpendent
             //{
-            try { 
-                
+            try
+            {
+
                 db.employees.Add(emp);
-                
-                db.SaveChanges(); 
-               
-                return true; 
+
+                db.SaveChanges();
+
+                return true;
             }
             catch { MessageBox.Show("Error ", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information); return false; }
-           
-           
+
+
             //}
             //else return false;
         }
