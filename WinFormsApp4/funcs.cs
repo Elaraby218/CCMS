@@ -246,9 +246,17 @@ namespace funcs
         {
             //if (ValidationMethods.CopyImage(emp.photo_path, emp.user_name, emp)) // Edited by Abbas & Araby, Cuz image copy should be indpendent
             //{
-            db.employees.Add(emp);
-            db.SaveChanges();
-            return true;
+            try { 
+                
+                db.employees.Add(emp);
+                
+                db.SaveChanges(); 
+               
+                return true; 
+            }
+            catch { MessageBox.Show("Error ", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information); return false; }
+           
+           
             //}
             //else return false;
         }

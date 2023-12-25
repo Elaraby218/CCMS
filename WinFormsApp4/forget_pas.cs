@@ -62,14 +62,14 @@ namespace WinFormsApp4
                     mailMessage.To.Add(new MailAddress(emai));
                     mailMessage.Body = "The code is\n" + code + "\nThanks";
                     mailMessage.Body = $"Dear {emp.name},\n\n" +
-                           $"We hope this email finds you well. Your request to change the password for your account on the CCMS (Customer Care Management System) app has been received.\n\n" +
+                           $"We hope this email finds you well. Your request to change the password for your account on the CCMS app has been received.\n\n" +
                            $"To proceed with the password change, please use the following authentication code:\n\n" +
                            $"Authentication Code: {code}\n\n" +
                            $"Please enter this code within the CCMS app to verify your identity and initiate the password change process.\n\n" +
                            $"If you did not make this request, or if you have any concerns regarding your account security, please contact our support team immediately at winformapp010@gmail.com.\n\n" +
                            $"Thank you for choosing CCMS. We are committed to ensuring the security of your account.\n\n" +
                            $"Best regards,\n" +
-                           $"CCMS \n" +
+                           $"CCMS - Sherif Elglaly \n" +
                            $"01026386402";
 
                     smtp.Port = 587;
@@ -92,8 +92,8 @@ namespace WinFormsApp4
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error In Sending Email Check yout internt Connection: ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        flag2 = false;
+                      //  MessageBox.Show("Error In Sending Email Check yout internt Connection: ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                      //  flag2 = false;
                     }
                 }
                 else

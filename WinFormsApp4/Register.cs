@@ -5,6 +5,8 @@ using WinFormsApp4.data;
 using System.ComponentModel;
 using funcs;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Net.Mail;
+using System.Net;
 
 namespace WinFormsApp4
 {
@@ -27,6 +29,46 @@ namespace WinFormsApp4
             cpass_txtbox.UseSystemPasswordChar = true;
 
         }
+
+        private void email_send(string mail,string user)
+        {
+        
+                    MailMessage mailMessage = new MailMessage();
+                    SmtpClient smtp = new SmtpClient();
+                    mailMessage.Subject = "Successful Account Creation - CCMS";
+                    mailMessage.From = new MailAddress(mail);
+                    mailMessage.To.Add(new MailAddress(mail));
+                   
+                    mailMessage.Body = $"Dear {user},\n" +
+                      "We hope this email finds you well. We are delighted to inform you that your account in the (CCMS) has been created successfully.\n\n" +
+                      "With your new CCMS account, you now have access to a range of features and tools designed to enhance your experience with our services.\n\n" +
+                      "We would like to express our sincere gratitude for choosing CCMS and being a valued part of our community. If you have any questions or need assistance, feel free to contact our support team at winformapp010@gmail.com.\n\n" +
+                      "Thank you again for trusting us with your business needs. We look forward to serving you.\n\n" +
+                       $"Best regards,\n" +
+                       $"CCMS - Sherif Elglaly \n" +
+                       $"01026386402";
+
+                    smtp.Port = 587;
+                    smtp.Host = "smtp.gmail.com";
+                    smtp.EnableSsl = true;
+
+                    // Use an application-specific password or a secure method to handle credentials
+                    string yourGmailAddress = "winformapp010@gmail.com";
+                    string yourAppSpecificPassword = "qdsqwsnazpxajhes";
+
+                    smtp.Credentials = new NetworkCredential(yourGmailAddress, yourAppSpecificPassword);
+
+                    try
+
+                    {
+                        smtp.Send(mailMessage);
+
+                    }
+                    catch (Exception ex)
+                    {
+                       // MessageBox.Show("Error In Sending Email Check yout internt Connection: ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
         private void ExecuteRegistration()
         {
             EmployeeTable emp = new EmployeeTable
@@ -120,8 +162,7 @@ namespace WinFormsApp4
                     MessageBox.Show("Your Account Created successfully");
                     //}
 
-
-
+                    email_send(this.email_txtbox.Text,this.user_txtbox.Text);
                     Application.OpenForms[0].Show();
                     this.Close();
                 }
