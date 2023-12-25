@@ -7,8 +7,8 @@ namespace WinFormsApp4
 
     public static class SharedValues
     {
-        public static decimal CostPerHour { get; set; } = 6.0M;
-        public static decimal CostPerPaper { get; set; } = 0.5M;
+        public static float CostPerHour { get; set; } = 6;
+        public static float CostPerPaper { get; set; } = 0.5f;
         public static TimeSpan ClosingTime { get; set; } = new TimeSpan(0, 0, 0);
         public static double RoundingValue { get; set; } = 0.25;
         public static string SelectedCurrency { get; set; } = "EGP";

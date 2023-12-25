@@ -78,18 +78,10 @@ namespace WinFormsApp4
             // 
             // History
             // 
-            History.BackColor = SystemColors.ControlDarkDark;
-            History.Cursor = Cursors.SizeAll;
-            History.FlatStyle = FlatStyle.Popup;
-            History.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            History.ForeColor = SystemColors.ButtonHighlight;
-            History.Location = new Point(12, 556);
+            History.Location = new Point(0, 0);
             History.Name = "History";
-            History.Size = new Size(147, 46);
-            History.TabIndex = 3;
-            History.Text = "History";
-            History.UseVisualStyleBackColor = false;
-            History.Click += History_Click;
+            History.Size = new Size(75, 23);
+            History.TabIndex = 8;
             // 
             // Log_out_btn
             // 
@@ -99,8 +91,7 @@ namespace WinFormsApp4
             Log_out_btn.ForeColor = SystemColors.ButtonHighlight;
             Log_out_btn.Image = Properties.Resources.icons8_logout_24;
             Log_out_btn.ImageAlign = ContentAlignment.MiddleLeft;
-
-            Log_out_btn.Location = new Point(12, 370);
+            Log_out_btn.Location = new Point(12, 415);
             Log_out_btn.Name = "Log_out_btn";
             Log_out_btn.Padding = new Padding(13, 0, 13, 0);
             Log_out_btn.Size = new Size(151, 36);
@@ -136,12 +127,12 @@ namespace WinFormsApp4
             // 
             textBox1.BackColor = Color.SeaGreen;
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             textBox1.ForeColor = SystemColors.Window;
             textBox1.Location = new Point(73, 69);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(94, 23);
+            textBox1.Size = new Size(112, 23);
             textBox1.TabIndex = 1;
             textBox1.TextAlign = HorizontalAlignment.Center;
             textBox1.TextChanged += textBox1_TextChanged;
@@ -165,15 +156,16 @@ namespace WinFormsApp4
             // 
             // History_btn
             // 
-            History_btn.BackColor = Color.SeaGreen;
+            History_btn.BackColor = Color.FromArgb(64, 64, 64);
+            History_btn.FlatStyle = FlatStyle.Flat;
             History_btn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             History_btn.ForeColor = SystemColors.ButtonHighlight;
             History_btn.Image = (Image)resources.GetObject("History_btn.Image");
             History_btn.ImageAlign = ContentAlignment.MiddleLeft;
-            History_btn.Location = new Point(12, 306);
+            History_btn.Location = new Point(12, 349);
             History_btn.Name = "History_btn";
             History_btn.Padding = new Padding(15, 0, 15, 0);
-            History_btn.Size = new Size(147, 48);
+            History_btn.Size = new Size(151, 39);
             History_btn.TabIndex = 7;
             History_btn.Text = "History";
             History_btn.TextAlign = ContentAlignment.MiddleRight;
@@ -188,9 +180,7 @@ namespace WinFormsApp4
             button3.ForeColor = SystemColors.ButtonHighlight;
             button3.Image = (Image)resources.GetObject("button3.Image");
             button3.ImageAlign = ContentAlignment.MiddleLeft;
-
-            button3.Location = new Point(12, 106);
-
+            button3.Location = new Point(12, 149);
             button3.Name = "button3";
             button3.Padding = new Padding(13, 0, 13, 0);
             button3.Size = new Size(151, 36);
@@ -208,8 +198,7 @@ namespace WinFormsApp4
             button2.ForeColor = SystemColors.ButtonHighlight;
             button2.Image = (Image)resources.GetObject("button2.Image");
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-
-            button2.Location = new Point(12, 174);
+            button2.Location = new Point(12, 212);
             button2.Name = "button2";
             button2.Padding = new Padding(13, 0, 22, 0);
             button2.Size = new Size(151, 36);
@@ -217,6 +206,7 @@ namespace WinFormsApp4
             button2.Text = "Print";
             button2.TextAlign = ContentAlignment.MiddleRight;
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
             // 
             // button1
             // 
@@ -226,9 +216,7 @@ namespace WinFormsApp4
             button1.ForeColor = SystemColors.ButtonHighlight;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-
-            button1.Location = new Point(12, 241);
-
+            button1.Location = new Point(12, 280);
             button1.Name = "button1";
             button1.Padding = new Padding(13, 0, 13, 0);
             button1.Size = new Size(151, 36);
@@ -425,7 +413,6 @@ namespace WinFormsApp4
             // 
             panel4.Controls.Add(button9);
             panel4.Controls.Add(pictureBox2);
-
             panel4.Dock = DockStyle.Right;
             panel4.Location = new Point(465, 0);
             panel4.Name = "panel4";
@@ -449,9 +436,9 @@ namespace WinFormsApp4
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.Design_a_modern_and_sleek_logo_for_a_Computer_Center_Management;
-            pictureBox2.Location = new Point(54, 43);
+            pictureBox2.Location = new Point(60, 35);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(126, 72);
+            pictureBox2.Size = new Size(120, 83);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 34;
             pictureBox2.TabStop = false;

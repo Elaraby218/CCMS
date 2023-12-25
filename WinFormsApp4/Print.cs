@@ -15,13 +15,17 @@ namespace WinFormsApp4
 {
     public partial class Print : DraggablePanel
     {
-        public Print()
+        string emp_id=" ";
+        float result = 0;
+        public Print(string cur_employee_n_id)
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.None;
             StartPosition = FormStartPosition.CenterScreen;
+            this.emp_id = cur_employee_n_id;
         }
-
+       
+       
         private void Print_Load(object sender, EventArgs e)
         {
 
@@ -36,26 +40,32 @@ namespace WinFormsApp4
         {
 
             AppDbContext db = AppDbContext.Instance;
-            int price= int.Parse(tt_cost.Text);
             var res = db.in_students.Where(st => st.student_n_id == textBox1.Text).FirstOrDefault();
             if (res != null)
             {
-                res.paper_printed += price;
+                res.paper_printed = int.Parse(Num_pg_tb.Text);
                 db.in_students.Update(res);
                 db.SaveChanges();
             }
 
             else
             {
-                InStudentsTable st = new InStudentsTable()
+                db.history.Add(new HistoryTable
                 {
                     student_n_id = "1",
-                    in_time = DateTime.Now.ToString("HH:mm"),
-                    paper_printed = price, 
-                };
-
+                    time_in = DateTime.Now.ToString("HH:mm"),
+                    time_out = DateTime.Now.ToString("HH:mm"),
+                    date = DateTime.Now.ToString("dd/MM/yyyy"),
+                    employee_n_id = emp_id,
+                    paper_count = int.Parse(Num_pg_tb.Text),
+                    cost = (int.Parse(Num_pg_tb.Text) * SharedValues.CostPerPaper)
+                });
+                db.SaveChanges();
 
             }
+            MessageBox.Show("Cost Added"," Print",MessageBoxButtons.OK,MessageBoxIcon.Information);
+           this.Close();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -72,12 +82,12 @@ namespace WinFormsApp4
             if (int.TryParse(Num_pg_tb.Text, out int inputValue))
             {
 
-                double result = inputValue * 1.5;
+                float result = inputValue * SharedValues.CostPerPaper;
                 tt_cost.Text = result.ToString();
+
             }
             else
             {
-                
                 tt_cost.Text = "Invalid input";
             }
         }

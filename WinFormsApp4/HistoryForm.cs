@@ -30,7 +30,7 @@ namespace WinFormsApp4
 
             foreach (var i in k)
             {
-                Histroty_dgridview.Rows.Add(i[0], i[1], i[2], i[3], i[5], i[4], i[6]);
+                Histroty_dgridview.Rows.Add(i[0], i[1], i[2], i[3], i[4], i[5], i[6]);
             }
         }
         AppDbContext db = AppDbContext.Instance;
@@ -57,7 +57,12 @@ namespace WinFormsApp4
                 fun();
                 return;
             }
-            if (!ValidationMethods.NationalIdLen(Search_txtbox.Text))
+            else if(Search_txtbox.Text=="1")
+            {
+                fun("1");
+                return;
+            }
+            else if (!ValidationMethods.NationalIdLen(Search_txtbox.Text))
             {
                 MessageBox.Show("Wrong National ID");
                 return;

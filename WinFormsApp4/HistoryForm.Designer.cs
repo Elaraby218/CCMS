@@ -44,6 +44,7 @@
             Column6 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
             Clear_filter_btn = new Button();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)historyTableBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Histroty_dgridview).BeginInit();
             SuspendLayout();
@@ -70,9 +71,8 @@
             // 
             Search_txtbox.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
             Search_txtbox.Location = new Point(405, 585);
-            Search_txtbox.Multiline = true;
             Search_txtbox.Name = "Search_txtbox";
-            Search_txtbox.Size = new Size(365, 41);
+            Search_txtbox.Size = new Size(365, 32);
             Search_txtbox.TabIndex = 29;
             Search_txtbox.TextAlign = HorizontalAlignment.Center;
             toolTip1.SetToolTip(Search_txtbox, "Insert National id to search for");
@@ -100,9 +100,9 @@
             // Histroty_dgridview
             // 
             Histroty_dgridview.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
-            Histroty_dgridview.Location = new Point(16, 46);
+            Histroty_dgridview.Location = new Point(16, 43);
             Histroty_dgridview.Name = "Histroty_dgridview";
-            Histroty_dgridview.Size = new Size(1060, 519);
+            Histroty_dgridview.Size = new Size(1060, 522);
             Histroty_dgridview.TabIndex = 0;
             Histroty_dgridview.CellContentClick += Histroty_dgridview_CellContentClick_1;
             // 
@@ -158,9 +158,16 @@
             Clear_filter_btn.Name = "Clear_filter_btn";
             Clear_filter_btn.Size = new Size(154, 41);
             Clear_filter_btn.TabIndex = 32;
-            Clear_filter_btn.Text = "Clear Filteration";
+            Clear_filter_btn.Text = "Reset";
             Clear_filter_btn.UseVisualStyleBackColor = false;
             Clear_filter_btn.Click += Clear_filter_btn_Click;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Location = new Point(505, 626);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(200, 100);
+            flowLayoutPanel1.TabIndex = 33;
             // 
             // HistoryForm
             // 
@@ -168,6 +175,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1096, 652);
             ControlBox = false;
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(Clear_filter_btn);
             Controls.Add(Histroty_dgridview);
             Controls.Add(panel2);
@@ -185,6 +193,7 @@
             Controls.SetChildIndex(panel2, 0);
             Controls.SetChildIndex(Histroty_dgridview, 0);
             Controls.SetChildIndex(Clear_filter_btn, 0);
+            Controls.SetChildIndex(flowLayoutPanel1, 0);
             ((System.ComponentModel.ISupportInitialize)historyTableBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)Histroty_dgridview).EndInit();
             ResumeLayout(false);
@@ -207,5 +216,6 @@
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
         private Button Clear_filter_btn;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

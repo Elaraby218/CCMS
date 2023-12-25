@@ -67,8 +67,8 @@ namespace WinFormsApp4
 
         private void Reg_newstudbtn_Click(object sender, EventArgs e)
         {
-            SharedValues.CostPerHour = decimal.TryParse(cost_per_hour.Text, out decimal costHour) ? costHour : 0m;
-            SharedValues.CostPerPaper = decimal.TryParse(cost_per_page.Text, out decimal costPaper) ? costPaper : 0m;
+            SharedValues.CostPerHour = float.TryParse(cost_per_hour.Text, out float costHour) ? costHour : 0;
+            SharedValues.CostPerPaper = float.TryParse(cost_per_page.Text, out float costPaper) ? costPaper : 0;
             SharedValues.ClosingTime = dateTimePicker1.Value.TimeOfDay;
             SharedValues.RoundingValue = (double)numericUpDown1.Value;
             SharedValues.SelectedCurrency = comboBox1.SelectedItem?.ToString();

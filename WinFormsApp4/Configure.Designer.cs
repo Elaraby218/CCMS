@@ -57,7 +57,7 @@
             Reg_newstudbtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             Reg_newstudbtn.ForeColor = SystemColors.ButtonHighlight;
             Reg_newstudbtn.ImageAlign = ContentAlignment.MiddleLeft;
-            Reg_newstudbtn.Location = new Point(256, 456);
+            Reg_newstudbtn.Location = new Point(292, 456);
             Reg_newstudbtn.Name = "Reg_newstudbtn";
             Reg_newstudbtn.Size = new Size(155, 36);
             Reg_newstudbtn.TabIndex = 58;
@@ -121,9 +121,8 @@
             // 
             cost_per_page.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             cost_per_page.Location = new Point(216, 152);
-            cost_per_page.Multiline = true;
             cost_per_page.Name = "cost_per_page";
-            cost_per_page.Size = new Size(312, 42);
+            cost_per_page.Size = new Size(312, 43);
             cost_per_page.TabIndex = 52;
             cost_per_page.Text = "0.5";
             // 
@@ -131,9 +130,8 @@
             // 
             cost_per_hour.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             cost_per_hour.Location = new Point(216, 64);
-            cost_per_hour.Multiline = true;
             cost_per_hour.Name = "cost_per_hour";
-            cost_per_hour.Size = new Size(312, 42);
+            cost_per_hour.Size = new Size(312, 43);
             cost_per_hour.TabIndex = 51;
             cost_per_hour.Text = "6";
             // 
@@ -141,9 +139,9 @@
             // 
             panel1.Controls.Add(pictureBox2);
             panel1.Dock = DockStyle.Right;
-            panel1.Location = new Point(631, 0);
+            panel1.Location = new Point(592, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(181, 520);
+            panel1.Size = new Size(220, 520);
             panel1.TabIndex = 59;
             // 
             // pictureBox2
@@ -152,7 +150,7 @@
             pictureBox2.Image = Properties.Resources.Design_a_modern_and_sleek_logo_for_a_Computer_Center_Management;
             pictureBox2.Location = new Point(0, 324);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(181, 196);
+            pictureBox2.Size = new Size(220, 196);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 34;
             pictureBox2.TabStop = false;
@@ -223,9 +221,9 @@
             comboBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Egyptian Pound (EGP)", "United States Dollar (USD)" });
-            comboBox1.Location = new Point(208, 392);
+            comboBox1.Location = new Point(216, 392);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(320, 38);
+            comboBox1.Size = new Size(312, 38);
             comboBox1.TabIndex = 66;
             comboBox1.Text = "Egyptian Pound (EGP)";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;

@@ -65,13 +65,7 @@ namespace WinFormsApp4
             UpdateGridView();
         }
 
-        private void History_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("NOT IMPLEMENTED YET", "Sorry",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-            throw new NotImplementedException();
-        }
-
+      
         private void FindSTU_btn_Click(object sender, EventArgs e)
         {
             MessageBox.Show("NOT IMPLEMENTED YET", "Sorry",
@@ -142,16 +136,14 @@ namespace WinFormsApp4
                 var hours = totalTime.Hours;
                 var minutes = totalTime.Minutes;
                 var totalMinutes = totalTime.TotalMinutes;
-                var costPerMinute = 0.10;
-                var paperCost = 0.10;
-                var totalCost = totalMinutes * costPerMinute + stud.paper_printed * paperCost;
+                var totalCost = (totalMinutes * SharedValues.CostPerHour) + (stud.paper_printed * SharedValues.CostPerPaper);
 
                 MessageBox.Show($"Student with ID {StudNational_txtbox.Text} removed\n" +
                 $"Time spent: {hours} hours and {minutes} minutes\n" +
                 $"Total cost: {totalCost:F2} Pound", "Student Removal Confirmation",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                ValidationMethods.StudentCheckOut(StudNational_txtbox.Text, this.cur_employee_n_id,Convert.ToDouble(totalCost));
+                ValidationMethods.StudentCheckOut(StudNational_txtbox.Text, this.cur_employee_n_id, Convert.ToDouble(totalCost));
                 UpdateGridView();
             }
 
@@ -248,18 +240,24 @@ namespace WinFormsApp4
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+       /* private void button2_Click(object sender, EventArgs e)
         {
             Print ppt = new Print();
-            
+
             ppt.ShowDialog();
         }
-
+       */
         private void History_btn_Click(object sender, EventArgs e)
         {
-            HistoryForm frm = new HistoryForm(); 
+            HistoryForm frm = new HistoryForm();
             frm.ShowDialog();
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Print print = new Print(this.cur_employee_n_id);
+            print.ShowDialog();
         }
     }
 }
