@@ -29,155 +29,148 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Print));
-            pictureBox3=new PictureBox();
-            panel1=new Panel();
-            label2=new Label();
-            name_lbl=new Label();
-            tt_cost=new TextBox();
-            Num_pg_tb=new TextBox();
-            label1=new Label();
-            label3=new Label();
-            textBox1=new TextBox();
-            button1=new Button();
-            button2=new Button();
+            pictureBox3 = new PictureBox();
+            panel1 = new Panel();
+            label2 = new Label();
+            name_lbl = new Label();
+            tt_cost = new TextBox();
+            Num_pg_tb = new TextBox();
+            label1 = new Label();
+            label3 = new Label();
+            textBox1 = new TextBox();
+            button1 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBox3
             // 
-            pictureBox3.Image=(Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location=new Point(-7, 106);
-            pictureBox3.Margin=new Padding(3, 4, 3, 4);
-            pictureBox3.Name="pictureBox3";
-            pictureBox3.Size=new Size(317, 362);
-            pictureBox3.SizeMode=PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex=21;
-            pictureBox3.TabStop=false;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(-6, 80);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(277, 272);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 21;
+            pictureBox3.TabStop = false;
             // 
             // panel1
             // 
-            panel1.AutoSize=true;
-            panel1.BackColor=Color.FromArgb(64, 64, 64);
+            panel1.AutoSize = true;
+            panel1.BackColor = Color.FromArgb(64, 64, 64);
             panel1.Controls.Add(pictureBox3);
-            panel1.Dock=DockStyle.Left;
-            panel1.Location=new Point(0, 0);
-            panel1.Margin=new Padding(3, 4, 3, 4);
-            panel1.Name="panel1";
-            panel1.Size=new Size(313, 512);
-            panel1.TabIndex=42;
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(274, 384);
+            panel1.TabIndex = 42;
             // 
             // label2
             // 
-            label2.AutoSize=true;
-            label2.BackColor=Color.Transparent;
-            label2.Font=new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor=Color.SeaGreen;
-            label2.Location=new Point(381, 321);
-            label2.Name="label2";
-            label2.Size=new Size(116, 30);
-            label2.TabIndex=46;
-            label2.Text="Total Cost";
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.SeaGreen;
+            label2.Location = new Point(333, 241);
+            label2.Name = "label2";
+            label2.Size = new Size(96, 25);
+            label2.TabIndex = 46;
+            label2.Text = "Total Cost";
             // 
             // name_lbl
             // 
-            name_lbl.AutoSize=true;
-            name_lbl.BackColor=Color.Transparent;
-            name_lbl.Font=new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            name_lbl.ForeColor=Color.SeaGreen;
-            name_lbl.Location=new Point(381, 261);
-            name_lbl.Name="name_lbl";
-            name_lbl.Size=new Size(169, 25);
-            name_lbl.TabIndex=45;
-            name_lbl.Text="Number Of Pages";
+            name_lbl.AutoSize = true;
+            name_lbl.BackColor = Color.Transparent;
+            name_lbl.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            name_lbl.ForeColor = Color.SeaGreen;
+            name_lbl.Location = new Point(333, 196);
+            name_lbl.Name = "name_lbl";
+            name_lbl.Size = new Size(133, 20);
+            name_lbl.TabIndex = 45;
+            name_lbl.Text = "Number Of Pages";
             // 
             // tt_cost
             // 
-            tt_cost.Location=new Point(381, 357);
-            tt_cost.Margin=new Padding(3, 4, 3, 4);
-            tt_cost.Name="tt_cost";
-            tt_cost.ReadOnly=true;
-            tt_cost.Size=new Size(178, 27);
-            tt_cost.TabIndex=44;
+            tt_cost.Location = new Point(333, 268);
+            tt_cost.Name = "tt_cost";
+            tt_cost.ReadOnly = true;
+            tt_cost.Size = new Size(156, 23);
+            tt_cost.TabIndex = 44;
             // 
             // Num_pg_tb
             // 
-            Num_pg_tb.Location=new Point(381, 290);
-            Num_pg_tb.Margin=new Padding(3, 4, 3, 4);
-            Num_pg_tb.Name="Num_pg_tb";
-            Num_pg_tb.Size=new Size(177, 27);
-            Num_pg_tb.TabIndex=43;
-            Num_pg_tb.TextChanged+=Num_pg_tb_TextChanged;
+            Num_pg_tb.Location = new Point(333, 218);
+            Num_pg_tb.Name = "Num_pg_tb";
+            Num_pg_tb.Size = new Size(172, 23);
+            Num_pg_tb.TabIndex = 43;
+            Num_pg_tb.TextChanged += Num_pg_tb_TextChanged;
             // 
             // label1
             // 
-            label1.AutoSize=true;
-            label1.BackColor=Color.Transparent;
-            label1.Font=new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor=Color.SeaGreen;
-            label1.Location=new Point(400, 70);
-            label1.Name="label1";
-            label1.Size=new Size(126, 54);
-            label1.TabIndex=48;
-            label1.Text="Print ";
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.SeaGreen;
+            label1.Location = new Point(350, 52);
+            label1.Name = "label1";
+            label1.Size = new Size(102, 45);
+            label1.TabIndex = 48;
+            label1.Text = "Print ";
             // 
             // label3
             // 
-            label3.AutoSize=true;
-            label3.BackColor=Color.Transparent;
-            label3.Font=new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor=Color.SeaGreen;
-            label3.Location=new Point(381, 199);
-            label3.Name="label3";
-            label3.Size=new Size(108, 25);
-            label3.TabIndex=49;
-            label3.Text="Student ID";
-            label3.Click+=label3_Click;
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.SeaGreen;
+            label3.Location = new Point(333, 149);
+            label3.Name = "label3";
+            label3.Size = new Size(84, 20);
+            label3.TabIndex = 49;
+            label3.Text = "Student ID";
+            label3.Click += label3_Click;
             // 
             // textBox1
             // 
-            textBox1.Location=new Point(382, 228);
-            textBox1.Margin=new Padding(3, 4, 3, 4);
-            textBox1.Name="textBox1";
-            textBox1.Size=new Size(177, 27);
-            textBox1.TabIndex=50;
+            textBox1.Location = new Point(334, 171);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(172, 23);
+            textBox1.TabIndex = 50;
             // 
             // button1
             // 
-            button1.BackColor=Color.SeaGreen;
-            button1.Font=new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor=SystemColors.ButtonHighlight;
-            button1.ImageAlign=ContentAlignment.MiddleLeft;
-            button1.Location=new Point(381, 423);
-            button1.Margin=new Padding(3, 4, 3, 4);
-            button1.Name="button1";
-            button1.Size=new Size(89, 48);
-            button1.TabIndex=51;
-            button1.Text="Exit";
-            button1.UseVisualStyleBackColor=false;
-            button1.Click+=button1_Click;
+            button1.BackColor = Color.SeaGreen;
+            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(333, 317);
+            button1.Name = "button1";
+            button1.Size = new Size(78, 36);
+            button1.TabIndex = 51;
+            button1.Text = "Exit";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.BackColor=Color.SeaGreen;
-            button2.Font=new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor=SystemColors.ButtonHighlight;
-            button2.ImageAlign=ContentAlignment.MiddleLeft;
-            button2.Location=new Point(469, 423);
-            button2.Margin=new Padding(3, 4, 3, 4);
-            button2.Name="button2";
-            button2.Size=new Size(89, 48);
-            button2.TabIndex=52;
-            button2.Text="Print";
-            button2.UseVisualStyleBackColor=false;
-            button2.Click+=button2_Click;
+            button2.BackColor = Color.SeaGreen;
+            button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.ButtonHighlight;
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(410, 317);
+            button2.Name = "button2";
+            button2.Size = new Size(78, 36);
+            button2.TabIndex = 52;
+            button2.Text = "Print";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // Print
             // 
-            AutoScaleDimensions=new SizeF(8F, 20F);
-            AutoScaleMode=AutoScaleMode.Font;
-            AutoSize=true;
-            ClientSize=new Size(642, 512);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            ClientSize = new Size(562, 384);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox1);
@@ -188,10 +181,11 @@
             Controls.Add(tt_cost);
             Controls.Add(Num_pg_tb);
             Controls.Add(panel1);
-            FormBorderStyle=FormBorderStyle.None;
-            Name="Print";
-            Text="Print";
-            Load+=Print_Load;
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "Print";
+            Text = "Print";
+            Load += Print_Load;
             Controls.SetChildIndex(panel1, 0);
             Controls.SetChildIndex(Num_pg_tb, 0);
             Controls.SetChildIndex(tt_cost, 0);
