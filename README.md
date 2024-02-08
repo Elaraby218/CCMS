@@ -9,8 +9,8 @@ The Computer Center Management System (CCMS) makes running our computer center e
 - **Automated Entry/Exit Logging:** Students effortlessly check in and out using either their national ID number or a barcode on their student card, eliminating the need for paper records.
 - **Comprehensive Database:** Centralized storage for student information ensures quick and accurate access, eliminating the hassle of manual record-keeping.
 - **Dashboard:** Easily manage students in the computer center with the ability to add, remove (check in), and checkout students.
-- **Printing Management:** Calculate printing costs based on university policies, simplifying the billing process.
-- **Settings Page:** Empower administrators to adjust prices for computer center hours and printing according to university policies.
+- **Printing Management:** Calculate printing costs, simplifying the billing process.
+- **Settings Page:** Empower administrators to adjust prices for computer center hours and printing.
 - **Employee Account Management:** Conveniently update personal information and profile pictures for enhanced user customization.
 
 ## Screenshots
