@@ -3,6 +3,7 @@
 ## Project Overview
 
 The Computer Center Management System (CCMS) makes running our computer center easier. It automates the sign-in process and gets rid of manual paperwork. With two ways to sign in—using your ID number or student card barcode—the system keeps things organized. CCMS helps staff work better and gives students a smoother experience. It replaces paper records with digital ones, making everything simpler and more efficient. 
+
 ## Key Features
 
 - **Automated Entry/Exit Logging:** Students effortlessly check in and out using either their national ID number or a barcode on their student card, eliminating the need for paper records.
@@ -15,22 +16,20 @@ The Computer Center Management System (CCMS) makes running our computer center e
 ## Screenshots
 
 ### 1. Login Page
-![Login Page](images/login_page.png)
+![image](https://github.com/Omar7001-B/Computer-Center-Management-System-CCMS/assets/115028809/45b49bb2-dd80-4388-9a00-018c59410ffb)
 
 ### 2. Employee Registration
-![Employee Registration](images/registration_page.png)
+![image](https://github.com/Omar7001-B/Computer-Center-Management-System-CCMS/assets/115028809/eae0b8a4-05a6-45cb-8be0-9c6c6bb52812)
 
 ### 3. Dashboard
-![Dashboard](images/dashboard.png)
+![image](https://github.com/Omar7001-B/Computer-Center-Management-System-CCMS/assets/115028809/ea4b4cc3-618e-4091-a1d8-867ea0eddc96)
 
 ### 4. Printing Page
-![Printing Page](images/printing_page.png)
+![image](https://github.com/Omar7001-B/Computer-Center-Management-System-CCMS/assets/115028809/b2b83a83-9a53-44ef-9113-47d4e58de1ed)
 
 ### 5. Settings Page
-![Settings Page](images/settings_page.png)
+![image](https://github.com/Omar7001-B/Computer-Center-Management-System-CCMS/assets/115028809/6abe1171-8e18-40f4-ad55-2ade095d9a59)
 
-### 6. Account Management
-![Account Management](images/account_page.png)
 
 ## How to Use
 
