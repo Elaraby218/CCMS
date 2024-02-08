@@ -2,8 +2,7 @@
 
 ## Project Overview
 
-The CCMS is a robust C# software solution developed to modernize and optimize the management of our university's computer center, replacing outdated manual processes with streamlined digital efficiency. With a focus on enhancing both employee workflow and student experience, this system automates entry and exit logging, maintains a centralized database, and offers features such as a dynamic dashboard, printing cost management, and employee account control.
-
+The Computer Center Management System (CCMS) makes running our computer center easier. It automates the sign-in process and gets rid of manual paperwork. With two ways to sign in—using your ID number or student card barcode—the system keeps things organized. CCMS helps staff work better and gives students a smoother experience. It replaces paper records with digital ones, making everything simpler and more efficient. 
 ## Key Features
 
 - **Automated Entry/Exit Logging:** Students effortlessly check in and out using either their national ID number or a barcode on their student card, eliminating the need for paper records.
