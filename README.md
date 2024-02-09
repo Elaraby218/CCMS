@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The Computer Center Management System (CCMS) makes running our computer center easier. It automates the sign-in process and gets rid of manual paperwork. With two ways to sign in—using your ID number or student card barcode—the system keeps things organized. CCMS helps staff work better and gives students a smoother experience. It replaces paper records with digital ones, making everything simpler and more efficient. 
+The Computer Center Management System (CCMS) streamlines our computer center operations. It automates sign-in, eliminating paperwork and simplifying the process. With easy ID number sign-in, CCMS improves staff efficiency and enhances the student experience by using digital records instead of paper.
 
 ## Key Features
 
