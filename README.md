@@ -1,8 +1,7 @@
 # Computer Center Management System (CCMS)
 
 ## Project Overview
-
-The Computer Center Management System (CCMS) streamlines our computer center operations. It automates sign-in, eliminating paperwork and simplifying the process. With easy ID number sign-in, CCMS improves staff efficiency and enhances the student experience by using digital records instead of paper.
+An easy-to-use interface automates worker tasks in the computer center, enabling digital student registration and cost calculation using just an ID for check-in/out, eliminating the need for pen and paper
 
 ## Key Features
 
