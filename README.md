@@ -29,17 +29,43 @@ An easy-to-use interface automates worker tasks in the computer center, enabling
 ### 5. Settings Page
 ![image](https://github.com/Omar7001-B/Computer-Center-Management-System-CCMS/assets/115028809/6abe1171-8e18-40f4-ad55-2ade095d9a59)
 
+## Technologies Used
+- **C#:** The primary programming language used for development.
+- **.NET:** The framework utilized for building the desktop application.
+- **Object-Oriented Programming (OOP):** Design paradigm used to structure the application.
+- **SQL Server:** Database management system used for storing and managing data on server-side.
+- **SQL lite:** Database management system used for storing and managing data on client-side.
+
+## Setup Instructions
+1. Clone the repository to your local machine.
+   ```
+   git clone https://github.com/cgmoreda/CCMS.git
+   ``` 
+2. Open the solution file in Visual Studio.
+3. Configure the SQL Server connection string in the application's configuration file.
+4. Run the application.
 
 ## How to Use
-
 1. **Login:** Enter credentials on the login page.
 2. **Dashboard:** Manage students in the center by adding, removing (check-in), and checking out students.
 3. **Printing:** Calculate costs on the printing page.
 4. **Settings:** Adjust prices for hours and printing.
 5. **Account:** Update personal information in the account section.
 
-## Conclusion
 
+
+## Contributors
+- [Omar Abdulrahman](https://github.com/Omar7001-B)
+- [Mohamed Reda](https://github.com/cgmoreda)
+- [Mohamed Ramadan](https://github.com/Elaraby218)
+- [Sherif Ashraf](https://github.com/ELglaly)
+- [Mohamed Khaled](https://github.com/m10090)
+- [Mohamed Khalifa](https://github.com/bn-khalifa)
+
+
+## Conclusion
 The CCMS offers an intuitive and user-friendly approach to computer center management, enhancing efficiency for both employees and students. For questions or feedback, contact [project team contact information].
+For any questions, issues, or suggestions, please feel free to [open an issue](https://github.com/cgmoreda/CCMS/issues) on GitHub.
 
 Thank you for using CCMS!
+
