@@ -39,7 +39,7 @@ An easy-to-use interface automates worker tasks in the computer center, enabling
 ## Setup Instructions
 1. Clone the repository to your local machine.
    ```
-   git clone https://github.com/cgmoreda/CCMS.git
+   git clone https://github.com/Omar7001-B/Computer-Center-Management-System-CCMS
    ``` 
 2. Open the solution file in Visual Studio.
 3. Configure the SQL Server connection string in the application's configuration file.
