@@ -64,8 +64,7 @@ An easy-to-use interface automates worker tasks in the computer center, enabling
 
 
 ## Conclusion
-The CCMS offers an intuitive and user-friendly approach to computer center management, enhancing efficiency for both employees and students. For questions or feedback, contact [project team contact information].
-For any questions, issues, or suggestions, please feel free to [open an issue](https://github.com/cgmoreda/CCMS/issues) on GitHub.
+The CCMS offers an intuitive and user-friendly approach to computer center management, enhancing efficiency for both employees and students. For questions or feedback, contact [Omar Abdulrahman](https://github.com/Omar7001-B).
 
 Thank you for using CCMS!
 
